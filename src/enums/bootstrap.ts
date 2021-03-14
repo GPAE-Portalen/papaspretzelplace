@@ -14,7 +14,6 @@ export enum BootstrapColor {
     Dark
 }
 
-
 // Papa's Pretzel Place custom colors
 export const bootstrapColorName = {
     [BootstrapColor.PppRed]: 'ppp-red',
