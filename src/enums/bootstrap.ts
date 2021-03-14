@@ -1,4 +1,9 @@
+// Papa's Pretzel Place custom themes
 export enum BootstrapColor {
+    PppRed,
+    PppOrange,
+    PppBlue,
+    PppBeige,
     Primary,
     Secondary,
     Success,
@@ -9,7 +14,13 @@ export enum BootstrapColor {
     Dark
 }
 
+
+// Papa's Pretzel Place custom colors
 export const bootstrapColorName = {
+    [BootstrapColor.PppRed]: 'ppp-red',
+    [BootstrapColor.PppOrange]: 'ppp-orange',
+    [BootstrapColor.PppBlue]: 'ppp-blue',
+    [BootstrapColor.PppBeige]: 'ppp-beige',
     [BootstrapColor.Primary]: 'primary',
     [BootstrapColor.Secondary]: 'secondary',
     [BootstrapColor.Success]: 'success',
