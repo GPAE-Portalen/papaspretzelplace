@@ -3,7 +3,7 @@
   "description": "Papa's Pretzel Place is a locally owned soft pretzel company in Philadelphia.",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://papaspretzelplace.com/",
+  "homepage": "https://portalen-io.github.io/",
   "author": {
     "name": "Michael Beck",
     "url": "https://www.facebook.com/papaspretzelplace",
@@ -22,10 +22,19 @@
     "web-vitals": "^1.1.0"
   },
   "scripts": {
+    "dev": "run-p start css-watch",
     "start": "cross-env REACT_APP_DIST_ENV=development react-scripts start",
     "build": "cross-env REACT_APP_DIST_ENV=production react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "deploy": "run-s build deploy-gh-pages",
+    "deploy-gh-pages": "gh-pages -d build",
+    "css": "run-s css-build css-compile css-prefix",
+    "css-watch": "run-p css-watch-dev css-watch-min",
+    "css-watch-dev": "npm run css-build -- --watch",
+    "css-watch-min": "npm run css-compile -- --watch",
+    "css-build": "node-sass-chokidar src/app/styles/index.scss src/app/styles/index.css",
+    "css-compile": "node-sass-chokidar --output-style compressed src/app/styles/index.scss src/app/styles/index.min.css",
+    "css-prefix": "postcss --no-map --use autoprefixer --output src/app/styles/index.min.css src/app/styles/index.min.css"
   },
   "eslintConfig": {
     "extends": [
@@ -46,6 +55,7 @@
     ]
   },
   "devDependencies": {
+    "@popperjs/core": "^2.9.1",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.1",
@@ -55,7 +65,14 @@
     "@types/react-dom": "^17.0.1",
     "@types/react-redux": "^7.1.16",
     "@types/react-router-dom": "^5.1.7",
+    "autoprefixer": "^10.2.5",
+    "bootstrap": "^5.0.0-beta2",
     "cross-env": "^7.0.3",
+    "gh-pages": "^3.1.0",
+    "node-sass-chokidar": "^1.5.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.8",
+    "postcss-cli": "^8.3.1",
     "typescript": "^4.2.3"
   }
 }

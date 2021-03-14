@@ -1,0 +1,14 @@
+// Configuration
+@import "scss/variables";
+@import "scss/bootstrap/bootstrap";
+@import "scss/resets";
+@import "scss/base";
+
+// Routes
+@import "scss/routes/Home";
+@import "scss/routes/NotFound";
+
+// Components
+@import "scss/components/Footer";
+@import "scss/components/Header";
+@import "scss/components/Spinner";
