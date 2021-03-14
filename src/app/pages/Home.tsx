@@ -8,7 +8,7 @@ import { Logo } from '../components/Logo';
 export default function Home(): JSX.Element {
     return (
         <React.Fragment>
-            <Alert type={bootstrapColorName[BootstrapColor.PppBeige]} className="border-bottom">
+            <Alert type={bootstrapColorName[BootstrapColor.PppBeige]} className={`border-bottom color-${bootstrapColorName[BootstrapColor.PppRed]}`}>
                 <span>This website is under construction! Visit our <a href="https://www.facebook.com/papaspretzelplace">Facebook page</a> for more information.</span>
             </Alert>
 
