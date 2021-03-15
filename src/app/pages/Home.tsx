@@ -23,7 +23,7 @@ export default function Home(): JSX.Element {
 
             <Header>
                 <Container type={ContainerType.Default}>
-                    <Logo alt="Papa's Pretzel Place logo" height="189" width="336" className="m-auto" />
+                    <Logo alt="Papa's Pretzel Place logo" height="100%" width="100%" className="m-auto" />
                 </Container>
             </Header>
 
@@ -43,12 +43,6 @@ export default function Home(): JSX.Element {
                     <a className="btn btn-ppp-red mx-auto d-block mt-4" href="https://www.facebook.com/papaspretzelplace" target="_blank" rel="noreferrer" style={{ width: '300px', borderRadius: '2rem' }}>Facebook page</a>
                 </Container>
             </main>
-
-            <Footer className="mt-5">
-                <Container type={ContainerType.Default}>
-                    <FacebookFeed />
-                </Container>
-            </Footer>
         </React.Fragment>
     );
 }
