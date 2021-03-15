@@ -17,12 +17,14 @@ export default function Home(): JSX.Element {
 
     return (
         <React.Fragment>
-            <Alert type={bootstrapColorName[BootstrapColor.PppBeige_100]} className={`border-bottom color-${bootstrapColorName[BootstrapColor.PppRed]}`}>
+            <Alert type={bootstrapColorName[BootstrapColor.Light]} className={`border-bottom color-${bootstrapColorName[BootstrapColor.PppRed]}`}>
                 <span>This website is under construction! Visit our <a href="https://www.facebook.com/papaspretzelplace" target="_blank" rel="noreferrer">Facebook page</a> for more information.</span>
             </Alert>
 
             <Header>
-                <Logo alt="Papa's Pretzel Place logo" height="auto" width="70%" className="m-auto w-100 w-md-70" />
+                <Container type={ContainerType.Default}>
+                    <Logo alt="Papa's Pretzel Place logo" height="189" width="336" className="m-auto" />
+                </Container>
             </Header>
 
             <main role="main">
