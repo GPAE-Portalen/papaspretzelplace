@@ -6,8 +6,8 @@
 	* Setup office email
 	* Setup project files
 
-* 0314, 5 hours
+* 0314, 6 hours
 	* Setup dns from godaddy to github custom pages
 	* Setup google analytics
 	* Setup custom bootstrap theme colors
-	* 
+	* Add basic SEO
