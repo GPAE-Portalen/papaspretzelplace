@@ -27,7 +27,7 @@ export default function Home(): JSX.Element {
                 </Container>
             </Header>
 
-            <main role="main">
+            <main role="main" className="py-3 mb-5">
                 <Container type={ContainerType.Default}>
                     <h1 className="text-center">Papa's Pretzel Place</h1>
 
@@ -40,7 +40,7 @@ export default function Home(): JSX.Element {
                         </a>
                     </address>
 
-                    <a className="btn btn-ppp-red mx-auto d-block mt-4" href="https://www.facebook.com/papaspretzelplace" target="_blank" rel="noreferrer" style={{ width: '300px', borderRadius: '2rem' }}>Facebook page</a>
+                    <a className="btn btn-ppp-red mx-auto d-block mt-4" href="https://www.facebook.com/papaspretzelplace" target="_blank" rel="noreferrer" style={{ maxWidth: '280px', borderRadius: '2rem' }}>Facebook page</a>
                 </Container>
             </main>
         </React.Fragment>
