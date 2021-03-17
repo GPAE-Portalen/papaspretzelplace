@@ -15,7 +15,7 @@ export default function App() {
                 <span>This website is under construction! Visit our <a href="https://www.facebook.com/papaspretzelplace" target="_blank" rel="noreferrer">Facebook page</a> for more information.</span>
             </Alert>
 
-            <Router basename={process.env.PUBLIC_URL}>
+            <Router>
                 <React.Suspense fallback={<div>Loading...</div>}>
                     <Switch>
                         <Route exact path="/" component={Home} />
