@@ -13,11 +13,12 @@ export const containerTypeClassName = {
 export interface IContainerProps {
     type: ContainerType;
     children: React.ReactNode;
+    className?: string;
 }
 
 export const Container = (props: IContainerProps): JSX.Element => {
     return (
-        <div className={`container${containerTypeClassName[props.type]}`}>
+        <div className={`${props.className} container${containerTypeClassName[props.type]}`}>
             {props.children}
         </div>
     );
