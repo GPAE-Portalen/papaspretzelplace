@@ -6,8 +6,6 @@ import { Logo } from '../components/Logo';
 import { GoogleMapsLink } from '../components/GoogleMapsLink';
 
 export default function Home(): JSX.Element {
-    const address: string = '302 Mill Street, Bristol, PA 19007';
-
     return (
         <React.Fragment>
             <Header>
