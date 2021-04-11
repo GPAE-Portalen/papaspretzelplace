@@ -7154,6 +7154,70 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important; } }
 
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("../../assets/fonts/SourceSerifPro-ExtraLight.ttf");
+  font-weight: 200; }
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("../../assets/fonts/SourceSerifPro-ExtraLightItalic.ttf");
+  font-style: italic, oblique;
+  font-weight: 200; }
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("../../assets/fonts/SourceSerifPro-Light.ttf");
+  font-weight: 300; }
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("../../assets/fonts/SourceSerifPro-LightItalic.ttf");
+  font-style: italic, oblique;
+  font-weight: 300; }
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("../../assets/fonts/SourceSerifPro-Regular.ttf"); }
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("../../assets/fonts/SourceSerifPro-Italic.ttf");
+  font-style: italic, oblique; }
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("../../assets/fonts/SourceSerifPro-SemiBold.ttf");
+  font-weight: 600; }
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("../../assets/fonts/SourceSerifPro-SemiBoldItalic.ttf");
+  font-style: italic, oblique;
+  font-weight: 600; }
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("../../assets/fonts/SourceSerifPro-Bold.ttf");
+  font-weight: 700; }
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("../../assets/fonts/SourceSerifPro-BoldItalic.ttf");
+  font-style: italic, oblique;
+  font-weight: 700; }
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("../../assets/fonts/SourceSerifPro-Black.ttf");
+  font-weight: 900; }
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("../../assets/fonts/SourceSerifPro-BlackItalic.ttf");
+  font-style: italic, oblique;
+  font-weight: 900; }
+
 body {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
