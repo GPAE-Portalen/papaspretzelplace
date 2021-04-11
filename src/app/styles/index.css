@@ -7155,23 +7155,23 @@ textarea.form-control-lg {
     display: none !important; } }
 
 @font-face {
-  font-family: "Source Serif Pro";
+  font-family: "Source Serif Pro Extra Light";
   src: url("../../assets/fonts/SourceSerifPro-ExtraLight.ttf");
   font-weight: 200; }
 
 @font-face {
-  font-family: "Source Serif Pro";
+  font-family: "Source Serif Pro Extra Light Italic";
   src: url("../../assets/fonts/SourceSerifPro-ExtraLightItalic.ttf");
   font-style: italic, oblique;
   font-weight: 200; }
 
 @font-face {
-  font-family: "Source Serif Pro";
+  font-family: "Source Serif Pro Light";
   src: url("../../assets/fonts/SourceSerifPro-Light.ttf");
   font-weight: 300; }
 
 @font-face {
-  font-family: "Source Serif Pro";
+  font-family: "Source Serif Pro Light Italic";
   src: url("../../assets/fonts/SourceSerifPro-LightItalic.ttf");
   font-style: italic, oblique;
   font-weight: 300; }
@@ -7181,39 +7181,39 @@ textarea.form-control-lg {
   src: url("../../assets/fonts/SourceSerifPro-Regular.ttf"); }
 
 @font-face {
-  font-family: "Source Serif Pro";
+  font-family: "Source Serif Pro Italic";
   src: url("../../assets/fonts/SourceSerifPro-Italic.ttf");
   font-style: italic, oblique; }
 
 @font-face {
-  font-family: "Source Serif Pro";
+  font-family: "Source Serif Pro Semi Bold";
   src: url("../../assets/fonts/SourceSerifPro-SemiBold.ttf");
   font-weight: 600; }
 
 @font-face {
-  font-family: "Source Serif Pro";
+  font-family: "Source Serif Pro Semi Bold Italic";
   src: url("../../assets/fonts/SourceSerifPro-SemiBoldItalic.ttf");
   font-style: italic, oblique;
   font-weight: 600; }
 
 @font-face {
-  font-family: "Source Serif Pro";
+  font-family: "Source Serif Pro Bold";
   src: url("../../assets/fonts/SourceSerifPro-Bold.ttf");
   font-weight: 700; }
 
 @font-face {
-  font-family: "Source Serif Pro";
+  font-family: "Source Serif Pro Bold Italic";
   src: url("../../assets/fonts/SourceSerifPro-BoldItalic.ttf");
   font-style: italic, oblique;
   font-weight: 700; }
 
 @font-face {
-  font-family: "Source Serif Pro";
+  font-family: "Source Serif Pro Black";
   src: url("../../assets/fonts/SourceSerifPro-Black.ttf");
   font-weight: 900; }
 
 @font-face {
-  font-family: "Source Serif Pro";
+  font-family: "Source Serif Pro Black Italic";
   src: url("../../assets/fonts/SourceSerifPro-BlackItalic.ttf");
   font-style: italic, oblique;
   font-weight: 900; }
