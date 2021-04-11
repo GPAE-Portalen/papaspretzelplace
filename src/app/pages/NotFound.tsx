@@ -1,22 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { Container, ContainerType } from "../components/Container";
+import { Portal } from "../components/Portal";
+import { NavigationList, ENavigation } from "../components/Navigation";
+import { Container, EContainerType } from "../components/Container";
+
 import { GoogleMapsLink } from "../components/GoogleMapsLink";
-import Header from "../components/Header";
 import { Logo } from "../components/Logo";
 
 export default function NotFound(): JSX.Element {
     return (
         <React.Fragment>
-            <Header>
-                <Container type={ContainerType.Default}>
-                    <Logo alt="Papa's Pretzel Place logo" height="100%" width="100%" className="m-auto" />
-                </Container>
-            </Header>
+            <Portal containerId="navigation-container">
+                <NavigationList active={null} />
+            </Portal>
 
-            <main role="main" className="py-3 mb-5">
-                <Container type={ContainerType.Default} className="text-center">
+            <main role="main">
+                <Container type={EContainerType.Default}>
+                    <Logo alt="Papa's Pretzel Place logo" height="100%" width="100%" className="m-auto" />
+
                     <h1 className="text-center">
                         <small className="text-muted d-block">404</small>
                         <div>Papa's Pretzel Place</div>
