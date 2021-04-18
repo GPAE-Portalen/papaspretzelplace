@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import Header from '../components/Header';
 import Main from '../components/Main';
 
-import { Logo } from "../components/Logo";
 import { GoogleMapsLink } from "../components/GoogleMapsLink";
 
 export default function Home(): JSX.Element {
