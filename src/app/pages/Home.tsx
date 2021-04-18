@@ -23,6 +23,7 @@ export default function Home(): JSX.Element {
                     <h1>{title}</h1>
                     <p>{description}</p>
                     <GoogleMapsLink />
+                    <a className="btn btn-ppp-red d-inline-block ms-3" href="https://www.facebook.com/papaspretzelplace" target="_blank" rel="noreferrer" style={{ minWidth: '150px', borderRadius: '2rem' }}>Facebook page</a>
                 </article>
             </Main>
         </React.Fragment>
