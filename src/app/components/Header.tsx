@@ -1,14 +1,18 @@
 import React from 'react';
 
+import { Container, EContainerType } from './Container';
+import { Logo } from './Logo';
+
 export interface IHeaderProps {
-    children: React.ReactNode;
-    className?: string;
+    active: string;
 }
 
 export default function Header(props: IHeaderProps): JSX.Element {
     return (
-        <header className={props.className}>
-            {props.children}
+        <header>
+            <Container type={EContainerType.Default}>
+                <Logo alt="Papa’s Pretzel Place logo" height="100%" width="100%" className="m-auto" />
+            </Container>
         </header>
     );
 }

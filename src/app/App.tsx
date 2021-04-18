@@ -6,6 +6,7 @@ import { BootstrapColor, bootstrapColorName } from '../enums/bootstrap';
 import Alert from './components/Alert';
 
 const Home = React.lazy(() => import("./pages/Home"));
+const Products = React.lazy(() => import("./pages/Products"));
 const NotFound = React.lazy(() => import("./pages/NotFound"));
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
                 <React.Suspense fallback={<div>Loading...</div>}>
                     <Switch>
                         <Route exact path="/" component={Home} />
+                        <Route exact path="/products" component={Products} />
                         <Route path="*" component={NotFound} />
                     </Switch>
                 </React.Suspense>

@@ -1,14 +1,17 @@
 import React from 'react';
 
+import { Container, EContainerType } from './Container';
+
 export interface IFooterProps {
-    children: React.ReactNode;
-    className?: string;
+    
 }
 
-export default function Alert(props: IFooterProps): JSX.Element {
+export default function Footer(props: IFooterProps): JSX.Element {
     return (
-        <footer className={props.className}>
-            {props.children}
+        <footer>
+            <Container type={EContainerType.Default}>
+                footer
+            </Container>
         </footer>
     );
 }

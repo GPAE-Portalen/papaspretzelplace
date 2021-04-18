@@ -1,24 +1,24 @@
 import React from 'react';
 
-export enum ContainerType {
+export enum EContainerType {
     Default,
     Fluid
 }
 
 export const containerTypeClassName = {
-    [ContainerType.Default]: '',
-    [ContainerType.Fluid]: '-fluid',
+    [EContainerType.Default]: '',
+    [EContainerType.Fluid]: '-fluid',
 }
 
 export interface IContainerProps {
-    type: ContainerType;
+    type: EContainerType;
     children: React.ReactNode;
     className?: string;
 }
 
 export const Container = (props: IContainerProps): JSX.Element => {
     return (
-        <div className={`${props.className} container${containerTypeClassName[props.type]}`}>
+        <div className={`container${containerTypeClassName[props.type]}${props.className ? ` ${props.className}` : ''}`}>
             {props.children}
         </div>
     );

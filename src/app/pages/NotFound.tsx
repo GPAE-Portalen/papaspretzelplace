@@ -1,38 +1,48 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { Container, ContainerType } from "../components/Container";
-import { GoogleMapsLink } from "../components/GoogleMapsLink";
-import Header from "../components/Header";
-import { Logo } from "../components/Logo";
+import Header from '../components/Header';
+import Main from '../components/Main';
+import Footer from '../components/Footer';
 
-export default function NotFound(): JSX.Element {
+import { Logo } from "../components/Logo";
+import { GoogleMapsLink } from "../components/GoogleMapsLink";
+
+export default function Home(): JSX.Element {
+    const title: string = 'Papa’s Pretzel Place';
+    const description: string = '*Dough* This page does knot exist!';
+    const path: string = window.location.pathname;
+
+    const header = {
+        active: path
+    }
+
     return (
         <React.Fragment>
-            <Header>
-                <Container type={ContainerType.Default}>
-                    <Logo alt="Papa's Pretzel Place logo" height="100%" width="100%" className="m-auto" />
-                </Container>
-            </Header>
+            <Header {...header} />
 
-            <main role="main" className="py-3 mb-5">
-                <Container type={ContainerType.Default} className="text-center">
+            <Main>
+                <article>
+                    <Logo alt="Papa's Pretzel Place logo" height="100%" width="100%" className="m-auto" />
+
                     <h1 className="text-center">
                         <small className="text-muted d-block">404</small>
-                        <div>Papa's Pretzel Place</div>
+                        <div>{title}</div>
                     </h1>
 
-                    <p>*Dough* This page does knot exist!</p>
+                    <p>{description}</p>
 
-                    <GoogleMapsLink />
+                    <GoogleMapsLink className="text-center" />
 
                     <Link to="/" className="btn btn-ppp-beige" style={{ minWidth: '150px', borderRadius: '2rem' }}>
                         Home
                     </Link>
 
                     <a className="btn btn-ppp-red d-inline-block ms-3" href="https://www.facebook.com/papaspretzelplace" target="_blank" rel="noreferrer" style={{ minWidth: '150px', borderRadius: '2rem' }}>Facebook page</a>
-                </Container>
-            </main>
+                </article>
+            </Main>
+
+            <Footer />
         </React.Fragment>
     );
 }

@@ -10,12 +10,15 @@ import './app/styles/index.css';
 import App from './app/App';
 import store from './app/store';
 
+import Repository from './repository';
+
 declare global {
     type Guid = string;
 
     interface Window {
         envDev: boolean;
         envProd: boolean;
+        repository: Repository;
     }
 }
 
@@ -37,6 +40,8 @@ function initDevelopment() {
         if (window.envProd) initProduction();
         else initDevelopment();
     })();
+
+    window.repository = new Repository('./data');
 
     ReactDOM.render(
         <React.StrictMode>

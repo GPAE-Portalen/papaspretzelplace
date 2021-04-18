@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Papa’s Pretzel",
+    "description": "Our signature pretzel hot out of the oven!",
+    "image": {
+      "name": "papas_pretzel",
+      "type": "jpg",
+      "width": "720",
+      "height": "960"
+    }
+  },
+  {
+    "name": "Mini Papa’s Pretzel",
+    "description": "Our signature mini pretzel hot out of the oven!",
+    "image": {
+      "name": "mini_papas_pretzel",
+      "type": "jpg",
+      "width": "960",
+      "height": "720"
+    }
+  },
+  {
+    "name": "Jalapeño Cheddar Pretzel",
+    "description": "Our jalapeño cheddar pretzel hot out of the oven!",
+    "image": {
+      "name": "jalapeno_cheddar",
+      "type": "jpg",
+      "width": "720",
+      "height": "960"
+    }
+  },
+  {
+    "name": "Cheddar Pretzel",
+    "description": "Our cheddar pretzel hot out of the oven!",
+    "image": {
+      "name": "cheddar_pretzel",
+      "type": "jpg",
+      "width": "720",
+      "height": "960"
+    }
+  }
+]
