@@ -20,6 +20,16 @@
     }
   },
   {
+    "name": "Cheddar Pretzel",
+    "description": "Our cheddar pretzel hot out of the oven!",
+    "image": {
+      "name": "cheddar_pretzel",
+      "type": "jpg",
+      "width": "720",
+      "height": "960"
+    }
+  },
+  {
     "name": "Jalapeño Cheddar Pretzel",
     "description": "Our jalapeño cheddar pretzel hot out of the oven!",
     "image": {
@@ -30,10 +40,20 @@
     }
   },
   {
-    "name": "Cheddar Pretzel",
-    "description": "Our cheddar pretzel hot out of the oven!",
+    "name": "Mozzaball Pretzel",
+    "description": "Pretzel dough made with rosemary, basil, oregano, parsley, fresh garlic and filled with mozzarella.",
     "image": {
-      "name": "cheddar_pretzel",
+      "name": "mozzaball_pretzel",
+      "type": "jpg",
+      "width": "720",
+      "height": "960"
+    }
+  },
+  {
+    "name": "OMG Pretzel",
+    "description": "Our OMG pretzel hot out of the oven!",
+    "image": {
+      "name": "omg_pretzel",
       "type": "jpg",
       "width": "720",
       "height": "960"
