@@ -11,8 +11,6 @@ export interface ISEOProps {
 }
 
 export default function SEO(props: ISEOProps): JSX.Element {
-    console.log('SEO props: ' + props);
-
     return (
         <Fragment>
             <Helmet>
@@ -41,8 +39,8 @@ export default function SEO(props: ISEOProps): JSX.Element {
             {
                 props.image &&
                 <Helmet>
-                    <meta name="twitter:images" content={props.image.url} />
-                    <meta name="og:image" content={props.image.url} />
+                    <meta name="twitter:image" content={encodeURI(props.image.url)} />
+                    <meta name="og:image" content={encodeURI(props.image.url)} />
                     <meta name="og:image:type" content={props.image.type} />
                     <meta name="og:image:width" content={props.image.width} />
                     <meta name="og:image:height" content={props.image.height} />

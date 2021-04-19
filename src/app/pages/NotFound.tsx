@@ -9,15 +9,10 @@ import { GoogleMapsLink } from "../components/GoogleMapsLink";
 export default function Home(): JSX.Element {
     const title: string = "Papa's Pretzel Place";
     const description: string = '*Dough* This page does knot exist!';
-    const path: string = window.location.pathname;
-
-    const header = {
-        active: path
-    }
 
     return (
         <React.Fragment>
-            <Header {...header} />
+            <Header />
 
             <Main>
                 <article className="text-center">

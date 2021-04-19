@@ -4,7 +4,7 @@ import { Container, EContainerType } from './Container';
 import { Logo } from './Logo';
 
 export interface IHeaderProps {
-    active: string;
+    
 }
 
 export default function Header(props: IHeaderProps): JSX.Element {

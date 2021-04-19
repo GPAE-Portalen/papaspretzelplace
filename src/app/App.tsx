@@ -7,6 +7,7 @@ import Alert from './components/Alert';
 
 const Home = React.lazy(() => import("./pages/Home"));
 const Products = React.lazy(() => import("./pages/Products"));
+const Product = React.lazy(() => import("./pages/Product"));
 const NotFound = React.lazy(() => import("./pages/NotFound"));
 
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
                     <Switch>
                         <Route exact path="/" component={Home} />
                         <Route exact path="/products" component={Products} />
+                        <Route path="/product/:productName" component={Product} />
                         <Route path="*" component={NotFound} />
                     </Switch>
                 </React.Suspense>
