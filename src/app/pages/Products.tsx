@@ -83,13 +83,13 @@ export default function Products(): JSX.Element {
 
             return (
                 <div key={product.name} className="mb-3 col-12 col-lg-6 col-xl-4">
-                    <article key={product.name} className="card">
+                    <article key={product.name} className="card shadow">
                         <div className="card-img-top position-relative" style={{ height: '256px', overflow: 'hidden' }}>
                             <LazyLoadImage
                                 alt={product.name}
                                 src={imgSrc}
                                 className="position-absolute"
-                                style={{ width: 'inherit'}}
+                                style={{ width: 'inherit', transform: 'translateY(-50%)', top: '50%' }}
                             />
                         </div>
 
