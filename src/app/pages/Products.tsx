@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-import { IProduct } from '../../interfaces'
+import { IProduct } from '../../interfaces/index';
 
 import SEO from '../components/SEO';
 import Header from '../components/Header';
@@ -74,6 +75,34 @@ export default function Products(): JSX.Element {
         console.log(products);
     }, [products]);
 
+    const renderProducts = (products: IProduct[]): JSX.Element[] => {
+        return products.map((product: IProduct) => {
+            const uri: string = encodeURI(`/products/${product.name}`);
+            const imgSrc: string = `/products/${product.image.name}.${product.image.type}`;
+
+            return (
+                <div key={product.name} className="mb-3 col-12 col-lg-6 col-xl-4">
+                    <article key={product.name} className="card">
+                        <div className="card-img-top position-relative" style={{ height: '256px', overflow: 'hidden' }}>
+                            <LazyLoadImage
+                                alt={product.name}
+                                src={imgSrc}
+                                className="position-absolute"
+                                style={{ width: 'inherit'}}
+                            />
+                        </div>
+
+                        <div className="card-body">
+                            <h5 className="card-title">{product.name}</h5>
+                            <p className="card-text">{product.description}</p>
+                            <a href={uri} className="btn btn-ppp-red">Details</a>
+                        </div>
+                    </article>
+                </div>
+            );
+        });
+    };
+
     return (
         <React.Fragment>
             <SEO {...seo} />
@@ -85,6 +114,10 @@ export default function Products(): JSX.Element {
                     <h1>{title}</h1>
                     <p>{description}</p>
                 </article>
+
+                <section className="row">
+                    {renderProducts(products)}
+                </section>
             </Main>
         </React.Fragment>
     );

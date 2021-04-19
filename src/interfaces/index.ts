@@ -1,7 +1,7 @@
 export interface IProduct {
     name: string;
     description: string;
-    image?: {
+    image: {
         name: string;
         type: string;
         width: string;
