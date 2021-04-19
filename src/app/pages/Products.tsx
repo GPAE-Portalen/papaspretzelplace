@@ -83,7 +83,7 @@ export default function Products(): JSX.Element {
 
             return (
                 <div key={product.name} className="mb-3 col-12 col-lg-6 col-xl-4">
-                    <article key={product.name} className="card shadow">
+                    <article key={product.name} className="card shadow h-100">
                         <div className="card-img-top position-relative" style={{ height: '256px', overflow: 'hidden' }}>
                             <LazyLoadImage
                                 alt={product.name}
@@ -92,11 +92,10 @@ export default function Products(): JSX.Element {
                                 style={{ width: 'inherit', transform: 'translateY(-50%)', top: '50%' }}
                             />
                         </div>
-
-                        <div className="card-body">
+                        <div className="card-body d-flex flex-column">
                             <h5 className="card-title">{product.name}</h5>
                             <p className="card-text">{product.description}</p>
-                            <a href={uri} className="btn btn-ppp-red">Details</a>
+                            <a href={uri} className="btn btn-ppp-red mt-auto" style={{ width: 'fit-content' }}>Details</a>
                         </div>
                     </article>
                 </div>
