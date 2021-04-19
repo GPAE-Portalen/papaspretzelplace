@@ -72,6 +72,8 @@ function Product(): JSX.Element {
                     <LazyLoadImage
                         alt={product.name}
                         src={encodeURI(`/products/${product.image?.name}.${product.image?.type}`)}
+                        className="w-100"
+                        style={{ maxWidth: 'fit-content' }}
                     />
                 </article>
             </Main>
