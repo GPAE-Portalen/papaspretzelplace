@@ -6,6 +6,7 @@ import { IFacebookImage } from './SEO/FacebookHelmet';
 export interface ISEOProps {
     title: string;
     description?: string;
+    type?: string;
     image?: IFacebookImage;
 }
 
@@ -20,6 +21,13 @@ export default function SEO(props: ISEOProps): JSX.Element {
                 <meta name="og:title" content={props.title} />
                 <meta name="og:site_name" content={props.title} />
             </Helmet>
+
+            {
+                props.type &&
+                <Helmet>
+                    <meta name="og:type" content={props.type} />
+                </Helmet>
+            }
 
             {
                 props.description &&
@@ -40,6 +48,7 @@ export default function SEO(props: ISEOProps): JSX.Element {
                     <meta name="og:image:height" content={props.image.height} />
                 </Helmet>
             }
+
         </Fragment>
     );
 }

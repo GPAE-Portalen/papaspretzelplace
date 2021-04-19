@@ -16,7 +16,8 @@ export default function Products(): JSX.Element {
 
     const seo = {
         title: title,
-        description: description
+        description: description,
+        type: 'article'
     }
 
     const header = {
