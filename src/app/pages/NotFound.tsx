@@ -7,7 +7,7 @@ import Main from '../components/Main';
 import { GoogleMapsLink } from "../components/GoogleMapsLink";
 
 export default function Home(): JSX.Element {
-    const title: string = 'Papa’s Pretzel Place';
+    const title: string = "Papa's Pretzel Place";
     const description: string = '*Dough* This page does knot exist!';
     const path: string = window.location.pathname;
 

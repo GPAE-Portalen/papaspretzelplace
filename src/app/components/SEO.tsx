@@ -15,7 +15,7 @@ export default function SEO(props: ISEOProps): JSX.Element {
     return (
         <Fragment>
             <Helmet>
-                <title>{`${props.title} · Papa’s Pretzel Place`}</title>
+                <title>{`${props.title} · Papa's Pretzel Place`}</title>
                 <meta name="twitter:title" content={props.title} />
                 <meta name="og:title" content={props.title} />
                 <meta name="og:site_name" content={props.title} />

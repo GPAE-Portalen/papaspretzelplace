@@ -1,6 +1,6 @@
 [
   {
-    "name": "Papa’s Pretzel",
+    "name": "Papa's Pretzel",
     "description": "Our signature pretzel hot out of the oven!",
     "image": {
       "name": "papas_pretzel",
@@ -10,7 +10,7 @@
     }
   },
   {
-    "name": "Mini Papa’s Pretzel",
+    "name": "Mini Papa's Pretzel",
     "description": "Our signature mini pretzel hot out of the oven!",
     "image": {
       "name": "mini_papas_pretzel",

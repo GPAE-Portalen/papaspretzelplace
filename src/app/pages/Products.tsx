@@ -10,7 +10,7 @@ export default function Products(): JSX.Element {
     const [products, setProducts] = useState<IProduct[]>([]);
 
     const title: string = 'Products';
-    const description: string = 'Papa’s pretzels hot outta the oven!';
+    const description: string = "Papa's pretzels hot outta the oven!";
     const path: string = window.location.pathname;
 
     const seo = {
@@ -27,7 +27,7 @@ export default function Products(): JSX.Element {
             //const data: IProduct[] = await window.repository.getProducts();
             setProducts([
                 {
-                    "name": "Papa’s Pretzel",
+                    "name": "Papa's Pretzel",
                     "description": "Our signature pretzel hot out of the oven!",
                     "image": {
                         "name": "papas_pretzel",
@@ -37,7 +37,7 @@ export default function Products(): JSX.Element {
                     }
                 },
                 {
-                    "name": "Mini Papa’s Pretzel",
+                    "name": "Mini Papa's Pretzel",
                     "description": "Our signature mini pretzel hot out of the oven!",
                     "image": {
                         "name": "mini_papas_pretzel",

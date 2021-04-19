@@ -18,8 +18,8 @@ export interface IFacebookHelmetProps {
 
 export default function FacebookHelmet(props: IFacebookHelmetProps): JSX.Element {
     const url: string = props.url ?? 'https://www.papaspretzelplace.com/';
-    const title: string = props.title ?? 'Papa’s Pretzel Place';
-    const description: string = props.description ?? 'Papa’s Pretzel Place is a locally owned soft pretzel company.They will have a wholesale and retail location opening at 302 Mill Street Bristol PA 19007 targeted for March of 2021.';
+    const title: string = props.title ?? "Papa's Pretzel Place";
+    const description: string = props.description ?? "Papa's Pretzel Place is a locally owned soft pretzel company.They will have a wholesale and retail location opening at 302 Mill Street Bristol PA 19007 targeted for March of 2021.";
     const type: string = props.type ?? 'website';
     const image: IFacebookImage = {
         url: props.image?.url ?? 'https://papaspretzelplace.com/android-chrome-512x512.png',

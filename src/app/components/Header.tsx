@@ -11,7 +11,7 @@ export default function Header(props: IHeaderProps): JSX.Element {
     return (
         <header>
             <Container type={EContainerType.Default}>
-                <Logo alt="Papa’s Pretzel Place logo" height="100%" width="100%" className="m-auto" />
+                <Logo alt="Papa's Pretzel Place logo" height="100%" width="100%" className="m-auto" />
             </Container>
         </header>
     );
