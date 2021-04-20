@@ -29,7 +29,7 @@ function Product(): JSX.Element {
         const products = window.repository.getProducts();
 
         const findProduct: IProduct | undefined = products.find((product: IProduct) => {
-            return window.location.pathname === encodeURI(`/product/${product.name}`);
+            return window.location.pathname === encodeURI(`/products/${product.name}`);
         });
 
         if (!findProduct) {

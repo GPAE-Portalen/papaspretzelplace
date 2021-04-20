@@ -20,9 +20,9 @@ export default function App() {
             <Router>
                 <React.Suspense fallback={<div>Loading...</div>}>
                     <Switch>
-                        <Route exact path="/" component={Home} />
+                        <Route exact path="/" component={Home} />                   
                         <Route exact path="/products" component={Products} />
-                        <Route path="/product/:productName" component={Product} />
+                        <Route path="/products/:productName" component={Product} />
                         <Route path="*" component={NotFound} />
                     </Switch>
                 </React.Suspense>

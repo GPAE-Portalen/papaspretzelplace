@@ -26,7 +26,7 @@ export default function Products(): JSX.Element {
 
     const renderProducts = (products: IProduct[]): JSX.Element[] => {
         return products.map((product: IProduct) => {
-            const productPath: string = encodeURI(`/product/${product.name}`);
+            const productPath: string = encodeURI(`/products/${product.name}`);
             const imagePath: string = encodeURI(`/products/${product.image.name}.${product.image.type}`);
 
             return (
