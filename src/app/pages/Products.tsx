@@ -9,6 +9,14 @@ import Main from '../components/Main';
 
 export default function Products(): JSX.Element {
     const [products, setProducts] = useState<IProduct[]>([]);
+    const [numberOfProducts, setNumberOfProducts] = useState<number>(12);
+
+    const incrementNumberOfProducts = (increment: number): void => {
+        const increase: number = numberOfProducts + increment;
+        const increaseToMuch: boolean = increase > products.length;
+
+        setNumberOfProducts(increaseToMuch ? products.length : increase);
+    };
 
     const title: string = 'Products';
     const description: string = "Papa's pretzels hot outta the oven!";
@@ -25,7 +33,12 @@ export default function Products(): JSX.Element {
     }, []);
 
     const renderProducts = (products: IProduct[]): JSX.Element[] => {
-        return products.map((product: IProduct) => {
+        console.log(numberOfProducts);
+        console.log(products.length);
+
+        return products.filter((product: IProduct) => {
+            return products.indexOf(product) < numberOfProducts;
+        }).map((product: IProduct) => {
             const productPath: string = encodeURI(`/products/${product.name}`);
             const imagePath: string = encodeURI(`/products/${product.image.name}.${product.image.type}`);
 
@@ -41,7 +54,7 @@ export default function Products(): JSX.Element {
                         <div className="card-body d-flex flex-column">
                             <h5 className="card-title">{product.name}</h5>
                             <p className="card-text">{product.description}</p>
-                            <a href={productPath} className="btn btn-ppp-red mt-auto">Details</a>
+                            <a href={productPath} className="btn btn-ppp-red mt-auto align-self-end">Details</a>
                         </div>
                     </article>
                 </div>
@@ -63,6 +76,20 @@ export default function Products(): JSX.Element {
 
                 <section className="row">
                     {renderProducts(products)}
+
+                    <span className="text-center mt-3">{`Showing ${numberOfProducts} of ${products.length} products`}</span>
+
+                    {
+                        numberOfProducts < products.length &&
+                        <button
+                            type="button"
+                            className="btn btn-lg btn-ppp-blue text-white mx-auto mt-3"
+                            onClick={() => incrementNumberOfProducts(6)}
+                            style={{ width: 'fit-content' }}>
+                            <i className="fas fa-chevron-down"></i>
+                            <span>&nbsp;Load more products</span>
+                        </button>
+                    }
                 </section>
             </Main>
         </React.Fragment>
