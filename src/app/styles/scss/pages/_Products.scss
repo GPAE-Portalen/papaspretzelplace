@@ -1,0 +1,24 @@
+.product-card {
+    .card-img-top {
+        height: 196px;
+        position: relative;
+        overflow: hidden;
+
+        @include media-breakpoint-up(xxl) {
+            height: 256px;
+        }
+    }
+
+    img {
+        position: absolute;
+        width: inherit;
+        transform: translateY(-50%);
+        top: 50%;
+    }
+
+    .card-body {
+        a {
+            width: fit-content;
+        }
+    }
+}

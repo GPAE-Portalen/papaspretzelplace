@@ -30,20 +30,18 @@ export default function Products(): JSX.Element {
             const imagePath: string = encodeURI(`/products/${product.image.name}.${product.image.type}`);
 
             return (
-                <div key={product.name} className="mb-3 col-12 col-lg-6 col-xl-4">
-                    <article key={product.name} className="card shadow h-100">
-                        <div className="card-img-top position-relative" style={{ height: '256px', overflow: 'hidden' }}>
+                <div key={product.name} className="mb-3 col-12 col-md-6 col-lg-4">
+                    <article key={product.name} className="product-card card shadow h-100">
+                        <div className="card-img-top">
                             <LazyLoadImage
                                 alt={product.name}
                                 src={imagePath}
-                                className="position-absolute"
-                                style={{ width: 'inherit', transform: 'translateY(-50%)', top: '50%' }}
                             />
                         </div>
                         <div className="card-body d-flex flex-column">
                             <h5 className="card-title">{product.name}</h5>
                             <p className="card-text">{product.description}</p>
-                            <a href={productPath} className="btn btn-ppp-red mt-auto" style={{ width: 'fit-content' }}>Details</a>
+                            <a href={productPath} className="btn btn-ppp-red mt-auto">Details</a>
                         </div>
                     </article>
                 </div>

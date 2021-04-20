@@ -7314,3 +7314,20 @@ img {
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: "Source Serif Pro Italic"; }
+
+.product-card .card-img-top {
+  height: 196px;
+  position: relative;
+  overflow: hidden; }
+  @media (min-width: 1400px) {
+    .product-card .card-img-top {
+      height: 256px; } }
+
+.product-card img {
+  position: absolute;
+  width: inherit;
+  transform: translateY(-50%);
+  top: 50%; }
+
+.product-card .card-body a {
+  width: fit-content; }
