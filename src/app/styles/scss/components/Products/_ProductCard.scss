@@ -1,5 +1,6 @@
 .product-card {
-    transition: 0.075s ease-in all;
+    transition: 0.065s ease-in all;
+    border: 1px solid rgba(96, 159, 204, 0.125);
 
     .card-img-top {
         height: 196px;
@@ -28,13 +29,15 @@
         }
 
         &:hover {
-            transform: scale(1.04);
-            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.18) !important;
+            transform: scale(1.02);
+            box-shadow: 0 1rem 3rem rgba(96, 159, 204, .75) !important;
             cursor: pointer;
 
             .card-title {
                 text-decoration: underline;
             }
+
+            border: 1px solid rgba(96, 159, 204, 0.5);
         }
     }
 
