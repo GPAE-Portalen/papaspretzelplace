@@ -9,16 +9,17 @@ export const ProductCard = (product: IProduct): JSX.Element => {
 
     return (
         <article key={product.name} className="product-card card shadow h-100">
-            <div className="card-img-top">
+            <div className="card-img-top my-1">
                 <LazyLoadImage
                     alt={product.name}
                     src={imagePath}
+                    className="img-thumbnail border-0"
                 />
             </div>
             <div className="card-body d-flex flex-column">
                 <h5 className="card-title">{product.name}</h5>
                 <p className="card-text">{product.description}</p>
-                <a href={productPath} className="btn btn-ppp-red mt-auto align-self-end">Details</a>
+                <a href={productPath} className="btn btn-ppp-red mt-auto align-self-end stretched-link">Details</a>
             </div>
         </article>
     );

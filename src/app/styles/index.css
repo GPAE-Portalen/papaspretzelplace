@@ -7331,3 +7331,29 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 .product-card .card-body a {
   width: fit-content; }
+
+.product-card {
+  transition: 0.075s ease-in all; }
+  .product-card .card-img-top {
+    height: 196px;
+    position: relative;
+    overflow: hidden; }
+  .product-card img {
+    position: absolute;
+    width: inherit;
+    transform: translateY(-50%);
+    top: 50%; }
+  .product-card .card-body a {
+    width: fit-content; }
+  @media (min-width: 1200px) {
+    .product-card .card-body .btn {
+      align-self: flex-start !important; }
+    .product-card:hover {
+      transform: scale(1.04);
+      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.18) !important;
+      cursor: pointer; }
+      .product-card:hover .card-title {
+        text-decoration: underline; } }
+  @media (min-width: 1400px) {
+    .product-card .card-img-top {
+      height: 256px; } }
