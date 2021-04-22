@@ -18,7 +18,7 @@ export default function App() {
             </Alert>
 
             <Router>
-                <React.Suspense fallback={<div>Loading...</div>}>
+                <React.Suspense fallback={<div className="d-none">Loading...</div>}>
                     <Switch>
                         <Route exact path="/" component={Home} />                   
                         <Route exact path="/products" component={Products} />
