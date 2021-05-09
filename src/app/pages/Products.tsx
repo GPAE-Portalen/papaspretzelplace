@@ -37,7 +37,7 @@ export default function Products(): JSX.Element {
                     <p>{description}</p>
                 </article>
 
-                <ProductGrid products={products} />             
+                <ProductGrid products={products} />
             </Main>
         </React.Fragment>
     );

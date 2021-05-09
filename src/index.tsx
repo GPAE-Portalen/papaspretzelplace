@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import '@popperjs/core';
+import GoogleAnalytics, { InitializeOptions } from 'react-ga';
 
 import EnvironmentVariables from './environmentVariables';
 
@@ -23,7 +24,9 @@ declare global {
 }
 
 function initProduction() {
-    console.log('prod');
+    const trackingCode: string = 'G-MF307G4SJW';
+    const options: InitializeOptions = { standardImplementation: true };
+    GoogleAnalytics.initialize(trackingCode, options);
 }
 
 function initDevelopment() {
