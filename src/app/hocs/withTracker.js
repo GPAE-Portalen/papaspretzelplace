@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import ReactGA from "react-ga";
 
-export default (WrappedComponent, options = {}) => {
+export default function withTracker(WrappedComponent, options = {}){
     const trackPage = page => {
         ReactGA.set({
             page,
