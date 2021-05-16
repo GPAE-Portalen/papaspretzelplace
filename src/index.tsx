@@ -25,7 +25,7 @@ declare global {
 
 function initProduction() {
     const trackingCode: string = 'G-MF307G4SJW';
-    ReactGA.initialize(trackingCode);
+    ReactGA.initialize(trackingCode, { standardImplementation: true });
 }
 
 function initDevelopment() {
