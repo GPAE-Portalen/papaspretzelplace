@@ -5,8 +5,6 @@ import { BootstrapColor, bootstrapColorName } from '../enums/bootstrap';
 
 import Alert from './components/Alert';
 
-import withTracker from './hocs/withTracker';
-
 const Home = React.lazy(() => import("./pages/Home"));
 const Products = React.lazy(() => import("./pages/Products"));
 const Product = React.lazy(() => import("./pages/Product"));
@@ -22,10 +20,10 @@ export default function App() {
             <Router>
                 <React.Suspense fallback={<div className="d-none">Loading...</div>}>
                     <Switch>
-                        <Route exact path="/" component={withTracker(Home)} />
-                        <Route exact path="/products" component={withTracker(Products)} />
-                        <Route path="/products/:productName" component={withTracker(Product)} />
-                        <Route path="*" component={withTracker(NotFound)} />
+                        <Route exact path="/" component={Home} />
+                        <Route exact path="/products" component={Products} />
+                        <Route path="/products/:productName" component={Product} />
+                        <Route path="*" component={NotFound} />
                     </Switch>
                 </React.Suspense>
             </Router>
