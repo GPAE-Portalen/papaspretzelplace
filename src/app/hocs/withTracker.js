@@ -3,6 +3,8 @@ import ReactGA from "react-ga";
 
 export default function withTracker(WrappedComponent, options = {}){
     const trackPage = page => {
+        console.log(page);
+
         ReactGA.set({
             page,
             ...options
