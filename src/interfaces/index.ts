@@ -6,5 +6,6 @@ export interface IProduct {
         type: string;
         width: string;
         height: string;
-    }
+    };
+    tags?: [string];
 }

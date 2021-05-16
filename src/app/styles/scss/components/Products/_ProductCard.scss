@@ -15,12 +15,6 @@
         top: 50%;
     }
 
-    .card-body {
-        a {
-            width: fit-content;
-        }
-    }
-
     @include media-breakpoint-up(xl) {
         .card-body {
             .btn {

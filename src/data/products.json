@@ -7,7 +7,10 @@
       "type": "jpg",
       "width": "720",
       "height": "960"
-    }
+    },
+    "tags": [
+      "Signature"
+    ]
   },
   {
     "name": "Mini Papa's Pretzel",
@@ -17,7 +20,10 @@
       "type": "jpg",
       "width": "960",
       "height": "720"
-    }
+    },
+    "tags": [
+      "Signature"
+    ]
   },
   {
     "name": "Cheddar Pretzel",
@@ -27,7 +33,10 @@
       "type": "jpg",
       "width": "720",
       "height": "960"
-    }
+    },
+    "tags": [
+      "Cheese"
+    ]
   },
   {
     "name": "Jalapeño Cheddar Pretzel",
@@ -37,7 +46,11 @@
       "type": "jpg",
       "width": "720",
       "height": "960"
-    }
+    },
+    "tags": [
+      "Hot",
+      "Cheese"
+    ]
   },
   {
     "name": "Mozzaball Pretzel",
@@ -47,7 +60,10 @@
       "type": "jpg",
       "width": "720",
       "height": "960"
-    }
+    },
+    "tags": [
+      "Cheese"
+    ]
   },
   {
     "name": "OMG Pretzel",
@@ -67,7 +83,10 @@
       "type": "jpg",
       "width": "720",
       "height": "960"
-    }
+    },
+    "tags": [
+      "Meat"
+    ]
   },
   {
     "name": "Triangle Slice Pretzel",
@@ -87,7 +106,10 @@
       "type": "jpg",
       "width": "720",
       "height": "960"
-    }
+    },
+    "tags": [
+      "Carmel"
+    ]
   },
   {
     "name": "Cone Pretzel Water Ice",
@@ -97,7 +119,10 @@
       "type": "jpg",
       "width": "518",
       "height": "481"
-    }
+    },
+    "tags": [
+      "Water ice"
+    ]
   },
   {
     "name": "Mini Beef Hotdog Pretzel",
@@ -107,7 +132,10 @@
       "type": "jpg",
       "width": "720",
       "height": "960"
-    }
+    },
+    "tags": [
+      "Meat"
+    ]
   },
   {
     "name": "Philly Style",
@@ -127,7 +155,10 @@
       "type": "jpg",
       "width": "305",
       "height": "666"
-    }
+    },
+    "tags": [
+      "Sourdough"
+    ]
   },
   {
     "name": "Pork Roll & Cheese",
@@ -137,7 +168,11 @@
       "type": "jpg",
       "width": "305",
       "height": "960"
-    }
+    },
+    "tags": [
+      "Meat",
+      "Cheese"
+    ]
   },
   {
     "name": "Pretzel Log",
@@ -197,6 +232,9 @@
       "type": "jpg",
       "width": "750",
       "height": "746"
-    }
+    },
+    "tags": [
+      "Meat"
+    ]
   }
 ]
