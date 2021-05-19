@@ -3,7 +3,7 @@
     border: 1px solid rgba(96, 159, 204, 0.125);
 
     .card-img-top {
-        height: 196px;
+        height: 96px;
         position: relative;
         overflow: hidden;
     }
@@ -13,6 +13,12 @@
         width: inherit;
         transform: translateY(-50%);
         top: 50%;
+    }
+
+    @include media-breakpoint-up(md) {
+        .card-img-top{
+            display: block;
+        }
     }
 
     @include media-breakpoint-up(xl) {
@@ -37,7 +43,7 @@
 
     @include media-breakpoint-up(xxl) {
         .card-img-top {
-            height: 256px;
+            height: 196px;
         }
     }
 }

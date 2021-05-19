@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import '@popperjs/core';
 import ReactGA from 'react-ga';
+import '@popperjs/core';
+import 'bootstrap/js/dist/collapse';
 
 import EnvironmentVariables from './environmentVariables';
 

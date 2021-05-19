@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import { IProduct } from '../../../interfaces/index';
@@ -9,7 +10,7 @@ export const ProductCard = (product: IProduct): JSX.Element => {
 
     const renderTags = (tags: [string]) => tags.map((tag: string) => {
         return (
-            <span className="badge rounded-pill bg-ppp-red me-1 text-uppercase">
+            <span className="badge rounded-pill bg-ppp-beige-100 me-1 text-uppercase text-dark">
                 {tag}
             </span>
         );
@@ -25,11 +26,11 @@ export const ProductCard = (product: IProduct): JSX.Element => {
                 />
             </div>
             <div className="card-body d-flex flex-column">
-                <h4 className="card-title">
-                    <a href={productPath} className="text-decoration-none text-dark stretched-link">
+                <h5 className="card-title m-0">
+                    <Link to={productPath} className="text-decoration-none text-dark stretched-link">
                         {product.name}
-                    </a>
-                </h4>
+                    </Link>
+                </h5>
 
                 <p className="card-text">
                     {product.description}

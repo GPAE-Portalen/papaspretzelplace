@@ -42,7 +42,7 @@ export const ProductGrid = (props: ProductGridProps): JSX.Element => {
                 numberOfProducts < products.length &&
                 <button
                     type="button"
-                    className="btn btn-lg btn-ppp-blue text-white mx-auto mt-3"
+                    className="btn btn-ppp-blue text-white mx-auto mt-3"
                     onClick={() => incrementNumberOfProducts(6)}
                     style={{ width: 'fit-content' }}>
                     <i className="fas fa-chevron-down"></i>
