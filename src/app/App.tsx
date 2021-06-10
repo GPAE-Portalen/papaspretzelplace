@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { BootstrapColor, bootstrapColorName } from '../enums/bootstrap';
 
 import Alert from './components/Alert';
-import Navbar from './components/Navbar';
 
 const Home = React.lazy(() => import("./pages/Home"));
 const Products = React.lazy(() => import("./pages/Products"));
@@ -27,8 +26,6 @@ export default function App() {
                         <Route path="*" component={NotFound} />
                     </Switch>
                 </React.Suspense>
-
-                <Navbar />
             </Router>
         </React.Fragment>
     );

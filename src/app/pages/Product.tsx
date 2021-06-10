@@ -7,6 +7,7 @@ import { IProduct } from '../../interfaces/index';
 import SEO, { ISEOProps } from '../components/SEO';
 import Header from '../components/Header';
 import Main from '../components/Main';
+import Navbar from '../components/Navbar';
 
 interface IProductRouteProps {
     productName: string;
@@ -77,6 +78,8 @@ function Product(): JSX.Element {
                     />
                 </article>
             </Main>
+
+            <Navbar />
         </React.Fragment>
     );
 }

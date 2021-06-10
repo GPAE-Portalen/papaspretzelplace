@@ -5,6 +5,7 @@ import { IProduct } from '../../interfaces/index';
 import SEO from '../components/SEO';
 import Header from '../components/Header';
 import Main from '../components/Main';
+import Navbar from '../components/Navbar';
 
 import { ProductGrid } from '../components/Products/ProductGrid';
 
@@ -39,6 +40,8 @@ export default function Products(): JSX.Element {
 
                 <ProductGrid products={products} />
             </Main>
+
+            <Navbar />
         </React.Fragment>
     );
 }
