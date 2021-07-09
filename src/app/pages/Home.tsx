@@ -19,7 +19,7 @@ export default function Home(): JSX.Element {
 
                 <section className="text-center">
                     <article>
-                        <h1>{title}</h1>
+                        <h1 className="display-4">{title}</h1>
                         <p>{description}</p>
                     </article>
 
