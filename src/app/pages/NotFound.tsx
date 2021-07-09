@@ -4,6 +4,7 @@ import Main from '../components/Main';
 import Header from '../components/Header';
 
 import { GoogleMapsLink } from "../components/GoogleMapsLink";
+import { Offcanvas } from "../components/Offcanvas";
 
 export default function Home(): JSX.Element {
     const title: string = "Papa's Pretzel Place";
@@ -12,9 +13,7 @@ export default function Home(): JSX.Element {
     return (
         <React.Fragment>
             <Main>
-                <div className="d-flex justify-content-end">
-                    <i className="bi bi-justify-right fs-2"></i>
-                </div>
+                <Offcanvas />
 
                 <Header />
 
