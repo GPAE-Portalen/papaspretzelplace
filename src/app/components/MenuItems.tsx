@@ -64,7 +64,7 @@ export const MenuItems = (): JSX.Element => {
                 <hr />
 
                 <dt>Italian Ice</dt>
-                <dd className="ms-3">
+                <dd className="ms-2">
                     <div>
                         <span>Kid Size</span>
                         <Divider />
@@ -90,7 +90,7 @@ export const MenuItems = (): JSX.Element => {
                 <hr />
 
                 <dt>OMG (Regular)</dt>
-                <dd className="ms-3">
+                <dd className="ms-2">
                     <div>
                         <span>Regular Size</span>
                         <Divider />
@@ -110,7 +110,7 @@ export const MenuItems = (): JSX.Element => {
                 <hr />
 
                 <dt>Sugar Cinnamon</dt>
-                <dd className="ms-3">
+                <dd className="ms-2">
                     <div>
                         <span>Regular Size</span>
                         <Divider />
@@ -130,7 +130,7 @@ export const MenuItems = (): JSX.Element => {
                 <hr />
 
                 <dt>All Flavors Specialt Pretzels</dt>
-                <dd className="ms-3">
+                <dd className="ms-2">
                     <SingleMenuItemPrice value={5} />
                     <Divider />
                     <MultipleMenuItemPrice quantity={5} value={20} />
@@ -139,7 +139,7 @@ export const MenuItems = (): JSX.Element => {
                 <hr />
 
                 <dt>Pretzel Dogs</dt>
-                <dd className="ms-3">
+                <dd className="ms-2">
                     <div>
                         <span>Regular Size</span>
                         <Divider />
@@ -155,28 +155,28 @@ export const MenuItems = (): JSX.Element => {
                 <hr />
 
                 <dt>Pretzel Pizza Pocket</dt>
-                <dd className="ms-3">
+                <dd className="ms-2">
                     <Money value={5} />
                 </dd>
 
                 <hr />
 
                 <dt>Pretzel Porkroll Links</dt>
-                <dd className="ms-3">
+                <dd className="ms-2">
                     <Money value={5} />
                 </dd>
 
                 <hr />
 
                 <dt>All Other Pretzel Sandwiches</dt>
-                <dd className="ms-3">
+                <dd className="ms-2">
                     <Money value={6} />
                 </dd>
 
                 <hr />
 
                 <dt>Nuggets</dt>
-                <dd className="ms-3">
+                <dd className="ms-2">
                     <div>
                         <MultipleMenuItemPrice quantity={25} value={8} />
                     </div>
@@ -188,7 +188,7 @@ export const MenuItems = (): JSX.Element => {
                 <hr />
 
                 <dt>Specialty Nuggets</dt>
-                <dd className="ms-3">
+                <dd className="ms-2">
                     <div>
                         <MultipleMenuItemPrice quantity={12} value={8} />
                     </div>
@@ -200,7 +200,7 @@ export const MenuItems = (): JSX.Element => {
                 <hr />
 
                 <dt>Soft Drinks</dt>
-                <dd className="ms-3">
+                <dd className="ms-2">
                     <div>
                         <Ounces value={16} />
                         <Divider />
@@ -216,7 +216,7 @@ export const MenuItems = (): JSX.Element => {
                 <hr />
 
                 <dt>Bottled Water</dt>
-                <dd className="ms-3">
+                <dd className="ms-2">
                     <Money value={1.50} />
                 </dd>
             </dl>
