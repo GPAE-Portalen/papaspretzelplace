@@ -5,7 +5,7 @@ interface IMoneyProps {
 }
 
 const Money = (props: IMoneyProps): JSX.Element => {
-    const hasDecimal: boolean = props.value % 1 != 0;
+    const hasDecimal: boolean = props.value % 1 !== 0;
     const valueWithDecimal: string = hasDecimal ? props.value.toFixed(2) : `${props.value}.00`;
     const dollarValueDecimal: string = '$' + valueWithDecimal;
 
