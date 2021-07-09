@@ -23,7 +23,7 @@ export const Offcanvas = (): JSX.Element => {
                     </section>
 
                     <section>
-                        <nav>
+                        <nav className="pb-3 my-4">
                             <ul className="navbar-nav">
                                 <li className="nav-item">
                                     <Link to="/" className="nav-link" data-bs-dismiss="offcanvas">
