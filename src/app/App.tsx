@@ -6,11 +6,12 @@ import { BootstrapColor, bootstrapColorName } from '../enums/bootstrap';
 import Alert from './components/Alert';
 
 const Home = React.lazy(() => import("./pages/Home"));
+const Menu = React.lazy(() => import("./pages/Menu"));
 const Products = React.lazy(() => import("./pages/Products"));
 const Product = React.lazy(() => import("./pages/Product"));
 const NotFound = React.lazy(() => import("./pages/NotFound"));
 
-export default function App() {
+function AppOld() {
     return (
         <React.Fragment>
             <Alert type={bootstrapColorName[BootstrapColor.Light]} className={`border-bottom color-${bootstrapColorName[BootstrapColor.PppRed]}`}>
@@ -23,6 +24,22 @@ export default function App() {
                         <Route exact path="/" component={Home} />
                         <Route exact path="/products" component={Products} />
                         <Route path="/products/:productName" component={Product} />
+                        <Route path="*" component={NotFound} />
+                    </Switch>
+                </React.Suspense>
+            </Router>
+        </React.Fragment>
+    );
+}
+
+export default function App() {
+    return (
+        <React.Fragment>
+            <Router>
+                <React.Suspense fallback={<div className="d-none">Loading...</div>}>
+                    <Switch>
+                        <Route exact path="/" component={Home} />
+                        <Route exact path="/menu" component={Menu} />
                         <Route path="*" component={NotFound} />
                     </Switch>
                 </React.Suspense>

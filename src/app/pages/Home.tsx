@@ -1,25 +1,42 @@
 import React from "react";
 
-import Header from '../components/Header';
 import Main from '../components/Main';
+import Header from '../components/Header';
 
+import { Offcanvas } from "../components/Offcanvas";
 import { GoogleMapsLink } from "../components/GoogleMapsLink";
 
 export default function Home(): JSX.Element {
     const title: string = "Papa's Pretzel Place";
-    const description: string = "Papa's Pretzel Place is a locally owned soft pretzel company. They will have a wholesale and retail location opening at 302 Mill Street, Bristol, PA 19007 targeted for March of 2021.";
+    const description: string = "Papa's Pretzel Place is a locally owned soft pretzel company. They will have a wholesale and retail location opening at 302 Mill Street, Bristol, PA 19007 targeted for 10th July of 2021.";
 
     return (
         <React.Fragment>
-            <Header  />
-
             <Main>
-                <article className="text-center">
-                    <h1>{title}</h1>
-                    <p>{description}</p>
+                <Offcanvas />
+
+                <Header />
+
+                <section className="text-center">
+                    <article>
+                        <h1>{title}</h1>
+                        <p>{description}</p>
+                    </article>
+
                     <GoogleMapsLink />
-                    <a className="btn btn-ppp-red d-inline-block ms-3" href="https://www.facebook.com/papaspretzelplace" target="_blank" rel="noreferrer" style={{ minWidth: '150px', borderRadius: '2rem' }}>Facebook page</a>
-                </article>
+
+                    <div className="d-flex justify-content-end mb-3 mx-auto" style={{ maxWidth: '500px' }}>
+                        <a href="https://www.instagram.com/papaspretzelplace/" target="_blank" rel="noreferrer" className="btn btn-sm btn-secondary fw-bold w-50 bg-ig">
+                            <i className="bi bi-instagram"></i>
+                            <span>&nbsp;Instagram</span>
+                        </a>
+
+                        <a href="https://www.facebook.com/papaspretzelplace/" target="_blank" rel="noreferrer" className="btn btn-sm btn-primary ms-2 fw-bold w-50">
+                            <i className="bi bi-facebook"></i>
+                            <span>&nbsp;Facebook</span>
+                        </a>
+                    </div>
+                </section>
             </Main>
         </React.Fragment>
     );

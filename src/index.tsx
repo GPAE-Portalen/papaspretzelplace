@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import ReactGA from 'react-ga';
 import '@popperjs/core';
-import 'bootstrap/js/dist/collapse';
+import 'bootstrap/js/dist/offcanvas';
 
 import EnvironmentVariables from './environmentVariables';
 

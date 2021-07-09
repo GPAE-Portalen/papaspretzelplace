@@ -1,8 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-import Header from '../components/Header';
 import Main from '../components/Main';
+import Header from '../components/Header';
 
 import { GoogleMapsLink } from "../components/GoogleMapsLink";
 
@@ -12,25 +11,36 @@ export default function Home(): JSX.Element {
 
     return (
         <React.Fragment>
-            <Header />
-
             <Main>
-                <article className="text-center">
-                    <h1>
-                        <small className="text-muted d-block">404</small>
-                        <div>{title}</div>
-                    </h1>
+                <div className="d-flex justify-content-end">
+                    <i className="bi bi-justify-right fs-2"></i>
+                </div>
 
-                    <p>{description}</p>
+                <Header />
+
+                <section className="text-center">
+                    <article>
+                        <h1>
+                            <small className="text-muted d-block">404</small>
+                            <div>{title}</div>
+                        </h1>
+                        <p>{description}</p>
+                    </article>
 
                     <GoogleMapsLink />
 
-                    <Link to="/" className="btn btn-ppp-beige" style={{ minWidth: '150px', borderRadius: '2rem' }}>
-                        Home
-                    </Link>
+                    <div className="d-flex justify-content-end mb-3 mx-auto" style={{ maxWidth: '500px' }}>
+                        <a href="https://www.instagram.com/papaspretzelplace/" target="_blank" rel="noreferrer" className="btn btn-sm btn-secondary fw-bold w-50 bg-ig">
+                            <i className="bi bi-instagram"></i>
+                            <span>&nbsp;Instagram</span>
+                        </a>
 
-                    <a className="btn btn-ppp-red d-inline-block ms-3" href="https://www.facebook.com/papaspretzelplace" target="_blank" rel="noreferrer" style={{ minWidth: '150px', borderRadius: '2rem' }}>Facebook page</a>
-                </article>
+                        <a href="https://www.facebook.com/papaspretzelplace/" target="_blank" rel="noreferrer" className="btn btn-sm btn-primary ms-2 fw-bold w-50">
+                            <i className="bi bi-facebook"></i>
+                            <span>&nbsp;Facebook</span>
+                        </a>
+                    </div>
+                </section>
             </Main>
         </React.Fragment>
     );
