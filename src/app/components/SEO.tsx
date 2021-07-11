@@ -4,17 +4,19 @@ import { Helmet } from 'react-helmet';
 import { IFacebookImage } from './SEO/FacebookHelmet';
 
 export interface ISEOProps {
-    title: string;
+    title?: string;
     description?: string;
     type?: string;
     image?: IFacebookImage;
 }
 
 export default function SEO(props: ISEOProps): JSX.Element {
+    const title: string = props.title ? `${props.title} · Papa's Pretzel Place` : "Papa's Pretzel Place";
+
     return (
         <Fragment>
             <Helmet>
-                <title>{`${props.title} · Papa's Pretzel Place`}</title>
+                <title>{title}</title>
                 <meta name="twitter:title" content={props.title} />
                 <meta name="og:title" content={props.title} />
                 <meta name="og:site_name" content={props.title} />

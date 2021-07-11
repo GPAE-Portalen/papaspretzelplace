@@ -1,5 +1,6 @@
 import React from "react";
 
+import SEO, { ISEOProps } from "../components/SEO";
 import Main from '../components/Main';
 import Header from '../components/Header';
 
@@ -10,9 +11,15 @@ export default function Home(): JSX.Element {
     const title: string = "Papa's Pretzel Place";
     const description: string = "Papa's Pretzel Place is a locally owned soft pretzel company. They will have a wholesale and retail location soft opening at 302 Mill Street, Bristol, PA 19007 targeted for 10th July of 2021.";
 
+    const seo: ISEOProps = {
+        description
+    }
+
     return (
         <React.Fragment>
             <Main>
+                <SEO {...seo} />
+
                 <Offcanvas />
 
                 <Header />
