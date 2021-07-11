@@ -1,24 +1,22 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import { GoogleMapsLink } from './GoogleMapsLink';
 
-import Header from './Header';
+import { Address } from './Address';
 
 export const Offcanvas = (): JSX.Element => {
     return (
         <Fragment>
-            <div className="d-flex justify-content-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                <i className="bi bi-justify-right fs-2"></i>
+            <div className="d-flex justify-content-end">
+                <i className="bi bi-justify-right fs-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
             </div>
 
             <div className="offcanvas offcanvas-end" tabIndex={-1} id="offcanvasRight">
                 <div className="offcanvas-header justify-content-end">
                     <i className="bi bi-x-lg" data-bs-dismiss="offcanvas"></i>
                 </div>
+
                 <div className="offcanvas-body text-center d-flex flex-column">
                     <section>
-                        <Header />
-
                         <p>Fresh Pretzels with an Artisan Twist!</p>
                     </section>
 
@@ -52,7 +50,7 @@ export const Offcanvas = (): JSX.Element => {
                             </a>
                         </div>
 
-                        <GoogleMapsLink />
+                        <Address />
                     </section>
                 </div>
             </div>

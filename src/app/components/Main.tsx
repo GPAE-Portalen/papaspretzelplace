@@ -5,15 +5,19 @@ import { Container, EContainerType } from './Container';
 export interface IMainProps {
     children: React.ReactNode;
     classNames?: string;
+    style?: React.CSSProperties;
 }
 
 export default function Main(props: IMainProps): JSX.Element {
     const standardClassNames: string = 'py-3 mb-5 mx-auto';
     const classNames: string = props.classNames ? `${standardClassNames} ${props.classNames}` : standardClassNames;
 
+    const standardStyle: React.CSSProperties = { };
+    const style: React.CSSProperties = Object.assign(standardStyle, props.style);
+
     return (
-        <main role="main" className={classNames} style={{ maxWidth: '680px' }}>
-            <Container type={EContainerType.Default} className="mb-3">
+        <main role="main" className={classNames} style={style}>
+            <Container type={EContainerType.Default}>
                 {props.children}
             </Container>
         </main>

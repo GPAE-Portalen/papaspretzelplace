@@ -1,10 +1,11 @@
-export interface IGoogleMapsLinkProps {
+import React from 'react';
+
+export interface IAddressProps {
     className?: string;
 }
 
-export const GoogleMapsLink = (props: IGoogleMapsLinkProps): JSX.Element => {
+export const Address = (props: IAddressProps): JSX.Element => {
     const address: string = '302 Mill Street, Bristol, PA 19007';
-    //const addressClean: string = address.replaceAll(',', '');
     const addressUrl: string = encodeURI(address);
 
     return (

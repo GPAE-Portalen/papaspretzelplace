@@ -14,11 +14,18 @@ export interface IContainerProps {
     type: EContainerType;
     children: React.ReactNode;
     className?: string;
+    style?: React.CSSProperties;
 }
 
 export const Container = (props: IContainerProps): JSX.Element => {
+    const standardClassName: string = '';
+    const className: string = `${standardClassName}container${containerTypeClassName[props.type]}${props.className ? ` ${props.className}` : ''}`
+
+    const standardStyle: React.CSSProperties = { maxWidth: '680px' };
+    const style: React.CSSProperties = Object.assign(standardStyle, props.style);
+
     return (
-        <div className={`container${containerTypeClassName[props.type]}${props.className ? ` ${props.className}` : ''}`}>
+        <div className={className} style={style}>
             {props.children}
         </div>
     );

@@ -1,11 +1,11 @@
 import React from "react";
 
 import SEO, { ISEOProps } from "../components/SEO";
-import Main from '../components/Main';
 import Header from '../components/Header';
+import Main from '../components/Main';
+import Footer from '../components/Footer';
 
-import { Offcanvas } from "../components/Offcanvas";
-import { GoogleMapsLink } from "../components/GoogleMapsLink";
+import { Address } from "../components/Address";
 
 export default function Home(): JSX.Element {
     const title: string = "Papa's Pretzel Place";
@@ -17,20 +17,18 @@ export default function Home(): JSX.Element {
 
     return (
         <React.Fragment>
+            <SEO {...seo} />
+
+            <Header />
+
             <Main>
-                <SEO {...seo} />
-
-                <Offcanvas />
-
-                <Header />
-
                 <section className="text-center">
                     <article>
                         <h1 className="display-4">{title}</h1>
                         <p>{description}</p>
                     </article>
 
-                    <GoogleMapsLink />
+                    <Address />
 
                     <div className="d-flex justify-content-end mb-3 mx-auto" style={{ maxWidth: '500px' }}>
                         <a href="https://www.instagram.com/papaspretzelplace/" target="_blank" rel="noreferrer" className="btn btn-sm btn-secondary fw-bold w-50 bg-ig">
@@ -45,6 +43,8 @@ export default function Home(): JSX.Element {
                     </div>
                 </section>
             </Main>
+
+            <Footer />
         </React.Fragment>
     );
 }
