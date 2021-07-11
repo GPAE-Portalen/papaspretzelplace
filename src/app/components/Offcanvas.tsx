@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
+import { Logo } from './Logo';
 import { Address } from './Address';
 
 export const Offcanvas = (): JSX.Element => {
@@ -15,30 +16,31 @@ export const Offcanvas = (): JSX.Element => {
                     <i className="bi bi-x-lg" data-bs-dismiss="offcanvas"></i>
                 </div>
 
-                <div className="offcanvas-body text-center d-flex flex-column">
-                    <section>
-                        <p>Fresh Pretzels with an Artisan Twist!</p>
-                    </section>
+                <div className="offcanvas-body d-flex flex-column">
+                    <section className="mb-4">
+                        <Logo alt="Papa's Pretzel Place Logo" height="260px" />
 
-                    <section>
-                        <nav className="pb-3 my-4">
-                            <ul className="navbar-nav">
-                                <li className="nav-item">
-                                    <Link to="/" className="nav-link" data-bs-dismiss="offcanvas">
+                        <p className="text-center">Fresh Pretzels with an Artisan Twist!</p>
+
+                        <nav className="py-3">
+                            <ul className="navbar-nav text-center">
+                                <li className="nav-item bg-ppp-red shadow fw-bold rounded">
+                                    <Link to="/" className="nav-link text-white p-1" data-bs-dismiss="offcanvas">
                                         Home
-                                </Link>
+                                    </Link>
                                 </li>
-                                <li className="nav-item">
-                                    <Link to="/menu" className="nav-link" data-bs-dismiss="offcanvas">
+
+                                <li className="nav-item bg-ppp-red mt-3 shadow fw-bold rounded">
+                                    <Link to="/menu" className="nav-link text-white p-1" data-bs-dismiss="offcanvas">
                                         Menu
-                                </Link>
+                                    </Link>
                                 </li>
                             </ul>
                         </nav>
                     </section>
 
                     <section className="mt-auto">
-                        <div className="d-flex justify-content-end mb-3 mx-auto" style={{ maxWidth: '500px' }}>
+                        <div className="d-flex justify-content-end my-3 mx-auto">
                             <a href="https://www.instagram.com/papaspretzelplace/" target="_blank" rel="noreferrer" className="btn btn-sm btn-secondary fw-bold w-50 bg-ig">
                                 <i className="bi bi-instagram"></i>
                                 <span>&nbsp;Instagram</span>

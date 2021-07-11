@@ -9,7 +9,7 @@ export interface IMainProps {
 }
 
 export default function Main(props: IMainProps): JSX.Element {
-    const standardClassNames: string = 'py-3 mb-5 mx-auto';
+    const standardClassNames: string = 'py-3 mb-4 mx-auto w-100';
     const classNames: string = props.classNames ? `${standardClassNames} ${props.classNames}` : standardClassNames;
 
     const standardStyle: React.CSSProperties = { };

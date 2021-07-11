@@ -1,7 +1,7 @@
 {
   "name": "papaspretzelplace.com",
   "description": "Papa's Pretzel Place is a locally owned soft pretzel company. They will have a wholesale and retail location soft opening at 302 Mill Street, Bristol, PA 19007 targeted for 10th July of 2021.",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "private": true,
   "author": {
     "name": "Michael Beck",

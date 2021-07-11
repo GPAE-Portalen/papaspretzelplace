@@ -1,15 +1,15 @@
-import React from "react";
+﻿import React from "react";
 
 import SEO, { ISEOProps } from "../components/SEO";
 import Header from '../components/Header';
 import Main from '../components/Main';
 import Footer from '../components/Footer';
 
-import { Address } from "../components/Address";
+import { Logo } from '../components/Logo';
 
 export default function Home(): JSX.Element {
     const title: string = "Papa's Pretzel Place";
-    const description: string = "Papa's Pretzel Place is a locally owned soft pretzel company. They will have a wholesale and retail location soft opening at 302 Mill Street, Bristol, PA 19007 targeted for 10th July of 2021.";
+    const description: string = 'Fresh Pretzel with an Artisan Twist!'
 
     const seo: ISEOProps = {
         description
@@ -22,13 +22,13 @@ export default function Home(): JSX.Element {
             <Header />
 
             <Main>
+                <Logo alt="Papa's Pretzel Place Logo" height="260px" className="mb-3" />
+
                 <section className="text-center">
                     <article>
                         <h1 className="display-4">{title}</h1>
                         <p>{description}</p>
                     </article>
-
-                    <Address />
 
                     <div className="d-flex justify-content-end mb-3 mx-auto" style={{ maxWidth: '500px' }}>
                         <a href="https://www.instagram.com/papaspretzelplace/" target="_blank" rel="noreferrer" className="btn btn-sm btn-secondary fw-bold w-50 bg-ig">
