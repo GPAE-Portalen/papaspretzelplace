@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
 import { Logo } from './Logo';
+import { SocialsButton } from '../components/SocialsButton';
 import { Address } from './Address';
 
 export const Offcanvas = (): JSX.Element => {
@@ -40,17 +41,7 @@ export const Offcanvas = (): JSX.Element => {
                     </section>
 
                     <section className="mt-auto">
-                        <div className="d-flex justify-content-end my-3 mx-auto">
-                            <a href="https://www.instagram.com/papaspretzelplace/" target="_blank" rel="noreferrer" className="btn btn-sm btn-secondary fw-bold w-50 bg-ig">
-                                <i className="bi bi-instagram"></i>
-                                <span>&nbsp;Instagram</span>
-                            </a>
-
-                            <a href="https://www.facebook.com/papaspretzelplace/" target="_blank" rel="noreferrer" className="btn btn-sm btn-primary ms-2 fw-bold w-50">
-                                <i className="bi bi-facebook"></i>
-                                <span>&nbsp;Facebook</span>
-                            </a>
-                        </div>
+                        <SocialsButton />
 
                         <Address />
                     </section>

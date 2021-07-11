@@ -6,6 +6,7 @@ import Main from '../components/Main';
 import Footer from '../components/Footer';
 
 import { Logo } from '../components/Logo';
+import { SocialsButton } from '../components/SocialsButton';
 import { MenuItems } from '../components/MenuItems';
 
 export default function Menu(): JSX.Element {
@@ -35,17 +36,7 @@ export default function Menu(): JSX.Element {
                         <p>{description}</p>
                     </article>
 
-                    <div className="d-flex justify-content-end mb-3 mx-auto" style={{ maxWidth: '500px' }}>
-                        <a href="https://www.instagram.com/papaspretzelplace/" target="_blank" rel="noreferrer" className="btn btn-sm btn-secondary fw-bold w-50 bg-ig">
-                            <i className="bi bi-instagram"></i>
-                            <span>&nbsp;Instagram</span>
-                        </a>
-
-                        <a href="https://www.facebook.com/papaspretzelplace/" target="_blank" rel="noreferrer" className="btn btn-sm btn-primary ms-2 fw-bold w-50">
-                            <i className="bi bi-facebook"></i>
-                            <span>&nbsp;Facebook</span>
-                        </a>
-                    </div>
+                    <SocialsButton />
 
                     <p>PA State Sales Tax 6%</p>
                 </section>

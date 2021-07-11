@@ -12,7 +12,7 @@ export const Logo = (props: ILogoProps): JSX.Element => {
     const standardClassNames: string = 'position-relative overflow-hidden mb-3';
     const classNames: string = props.className ? `${standardClassNames} ${props.className}` : standardClassNames;
 
-    const standardStyle: React.CSSProperties = { height: `calc(${props.height} + 100px)`, transform: `translate(-50%, calc(50% - (${props.height} + 100px))`, top: '50%', left: '50%' };
+    const standardStyle: React.CSSProperties = { height: `calc(${props.height} + 100px)`, transform: `translate(-50%, calc(50% - (${props.height} + 100px))`, top: '50%', left: '50%', maxWidth: '180%' };
     const style: React.CSSProperties = Object.assign(standardStyle, props.style);
 
     return (
