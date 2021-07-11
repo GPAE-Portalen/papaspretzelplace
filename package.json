@@ -1,7 +1,7 @@
 {
   "name": "papaspretzelplace.com",
-  "description": "Papa's Pretzel Place is a locally owned soft pretzel company. They will have a wholesale and retail location opening at 302 Mill Street, Bristol, PA 19007 targeted for March of 2021.",
-  "version": "0.3.0",
+  "description": "Papa's Pretzel Place is a locally owned soft pretzel company. They will have a wholesale and retail location soft opening at 302 Mill Street, Bristol, PA 19007 targeted for 10th July of 2021.",
+  "version": "0.5.0",
   "private": true,
   "author": {
     "name": "Michael Beck",
@@ -9,8 +9,8 @@
     "email": "papaspretzelplace@gmail.com"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^1.5.1",
-    "@types/react-router": "^5.1.14",
+    "@reduxjs/toolkit": "^1.6.0",
+    "@types/react-router": "^5.1.16",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-facebook-pixel": "^1.0.4",
@@ -20,7 +20,7 @@
     "react-lazy-load-image-component": "^1.5.1",
     "react-redux": "^7.2.3",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^4.0.3",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
@@ -32,8 +32,8 @@
     "css-watch": "run-p css-watch-dev css-watch-min",
     "css-watch-dev": "npm run css-build -- --watch",
     "css-watch-min": "npm run css-compile -- --watch",
-    "css-build": "node-sass-chokidar src/app/styles/index.scss src/app/styles/index.css",
-    "css-compile": "node-sass-chokidar --output-style compressed src/app/styles/index.scss src/app/styles/index.min.css",
+    "css-build": "node-sass src/app/styles/index.scss src/app/styles/index.css",
+    "css-compile": "node-sass --output-style compressed src/app/styles/index.scss src/app/styles/index.min.css",
     "css-prefix": "postcss --no-map --use autoprefixer --output src/app/styles/index.min.css src/app/styles/index.min.css"
   },
   "eslintConfig": {
@@ -56,24 +56,24 @@
   },
   "devDependencies": {
     "@popperjs/core": "^2.9.2",
-    "@testing-library/jest-dom": "^5.11.10",
-    "@testing-library/react": "^11.2.6",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
-    "@types/jest": "^26.0.22",
-    "@types/node": "^12.20.10",
-    "@types/react": "^17.0.3",
-    "@types/react-dom": "^17.0.3",
-    "@types/react-helmet": "^6.1.1",
-    "@types/react-lazy-load-image-component": "^1.5.1",
-    "@types/react-redux": "^7.1.16",
-    "@types/react-router-dom": "^5.1.7",
-    "autoprefixer": "^10.2.5",
-    "bootstrap": "^5.0.0",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^12.20.16",
+    "@types/react": "^17.0.14",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-helmet": "^6.1.2",
+    "@types/react-lazy-load-image-component": "^1.5.2",
+    "@types/react-redux": "^7.1.18",
+    "@types/react-router-dom": "^5.1.8",
+    "autoprefixer": "^10.3.0",
+    "bootstrap": "^5.0.2",
     "cross-env": "^7.0.3",
-    "node-sass-chokidar": "^1.5.0",
+    "node-sass": "^6.0.1",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.2.10",
+    "postcss": "^8.3.5",
     "postcss-cli": "^8.3.1",
-    "typescript": "^4.2.4"
+    "typescript": "^4.3.5"
   }
 }
