@@ -1,4 +1,4 @@
-import Header from "./Header";
+import React from 'react';
 
 export interface ILogoProps {
     alt: string;
