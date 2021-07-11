@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 
 import SEO, { ISEOProps } from "../components/SEO";
 import Header from '../components/Header';
