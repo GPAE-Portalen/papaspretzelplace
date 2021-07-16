@@ -8072,6 +8072,18 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .bg-ig {
   background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
 
+#front {
+  background-color: rgba(0, 0, 0, 0.5); }
+
+#front-bg {
+  height: 400px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: -500; }
+
 .product-card .card-img-top {
   height: 196px;
   position: relative;

@@ -10,7 +10,7 @@ import { SocialsButton } from '../components/SocialsButton';
 
 export default function Home(): JSX.Element {
     const title: string = "Papa's Pretzel Place";
-    const description: string = 'Fresh Pretzel with an Artisan Twist!'
+    const description: string = "Papa's Pretzel Place is a locally owned soft pretzel company.They are a wholesale and retail soft pretzel bakery and eatery at 302 Mill Street, Bristol, PA 19007 open daily.";
 
     const seo: ISEOProps = {
         description
@@ -36,6 +36,14 @@ export default function Home(): JSX.Element {
             </Main>
 
             <Footer />
-        </React.Fragment>
+        </React.Fragment >
+    );
+}
+
+const Front = (): JSX.Element => {
+    return (
+        <div id="front">
+            <div id="front-bg" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/store.jpg)` }}></div>
+        </div>
     );
 }

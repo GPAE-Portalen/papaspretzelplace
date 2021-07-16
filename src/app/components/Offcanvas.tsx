@@ -9,7 +9,7 @@ export const Offcanvas = (): JSX.Element => {
     return (
         <Fragment>
             <div className="d-flex justify-content-end">
-                <i className="bi bi-justify-right fs-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
+                <i className="bi bi-justify-right text-white" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style={{ fontSize: '1.75rem' }}></i>
             </div>
 
             <div className="offcanvas offcanvas-end" tabIndex={-1} id="offcanvasRight">
@@ -20,8 +20,6 @@ export const Offcanvas = (): JSX.Element => {
                 <div className="offcanvas-body d-flex flex-column">
                     <section className="mb-4">
                         <Logo alt="Papa's Pretzel Place Logo" height="260px" />
-
-                        <p className="text-center">Fresh Pretzels with an Artisan Twist!</p>
 
                         <nav className="py-3">
                             <ul className="navbar-nav text-center">

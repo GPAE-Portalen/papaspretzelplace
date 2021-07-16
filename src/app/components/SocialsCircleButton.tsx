@@ -1,5 +1,5 @@
 export const SocialsCircleButton = (): JSX.Element => (
-    <div className="d-flex mb-2">
+    <div className="d-flex">
         <a href="https://www.instagram.com/papaspretzelplace/" target="_blank" rel="noreferrer" className="btn btn-secondary bg-ig rounded-circle">
             <i className="bi bi-instagram"></i>
         </a>

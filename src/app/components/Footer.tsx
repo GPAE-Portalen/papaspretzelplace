@@ -15,7 +15,7 @@ export default function Footer(props: IFooterProps): JSX.Element {
             <Container type={EContainerType.Default} className="py-3">
                 <Address className="mb-2" />
 
-                <SocialsCircleButton />
+                <Lowbar />
             </Container>
 
             <section className="bg-light py-1">
@@ -24,5 +24,20 @@ export default function Footer(props: IFooterProps): JSX.Element {
                 </Container>
             </section>
         </footer>
+    );
+}
+
+const Lowbar = (): JSX.Element => {
+    return (
+        <div className="d-flex justify-content-between flex-wrap align-items-center mb-2">
+            <SocialsCircleButton />
+
+            <div>
+                <a href="#" className="text-center">
+                    <i className="bi bi-arrow-up d-block fs-5"></i>
+                    <span>Back to top</span>
+                </a>
+            </div>
+        </div>
     );
 }

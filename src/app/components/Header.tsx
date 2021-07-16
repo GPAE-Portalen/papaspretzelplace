@@ -10,8 +10,8 @@ export interface IHeaderProps {
 
 export default function Header(props: IHeaderProps): JSX.Element {
     return (
-        <header>
-            <Container type={EContainerType.Default} className="py-2">
+        <header className="navbar fixed-top bg-ppp-red bg-gradient shadow">
+            <Container type={EContainerType.Default} className="justify-content-end">
                 <Offcanvas />
             </Container>
         </header>
