@@ -40,6 +40,7 @@ export default function Home(): JSX.Element {
     );
 }
 
+/*
 const Front = (): JSX.Element => {
     return (
         <div id="front">
@@ -47,3 +48,4 @@ const Front = (): JSX.Element => {
         </div>
     );
 }
+*/
