@@ -28,15 +28,19 @@ export default function Footer(props: IFooterProps): JSX.Element {
 }
 
 const Lowbar = (): JSX.Element => {
+    const scrollTop = (): void => {
+        window.scrollTo(0, 0);
+    };
+
     return (
         <div className="d-flex justify-content-between flex-wrap align-items-center mb-2">
             <SocialsCircleButton />
 
             <div>
-                <a href="#" className="text-center">
+                <button type="button" className="btn btn-link text-center" onClick={scrollTop}>
                     <i className="bi bi-arrow-up d-block fs-5"></i>
                     <span>Back to top</span>
-                </a>
+                </button>
             </div>
         </div>
     );
