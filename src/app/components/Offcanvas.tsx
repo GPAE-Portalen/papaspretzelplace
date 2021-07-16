@@ -23,13 +23,13 @@ export const Offcanvas = (): JSX.Element => {
 
                         <nav className="py-3">
                             <ul className="navbar-nav text-center">
-                                <li className="nav-item bg-ppp-red shadow fw-bold rounded">
+                                <li className="nav-item bg-ppp-red bg-gradient shadow fw-bold rounded">
                                     <Link to="/" className="nav-link text-white p-1" data-bs-dismiss="offcanvas">
                                         Home
                                     </Link>
                                 </li>
 
-                                <li className="nav-item bg-ppp-red mt-3 shadow fw-bold rounded">
+                                <li className="nav-item bg-ppp-red bg-gradient mt-3 shadow fw-bold rounded">
                                     <Link to="/menu" className="nav-link text-white p-1" data-bs-dismiss="offcanvas">
                                         Menu
                                     </Link>
