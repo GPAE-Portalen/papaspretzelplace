@@ -36,26 +36,28 @@ const Lowbar = (): JSX.Element => {
 
     return (
         <div className="d-flex justify-content-between flex-nowrap align-items-end mb-2">
-            <div>
+            <section>
                 <div className="d-flex flex-wrap">
-                    <div className="mb-3 me-5">
-                        <h4>Address</h4>
-                        <div>302 Mill Street</div>
-                        <div>Bristol</div>
-                        <div>PA 19007</div>
-                    </div>
+                    <article className="me-5">
+                        <h2 className="h4">Address</h2>
+                        <p>
+                            302 Mill Street<br />
+                            Bristol<br />
+                            PA 19007
+                        </p>
+                    </article>
 
-                    <div className="mb-3">
-                        <h4>Hours</h4>
-                        <div>Open daily 11am-7pm</div>
-                    </div>
+                    <article>
+                        <h2 className="h4">Hours</h2>
+                        <p>Open daily 11am-7pm</p>
+                    </article>
                 </div>
 
                 <div className="mb-3">
-                    <h4>Follow us</h4>
+                    <h2 className="h4">Follow us</h2>
                     <SocialsCircleButton />
                 </div>
-            </div>
+            </section>
 
             <div>
                 <button type="button" className="btn btn-link text-center" onClick={scrollTop}>
