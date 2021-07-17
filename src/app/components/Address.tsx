@@ -10,7 +10,7 @@ export const Address = (props: IAddressProps): JSX.Element => {
 
     return (
         <address className={props.className}>
-            <a href={`https://maps.google.com/maps?hl=sv&q=${addressUrl}&ie=UTF8&t=roadmap&z=10&iwloc=B`} target="_blank" rel="noreferrer" className="d-inline-block my-1">
+            <a href={`https://maps.google.com/maps?hl=en&q=${addressUrl}&ie=UTF8&t=roadmap&z=10&iwloc=B`} target="_blank" rel="noreferrer" className="d-inline-block my-1">
                 <i className="bi bi-geo-alt"></i>&nbsp;{address}
             </a>
 

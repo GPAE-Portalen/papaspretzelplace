@@ -1,19 +1,30 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
+import { Container, EContainerType } from './Container';
+
 import { Logo } from './Logo';
 import { SocialsButton } from '../components/SocialsButton';
 import { Address } from './Address';
 
 export const Offcanvas = (): JSX.Element => {
+    const address: string = '302 Mill Street, Bristol, PA 19007';
+    const addressUrl: string = encodeURI(address);
+
     return (
         <Fragment>
-            <div className="d-flex justify-content-end">
-                <i className="bi bi-justify-right text-white" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style={{ fontSize: '1.75rem' }}></i>
+            <div className="bg-ppp-red bg-gradient">
+                <Container type={EContainerType.Default} className="d-flex justify-content-between w-100 align-items-center">
+                    <div className="text-uppercase fw-bold text-white">Open daily 11am-7pm</div>
+
+                    <i className="bi bi-justify-right text-white" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style={{ fontSize: '1.75rem' }}></i>
+                </Container>
             </div>
 
             <div className="offcanvas offcanvas-end" tabIndex={-1} id="offcanvasRight">
                 <div className="offcanvas-header justify-content-end">
+                    <div className="text-uppercase fw-bold flex-grow-1">Open daily 11am-7pm</div>
+
                     <i className="bi bi-x-lg" data-bs-dismiss="offcanvas"></i>
                 </div>
 
@@ -44,6 +55,14 @@ export const Offcanvas = (): JSX.Element => {
                         <Address />
                     </section>
                 </div>
+            </div>
+
+            <div className="bg-light w-100">
+                <Container type={EContainerType.Default}>
+                    <a href={`https://maps.google.com/maps?hl=en&q=${addressUrl}&ie=UTF8&t=roadmap&z=10&iwloc=B`} target="_blank" rel="noreferrer" className="d-inline-block my-1 text-decoration-none text-dark">
+                        <i className="bi bi-geo-alt-fill"></i>&nbsp;{address}
+                    </a>
+                </Container>
             </div>
         </Fragment>
     );
