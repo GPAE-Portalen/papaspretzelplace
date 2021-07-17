@@ -13,7 +13,7 @@ export default function Main(props: IMainProps): JSX.Element {
     const standardClassNames: string = `${props.front ? 'pb-3' : 'py-3'} mb-4 mx-auto w-100`;
     const classNames: string = props.classNames ? `${standardClassNames} ${props.classNames}` : standardClassNames;
 
-    const standardStyle: React.CSSProperties = { marginTop: '80px' };
+    const standardStyle: React.CSSProperties = { marginTop: '96px' };
     const style: React.CSSProperties = Object.assign(standardStyle, props.style);
 
     return (

@@ -15,9 +15,23 @@ export const Offcanvas = (): JSX.Element => {
         <Fragment>
             <div className="bg-ppp-red bg-gradient">
                 <Container type={EContainerType.Default} className="d-flex justify-content-between w-100 align-items-center">
-                    <div className="text-uppercase fw-bold text-white">Open daily 11am-7pm</div>
+                    <div className="text-uppercase fw-bold text-white">Papa's Pretzel Place</div>
 
                     <i className="bi bi-justify-right text-white" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style={{ fontSize: '1.75rem' }}></i>
+                </Container>
+            </div>
+
+            <div className="bg-light bg-gradient w-100">
+                <Container type={EContainerType.Default}>
+                    <a href={`https://maps.google.com/maps?hl=en&q=${addressUrl}&ie=UTF8&t=roadmap&z=10&iwloc=B`} target="_blank" rel="noreferrer" className="d-inline-block my-1 text-decoration-none text-dark">
+                        <i className="bi bi-geo-alt-fill"></i>&nbsp;{address}
+                    </a>
+                </Container>
+            </div>
+
+            <div className="bg-ppp-beige-100 bg-gradient w-100 border-top border-ppp-blue-100">
+                <Container type={EContainerType.Default} className="text-end">
+                    <small className="text-uppercase fw-bold d-block">Open daily 11am-7pm</small>
                 </Container>
             </div>
 
@@ -55,14 +69,6 @@ export const Offcanvas = (): JSX.Element => {
                         <Address />
                     </section>
                 </div>
-            </div>
-
-            <div className="bg-light w-100">
-                <Container type={EContainerType.Default}>
-                    <a href={`https://maps.google.com/maps?hl=en&q=${addressUrl}&ie=UTF8&t=roadmap&z=10&iwloc=B`} target="_blank" rel="noreferrer" className="d-inline-block my-1 text-decoration-none text-dark">
-                        <i className="bi bi-geo-alt-fill"></i>&nbsp;{address}
-                    </a>
-                </Container>
             </div>
         </Fragment>
     );

@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 interface IMoneyProps {
     value: number;
@@ -57,7 +58,267 @@ const Divider = (): JSX.Element => (
     <Fragment>&nbsp;-&nbsp;</Fragment>
 );
 
+interface ISizingPrice {
+    sizeName: string;
+    sizePrice: number;
+}
+
+interface IPrice {
+    unitPrice?: number;
+    sizingPrices?: ISizingPrice[];
+}
+
+interface IMenuItemProps {
+    title: string;
+    price: IPrice;
+}
+
+const MenuItem = (props: IMenuItemProps): JSX.Element => {
+    const unitPrice = props.price.unitPrice;
+    const sizingPrices = props.price.sizingPrices;
+
+    const renderSizingPrices = (sizingPrices: ISizingPrice[]): JSX.Element[] => sizingPrices.map((sizingPrice: ISizingPrice): JSX.Element => {
+        const first: boolean = sizingPrices.indexOf(sizingPrice) === 0;
+        const className: string = first ? 'pe-2' : 'px-2 border-start'
+
+        return (
+            <Fragment key={uuidv4()}>
+                <span className={className}>
+                    {sizingPrice.sizeName}&nbsp;
+                    <Money value={sizingPrice.sizePrice} />
+                </span>
+            </Fragment>
+        );
+    });
+
+    return (
+        <article className="card shadow border-ppp-blue-100 mb-1">
+            <div className="card-body">
+                <h2 className="h6 card-title m-0 text-capitalize">{props.title}</h2>
+            </div>
+            <div className="card-footer">
+                {
+                    unitPrice &&
+                    <p className="card-text">
+                        <small>
+                            <Money value={unitPrice} />
+                        </small>
+                    </p>
+                }
+                {
+                    sizingPrices &&
+                    <p className="card-text">
+                        <small>
+                            {
+                                renderSizingPrices(sizingPrices)
+                            }
+                        </small>
+                    </p>
+                }
+            </div>
+        </article>
+    );
+}
+
 export const MenuItems = (): JSX.Element => {
+    const pretzels: IMenuItemProps[] = [
+        {
+            title: 'OMG (Regular)',
+            price: { unitPrice: 2 }
+        },
+        {
+            title: 'Chedder',
+            price: { unitPrice: 2.5 }
+        },
+        {
+            title: 'Cinnamon Sugar',
+            price: { unitPrice: 2.5 }
+        },
+        {
+            title: 'Everything',
+            price: { unitPrice: 2 }
+        }
+    ];
+    const pretzelDogs: IMenuItemProps[] = [
+        {
+            title: 'Regular + Cheese',
+            price: { unitPrice: 4 }
+        },
+        {
+            title: 'Pork Roll',
+            price: { unitPrice: 5 }
+        },
+    ];
+    const iceCreams: IMenuItemProps[] = [
+        {
+            title: 'Chocolate',
+            price: {
+                sizingPrices: [
+                    { sizeName: 'sm', sizePrice: 3 },
+                    { sizeName: 'lg', sizePrice: 5 }
+                ]
+            }
+        },
+        {
+            title: 'Vanilla',
+            price: {
+                sizingPrices: [
+                    { sizeName: 'sm', sizePrice: 3 },
+                    { sizeName: 'lg', sizePrice: 5 }
+                ]
+            }
+        },
+        {
+            title: 'Cookies + Cream',
+            price: {
+                sizingPrices: [
+                    { sizeName: 'sm', sizePrice: 3 },
+                    { sizeName: 'lg', sizePrice: 5 }
+                ]
+            }
+        },
+        {
+            title: 'Mint Chocolate Chip',
+            price: {
+                sizingPrices: [
+                    { sizeName: 'sm', sizePrice: 3 },
+                    { sizeName: 'lg', sizePrice: 5 }
+                ]
+            }
+        },
+        {
+            title: 'Cherry Vanilla',
+            price: {
+                sizingPrices: [
+                    { sizeName: 'sm', sizePrice: 3 },
+                    { sizeName: 'lg', sizePrice: 5 }
+                ]
+            }
+        },
+        {
+            title: 'Moose Tracks',
+            price: {
+                sizingPrices: [
+                    { sizeName: 'sm', sizePrice: 3 },
+                    { sizeName: 'lg', sizePrice: 5 }
+                ]
+            }
+        },
+        {
+            title: 'Chocolate Chip Cookie Dough',
+            price: {
+                sizingPrices: [
+                    { sizeName: 'sm', sizePrice: 3 },
+                    { sizeName: 'lg', sizePrice: 5 }
+                ]
+            }
+        },
+        {
+            title: 'Salted Caramel Pretzel',
+            price: {
+                sizingPrices: [
+                    { sizeName: 'sm', sizePrice: 3 },
+                    { sizeName: 'lg', sizePrice: 5 }
+                ]
+            }
+        },
+    ];
+    const waterIces: IMenuItemProps[] = [
+        {
+            title: 'Mango',
+            price: {
+                sizingPrices: [
+                    { sizeName: 'sm', sizePrice: 2 },
+                    { sizeName: 'md', sizePrice: 3 },
+                    { sizeName: 'lg', sizePrice: 5 }
+                ]
+            }
+        },
+        {
+            title: 'Cherry',
+            price: {
+                sizingPrices: [
+                    { sizeName: 'sm', sizePrice: 2 },
+                    { sizeName: 'md', sizePrice: 3 },
+                    { sizeName: 'lg', sizePrice: 5 }
+                ]
+            }
+        },
+        {
+            title: 'Lemon',
+            price: {
+                sizingPrices: [
+                    { sizeName: 'sm', sizePrice: 2 },
+                    { sizeName: 'md', sizePrice: 3 },
+                    { sizeName: 'lg', sizePrice: 5 }
+                ]
+            }
+        },
+        {
+            title: 'Blueberry',
+            price: {
+                sizingPrices: [
+                    { sizeName: 'sm', sizePrice: 2 },
+                    { sizeName: 'md', sizePrice: 3 },
+                    { sizeName: 'lg', sizePrice: 5 }
+                ]
+            }
+        },
+        {
+            title: 'Watermelon',
+            price: {
+                sizingPrices: [
+                    { sizeName: 'sm', sizePrice: 2 },
+                    { sizeName: 'md', sizePrice: 3 },
+                    { sizeName: 'lg', sizePrice: 5 }
+                ]
+            }
+        },
+        {
+            title: 'Strawberry',
+            price: {
+                sizingPrices: [
+                    { sizeName: 'sm', sizePrice: 2 },
+                    { sizeName: 'md', sizePrice: 3 },
+                    { sizeName: 'lg', sizePrice: 5 }
+                ]
+            }
+        },
+    ];
+    const dips: IMenuItemProps[] = [
+        {
+            title: 'Cheese',
+            price: { unitPrice: 0.75 }
+        }
+    ];
+
+    const renderMenuItems = (menuItems: IMenuItemProps[]): JSX.Element[] => menuItems.map((menuItem: IMenuItemProps): JSX.Element => {
+        return (
+            <MenuItem key={menuItem.title} title={menuItem.title} price={menuItem.price} />
+        );
+    });
+
+    return (
+        <section>
+            <h2 className="text-capitalize">Pretzels</h2>
+            {renderMenuItems(pretzels)}
+
+            <h2 className="text-capitalize mt-5">Pretzel Dogs</h2>
+            {renderMenuItems(pretzelDogs)}
+
+            <h2 className="text-capitalize mt-5">Ice Cream</h2>
+            {renderMenuItems(iceCreams)}
+
+            <h2 className="text-capitalize mt-5">Water Ice</h2>
+            {renderMenuItems(waterIces)}
+
+            <h2 className="text-capitalize mt-5">Dips</h2>
+            {renderMenuItems(dips)}
+        </section>
+    );
+}
+
+export const MenuItems2 = (): JSX.Element => {
     return (
         <React.Fragment>
             <dl>

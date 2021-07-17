@@ -41,9 +41,7 @@ export default function Menu(): JSX.Element {
                     <p>PA State Sales Tax 6%</p>
                 </section>
 
-                <section>
-                    <MenuItems />
-                </section>
+                <MenuItems />
             </Main>
 
             <Footer />
