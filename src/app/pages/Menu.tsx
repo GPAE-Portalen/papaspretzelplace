@@ -11,11 +11,11 @@ import { MenuItems } from '../components/MenuItems';
 
 export default function Menu(): JSX.Element {
     const title: string = 'Menu';
-    const description: string = 'Fresh Pretzels with an Artisan Twist!';
+    const description: string = 'Fresh Pretzels with an Artisan Twist';
 
     const seo: ISEOProps = {
         title,
-        description
+        description: "Papa's Pretzel Place is a locally owned soft pretzel company. They are a wholesale and retail soft pretzel bakery and eatery at 302 Mill Street, Bristol, PA 19007 open daily 11am-7pm."
     }
 
     return (
