@@ -10,6 +10,8 @@ export interface IFooterProps {
 }
 
 export default function Footer(props: IFooterProps): JSX.Element {
+    const year: number = new Date().getFullYear();
+
     return (
         <footer className="mt-auto border-top">
             <Container type={EContainerType.Default} className="py-3">
@@ -22,7 +24,7 @@ export default function Footer(props: IFooterProps): JSX.Element {
 
             <section className="bg-light py-1">
                 <Container type={EContainerType.Default}>
-                    <small className="text-muted">© 2021 Papa's Pretzel Place. All Rights Reserved</small>
+                    <small>© {year} Papa's Pretzel Place. All Rights Reserved</small>
                 </Container>
             </section>
         </footer>
