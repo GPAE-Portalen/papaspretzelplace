@@ -127,7 +127,7 @@ export const MenuItems = (): JSX.Element => {
             price: { unitPrice: 2 }
         },
         {
-            title: 'Chedder',
+            title: 'Cheddar',
             price: { unitPrice: 2.5 }
         },
         {
