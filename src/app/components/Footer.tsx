@@ -51,7 +51,7 @@ const Lowbar = (): JSX.Element => {
 
                     <article>
                         <h2 className="h4">Hours</h2>
-                        <p>Open daily 11am-7pm</p>
+                        <p>Opens daily 11am</p>
                     </article>
                 </div>
 
