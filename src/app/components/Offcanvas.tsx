@@ -31,13 +31,13 @@ export const Offcanvas = (): JSX.Element => {
 
             <div className="bg-ppp-beige-100 bg-gradient w-100 border-top border-ppp-blue-100">
                 <Container type={EContainerType.Default} className="text-end">
-                    <small className="text-uppercase fw-bold d-block">Open daily 11am-7pm</small>
+                    <small className="text-uppercase fw-bold d-block">Opens daily 11am</small>
                 </Container>
             </div>
 
             <div className="offcanvas offcanvas-end" tabIndex={-1} id="offcanvasRight">
                 <div className="offcanvas-header justify-content-end">
-                    <div className="text-uppercase fw-bold flex-grow-1">Open daily 11am-7pm</div>
+                    <div className="text-uppercase fw-bold flex-grow-1">Opens daily 11am</div>
 
                     <i className="bi bi-x-lg" data-bs-dismiss="offcanvas"></i>
                 </div>
