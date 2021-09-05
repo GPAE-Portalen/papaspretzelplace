@@ -10641,6 +10641,9 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important; } }
 
+.offcancas {
+  z-index: 50000; }
+
 @font-face {
   font-family: "Source Serif Pro Extra Light";
   src: url("../../assets/fonts/SourceSerifPro-ExtraLight.ttf");
