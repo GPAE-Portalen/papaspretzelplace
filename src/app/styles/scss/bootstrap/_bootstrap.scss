@@ -1,15 +1,16 @@
 // Configuration
 @import "../../../../../node_modules/bootstrap/scss/functions";
 
-$box-shadow: 0 0.5rem 1rem rgba($ppp-blue_cornflowerblue, .5) !default;
-$box-shadow-sm: 0 .125rem .25rem rgba($ppp-blue_cornflowerblue, .25) !default;
-$box-shadow-lg: 0 1rem 3rem rgba($ppp-blue_cornflowerblue, .75) !default;
+$box-shadow: 0 .5rem 1rem rgba($ppp-blue, .15) !default;
+$box-shadow-sm: 0 .125rem .25rem rgba($ppp-blue, .075) !default;
+$box-shadow-lg: 0 1rem 3rem rgba($ppp-blue, .175) !default;
+$box-shadow-inset: inset 0 1px 2px rgba($ppp-blue, .075) !default;
 
 @import "../../../../../node_modules/bootstrap/scss/variables";
 @import "../../../../../node_modules/bootstrap/scss/mixins";
 
-$custom-colors: ( "ppp-red": $ppp-red_sienna,"ppp-orange": $ppp-orange_indianred, "ppp-blue": $ppp-blue_cornflowerblue, "ppp-blue-100": $ppp-blue-100, "ppp-beige": $ppp-beige_papayawhip, "ppp-beige-100": $ppp-beige-100 );
-$theme-colors: map-merge($theme-colors, $custom-colors);
+$theme-colors: map-merge($theme-colors, $ppp-custom-colors);
+$utilities-bg-colors: map-merge($utilities-bg-colors, $ppp-custom-colors);
 
 @import "../../../../../node_modules/bootstrap/scss/utilities";
 
