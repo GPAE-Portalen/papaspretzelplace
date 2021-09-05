@@ -67,7 +67,6 @@
 
         gtag('config', 'G-MF307G4SJW');
     </script>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -82,5 +81,19 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", (user) => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin";
+                    });
+                }
+            });
+        }
+    </script>
 </body>
 </html>
