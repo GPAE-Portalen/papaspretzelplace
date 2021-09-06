@@ -24,9 +24,7 @@ export default function Menu(): JSX.Element {
                 setGetData(true);
             })();
         }
-    }, [getData]);
 
-    useEffect(() => {
         if (getData) {
             (async () => {
                 const data = await window.repository.getBlogPost('2021-08-17_hello-world');
