@@ -20,7 +20,7 @@ export default function Menu(): JSX.Element {
 
         (async () => {
             var jsonData = window.repository.getBlogPost('2021-08-17_hello-world');
-            console.log(await jsonData);
+            setBlogPost(await jsonData);
         })();
 
         
