@@ -10,11 +10,15 @@ const handler = async (event) => {
     console.log(jsonFilePath);
 
     try {
+        let x = "";
+
         fs.readFile(mdFilePath, 'utf8', function (err, data) {
             if (err) throw err;
 
             var content = fm(data);
             var blogPost = content.attributes;
+
+            x = JSON.stringify(blogPost);
 
             fs.writeFile(jsonFilePath, JSON.stringify(blogPost), function (err) {
                 if (err) throw err;
@@ -24,7 +28,7 @@ const handler = async (event) => {
 
         return {
             statusCode: 200,
-            body: 'ok',
+            body: x,
         }
 
     } catch (error) {
