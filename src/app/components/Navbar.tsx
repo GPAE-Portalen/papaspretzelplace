@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import { Menu } from 'react-feather';
 
@@ -26,17 +26,15 @@ export default function Navbar(): JSX.Element {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a href="/" className="nav-link" onClick={(event) => handleActive(event)}>
+                            <NavLink to="/" className="nav-link" onClick={(event) => handleActive(event)}>
                                 Home
-                            </a>
-
-
-                           
+                            </NavLink>
                         </li>
+
                         <li className="nav-item">
-                            <Link to="/products" className="nav-link" onClick={(event) => handleActive(event)}>
+                            <NavLink to="/products" className="nav-link" onClick={(event) => handleActive(event)}>
                                 Products
-                            </Link>
+                            </NavLink>
                         </li>
                     </ul>
                 </div>
