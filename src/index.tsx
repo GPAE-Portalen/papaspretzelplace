@@ -28,8 +28,6 @@ declare global {
 function initProduction() {
     const trackingCode: string = 'G-MF307G4SJW';
     ReactGA.initialize(trackingCode, { standardImplementation: true });
-
-    window.repository.getBlogPost('2021-08-17_hello-world');
 }
 
 function initDevelopment() {
