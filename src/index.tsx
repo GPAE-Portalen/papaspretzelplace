@@ -28,6 +28,8 @@ declare global {
 function initProduction() {
     const trackingCode: string = 'G-MF307G4SJW';
     ReactGA.initialize(trackingCode, { standardImplementation: true });
+
+    window.repository.getBlogPost('2021-08-17_hello-world');
 }
 
 function initDevelopment() {
@@ -40,12 +42,12 @@ function initDevelopment() {
     window.envProd = process.env.REACT_APP_DIST_ENV === EnvironmentVariables.Production;
     window.envDev = process.env.REACT_APP_DIST_ENV === EnvironmentVariables.Development;
 
+    window.repository = new Repository('./data');
+
     await (() => {
         if (window.envProd) initProduction();
         else initDevelopment();
     })();
-
-    window.repository = new Repository('./data');
 
     ReactDOM.render(
         <React.StrictMode>

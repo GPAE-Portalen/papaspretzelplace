@@ -9,3 +9,8 @@ export interface IProduct {
     };
     tags?: [string];
 }
+
+export interface IBlogPost {
+    title: string;
+    date: Date;
+}

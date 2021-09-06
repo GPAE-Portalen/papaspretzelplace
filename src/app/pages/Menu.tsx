@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import SEO, { ISEOProps } from "../components/SEO";
 import Header from '../components/Header';
@@ -8,10 +8,30 @@ import Footer from '../components/Footer';
 import { Logo } from '../components/Logo';
 import { SocialsButton } from '../components/SocialsButton';
 import { MenuItems } from '../components/MenuItems';
+import { IBlogPost } from "../../interfaces";
 
 export default function Menu(): JSX.Element {
+    const [blogPost, setBlogPost] = useState <IBlogPost>();
+
     const title: string = 'Menu';
     const description: string = 'Fresh Pretzels with an Artisan Twist';
+
+    useEffect(() => {
+
+        (async () => {
+            var jsonData = window.repository.getBlogPost('2021-08-17_hello-world');
+            console.log(await jsonData);
+        })();
+
+        
+
+
+
+        
+
+        console.log(blogPost);
+    }, [blogPost]);
+
 
     const seo: ISEOProps = {
         title,

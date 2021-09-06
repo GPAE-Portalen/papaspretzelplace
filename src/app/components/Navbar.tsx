@@ -26,9 +26,12 @@ export default function Navbar(): JSX.Element {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <Link to="/" className="nav-link" onClick={(event) => handleActive(event)}>
+                            <a href="/" className="nav-link" onClick={(event) => handleActive(event)}>
                                 Home
-                            </Link>
+                            </a>
+
+
+                           
                         </li>
                         <li className="nav-item">
                             <Link to="/products" className="nav-link" onClick={(event) => handleActive(event)}>
