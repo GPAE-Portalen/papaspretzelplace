@@ -28,6 +28,11 @@ export default class Repository implements IRepository {
         return resp.json();
     }
 
+    async deleteBlogPost(fileName: string) {
+        const resp = await fetch(`/.netlify/functions/deleteBlogPost?fileName=${fileName}`);
+        return resp.json();
+    }
+
     private handleResponse(response: Response) {
         const contentType = response.headers.get('Content-Type');
         const isJson = (contentType && contentType.indexOf('application/json') !== -1) || false;

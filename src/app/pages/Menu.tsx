@@ -12,25 +12,37 @@ import { IBlogPost } from "../../interfaces";
 
 export default function Menu(): JSX.Element {
     const [blogPost, setBlogPost] = useState<IBlogPost>();
+    const [getData, setGetData] = useState<boolean>(false);
 
     const title: string = 'Menu';
     const description: string = 'Fresh Pretzels with an Artisan Twist';
 
     useEffect(() => {
+        if (!getData) {
+            (async () => {
+                await window.repository.createBlogPost('2021-08-17_hello-world');
+                setGetData(true);
+            })();
+        }
+    }, [getData]);
 
-        (async () => {
-            var jsonData = window.repository.getBlogPost('2021-08-17_hello-world');
-            setBlogPost(await jsonData);
-        })();
+    useEffect(() => {
 
-        
+        if (getData) {
+            (async () => {
+                const data = await window.repository.getBlogPost('2021-08-17_hello-world');
+                setBlogPost(data);
+            })();
+        }
 
-
-
-        
+        return () => {
+            (async () => {
+                await window.repository.deleteBlogPost('2021-08-17_hello-world');
+            })();
+        }
 
         console.log(blogPost);
-    }, [blogPost]);
+    }, [getData, blogPost]);
 
 
     const seo: ISEOProps = {
