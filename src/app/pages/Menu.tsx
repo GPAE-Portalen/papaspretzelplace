@@ -11,7 +11,7 @@ import { MenuItems } from '../components/MenuItems';
 import { IBlogPost } from "../../interfaces";
 
 export default function Menu(): JSX.Element {
-    const [blogPost, setBlogPost] = useState <IBlogPost>();
+    const [blogPost, setBlogPost] = useState<IBlogPost>();
 
     const title: string = 'Menu';
     const description: string = 'Fresh Pretzels with an Artisan Twist';

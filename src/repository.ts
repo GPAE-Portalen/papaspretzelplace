@@ -1,6 +1,6 @@
 import { ModelStateError } from './modelStateError';
 
-import { IProduct, IBlogPost } from './interfaces/index';
+import { IProduct } from './interfaces/index';
 
 export interface IRepository {
     getProducts(): IProduct[];
