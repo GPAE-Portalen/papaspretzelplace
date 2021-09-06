@@ -10,25 +10,22 @@ const handler = async (event) => {
     console.log(jsonFilePath);
 
     try {
-        let x = "";
-
-        fs.readFile(mdFilePath, 'utf8', function (err, data) {
+        var data = fs.readFileSync(mdFilePath, 'utf8', function (err, data) {
             if (err) throw err;
+            return data;
+        });
 
-            var content = fm(data);
-            var blogPost = content.attributes;
+        var content = fm(data);
+        var blogPost = content.attributes;
 
-            x = JSON.stringify(blogPost);
-
-            fs.writeFile(jsonFilePath, JSON.stringify(blogPost), function (err) {
-                if (err) throw err;
-                console.log(jsonFilePath, 'Saved!');
-            });
+        fs.writeFile(jsonFilePath, JSON.stringify(blogPost), function (err) {
+            if (err) throw err;
+            console.log(jsonFilePath, 'Saved!');
         });
 
         return {
             statusCode: 200,
-            body: x,
+            body: JSON.stringify(blogPost),
         }
 
     } catch (error) {
