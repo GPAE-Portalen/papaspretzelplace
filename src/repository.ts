@@ -19,7 +19,13 @@ export default class Repository implements IRepository {
     }
 
     async getBlogPost(fileName: string) {
-        const resp = await fetch(`${this.url}/blog/${fileName}.json`);
+        const resp = await fetch(`${this.url}/blog/${fileName}.json`{
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+
+        });
         return resp.json();
     }
 
