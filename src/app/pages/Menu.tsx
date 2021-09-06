@@ -27,21 +27,20 @@ export default function Menu(): JSX.Element {
     }, [getData]);
 
     useEffect(() => {
-
         if (getData) {
             (async () => {
                 const data = await window.repository.getBlogPost('2021-08-17_hello-world');
                 setBlogPost(data);
+                console.log(blogPost);
             })();
         }
 
         return () => {
             (async () => {
                 await window.repository.deleteBlogPost('2021-08-17_hello-world');
+                console.log(blogPost);
             })();
         }
-
-        console.log(blogPost);
     }, [getData, blogPost]);
 
 
