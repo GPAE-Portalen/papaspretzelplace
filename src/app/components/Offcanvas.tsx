@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import { Container, EContainerType } from './Container';
 
@@ -49,15 +49,15 @@ export const Offcanvas = (): JSX.Element => {
                         <nav className="py-3">
                             <ul className="navbar-nav text-center">
                                 <li className="nav-item bg-ppp-red bg-gradient shadow fw-bold rounded">
-                                    <Link to="/" className="nav-link text-white p-1" data-bs-dismiss="offcanvas">
+                                    <NavLink to="/" className="nav-link text-white p-1" data-bs-dismiss="offcanvas">
                                         Home
-                                    </Link>
+                                    </NavLink>
                                 </li>
 
                                 <li className="nav-item bg-ppp-red bg-gradient mt-3 shadow fw-bold rounded">
-                                    <Link to="/menu" className="nav-link text-white p-1" data-bs-dismiss="offcanvas">
+                                    <NavLink to="/menu" className="nav-link text-white p-1" data-bs-dismiss="offcanvas">
                                         Menu
-                                    </Link>
+                                    </NavLink>
                                 </li>
                             </ul>
                         </nav>
