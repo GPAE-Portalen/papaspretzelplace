@@ -48,14 +48,14 @@ export const Offcanvas = (): JSX.Element => {
 
                         <nav className="py-3">
                             <ul className="navbar-nav text-center">
-                                <li className="nav-item bg-ppp-red bg-gradient shadow fw-bold rounded">
-                                    <NavLink to="/" className="nav-link text-white p-1" data-bs-dismiss="offcanvas">
+                                <li className="nav-item bg-ppp-red bg-gradient shadow fw-bold rounded" data-bs-dismiss="offcanvas">
+                                    <NavLink to="/" className="nav-link text-white p-1">
                                         Home
                                     </NavLink>
                                 </li>
 
-                                <li className="nav-item bg-ppp-red bg-gradient mt-3 shadow fw-bold rounded">
-                                    <NavLink to="/menu" className="nav-link text-white p-1" data-bs-dismiss="offcanvas">
+                                <li className="nav-item bg-ppp-red bg-gradient mt-3 shadow fw-bold rounded" data-bs-dismiss="offcanvas">
+                                    <NavLink to="/menu" className="nav-link text-white p-1">
                                         Menu
                                     </NavLink>
                                 </li>
