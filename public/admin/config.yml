@@ -12,4 +12,4 @@ collections:
     fields:
       - { label: 'Name', name: 'name', widget: 'string', required: true }
       - { label: 'Image', name: 'image', widget: 'image' }
-      - { label: 'Prices', name: 'prices', widget: 'list', label_singular: 'Add a price', fields: { label: 'Amount', name: 'ammount', widget: 'number', value_type: 'float' }, { label: 'Name', name: 'name', widget: 'string', required: true } }
+      - { label: 'Prices', name: 'prices', widget: 'list', label_singular: 'Add a price', required: true, fields: { label: 'Amount', name: 'ammount', widget: 'number', value_type: 'float', required: true }, { label: 'Name', name: 'name', widget: 'string', required: true } }
