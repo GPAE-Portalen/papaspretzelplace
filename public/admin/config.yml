@@ -11,6 +11,5 @@ collections:
     slug: '{{slug}}'
     fields:
       - { label: 'Name', name: 'name', widget: 'string', required: true }
-      - { label: 'Type', name: 'type', widget: 'list', allow_add: false, default: ["news"] }
       - { label: 'Image', name: 'image', widget: 'image' }
-      - { label: 'Prices', name: 'prices', widget: 'list', field: { label: 'Amount', name: 'ammount', widget: 'number', value_type: 'float' }, { label: 'Name', name: 'name', widget: 'string', required: true } }
+      - { label: 'Prices', name: 'prices', widget: 'list', label_singular: 'Add a price', fields: { label: 'Amount', name: 'ammount', widget: 'number', value_type: 'float' }, { label: 'Name', name: 'name', widget: 'string', required: true } }
