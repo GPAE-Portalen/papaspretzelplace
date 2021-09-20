@@ -10,35 +10,6 @@ collections:
     identifier_field: name
     slug: '{{slug}}'
     fields:
-      - { 
-          label: 'Name',
-          name: 'name',
-          widget: 'string',
-          required: true
-      }
-      - { 
-          label: 'Image',
-          name: 'image',
-          widget: 'image'
-      }
-      - { 
-          label: 'Prices',
-          name: 'prices',
-          widget: 'list',
-          label_singular: 'Add a price',
-          field: { label: 'Price', name: 'price', widget: 'object', fields: 
-            {
-               label: 'Amount',
-               name: 'ammount',
-               widget: 'number',
-               value_type: 'float',
-               required: true
-            },
-            { 
-               label: 'Name',
-               name: 'name',
-               widget: 'string',
-               required: true
-             }
-           }
-        }
+      - { label: 'Name', name: 'name', widget: 'string', required: true }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Prices', name: 'prices', widget: 'list', label_singular: 'Add a price', required: true, field: { label: 'Price', name: 'price', widget: 'object', fields: { label: 'Amount', name: 'ammount', widget: 'number', value_type: 'float', required: true }, { label: 'Size', name: 'size', widget: 'string', required: true } } }
