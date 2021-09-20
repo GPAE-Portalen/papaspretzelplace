@@ -28,10 +28,13 @@
     "web-vitals": "^1.1.1"
   },
   "scripts": {
-    "dev": "run-p start css-watch",
-    "start": "cross-env REACT_APP_DIST_ENV=development react-scripts start",
-    "build": "cross-env REACT_APP_DIST_ENV=production react-scripts build",
+    "start": "run-s css gulping start-js",
+    "start-js": "cross-env REACT_APP_DIST_ENV=development react-scripts start",
+    "build": "run-s css gulping build-js",
+    "build-js": "cross-env REACT_APP_DIST_ENV=production react-scripts build",
     "test": "react-scripts test",
+    "gulping": "gulp cleanJson && gulp generateJson && gulp combineJson && gulp copyImages",
+    "dev": "run-p start css-watch",
     "css": "run-s css-build css-compile css-prefix",
     "css-watch": "run-p css-watch-dev css-watch-min",
     "css-watch-dev": "npm run css-build -- --watch",
