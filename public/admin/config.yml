@@ -26,19 +26,19 @@ collections:
           name: 'prices',
           widget: 'list',
           label_singular: 'Add a price',
-          required: true,
-          fields:
-           {
+          field: { label: 'Price', name: 'price', widget: 'object', fields: 
+            {
                label: 'Amount',
                name: 'ammount',
                widget: 'number',
                value_type: 'float',
                required: true
-           },
-           { 
+            },
+            { 
                label: 'Name',
                name: 'name',
                widget: 'string',
                required: true
+             }
            }
         }
