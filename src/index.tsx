@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import ReactGA from 'react-ga';
 import '@popperjs/core';
-import 'bootstrap/js/dist/offcanvas';
-import 'bootstrap/js/dist/tooltip';
+import 'bootstrap/dist/js/bootstrap';
 
 import EnvironmentVariables from './environmentVariables';
 
@@ -42,9 +41,11 @@ function initDevelopment() {
 
     window.repository = new Repository('./data');
 
-    await (() => {
-        if (window.envProd) initProduction();
-        else initDevelopment();
+    (() => {
+        if (window.envProd)
+            initProduction();
+        else
+            initDevelopment();
     })();
 
     ReactDOM.render(
