@@ -9,7 +9,7 @@ collections:
     create: true
     identifier_field: 'name'
     slug: '{{slug}}'
-    label_singular: 'Add Pretzel'
+    label_singular: 'Pretzel'
     fields:
       - { label: 'Name', name: 'name', widget: 'string', required: true }
       - { label: 'Image', name: 'image', widget: 'image' }
@@ -20,7 +20,7 @@ collections:
     create: true
     identifier_field: 'name'
     slug: '{{slug}}'
-    label_singular: 'Add Pretzel Dog'
+    label_singular: 'Pretzel Dog'
     fields:
       - { label: 'Name', name: 'name', widget: 'string', required: true }
       - { label: 'Image', name: 'image', widget: 'image' }
@@ -31,7 +31,7 @@ collections:
     create: true
     identifier_field: 'name'
     slug: '{{slug}}'
-    label_singular: 'Add Ice Cream'
+    label_singular: 'Ice Cream'
     fields:
       - { label: 'Name', name: 'name', widget: 'string', required: true }
       - { label: 'Image', name: 'image', widget: 'image' }
@@ -42,7 +42,7 @@ collections:
     create: true
     identifier_field: 'name'
     slug: '{{slug}}'
-    label_singular: 'Add Water Ice'
+    label_singular: 'Water Ice'
     fields:
       - { label: 'Name', name: 'name', widget: 'string', required: true }
       - { label: 'Image', name: 'image', widget: 'image' }
@@ -53,7 +53,8 @@ collections:
     create: true
     identifier_field: 'name'
     slug: '{{slug}}'
-    label_singular: 'Add Dip'
+    label_singular: 'Dip'
     fields:
       - { label: 'Name', name: 'name', widget: 'string', required: true }
       - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Prices', name: 'prices', widget: 'list', field: { label: 'Price', name: 'price', widget: 'object', fields: - { label: 'Ammount', name: 'ammount', widget: 'number', value_type: 'float', required: true } - { label: 'Size', name: 'size', widget: 'string', required: true } } }
