@@ -57,4 +57,4 @@ collections:
     fields:
       - { label: 'Name', name: 'name', widget: 'string', required: true }
       - { label: 'Image', name: 'image', widget: 'image' }
-      - { label: 'Prices', name: 'prices', widget: 'list', field: { label: 'Price', name: 'price', widget: 'object', fields: - { label: 'Ammount', name: 'ammount', widget: 'number', value_type: 'float', required: true } - { label: 'Size', name: 'size', widget: 'string', required: true } } }
+      - { label: 'Prices', name: 'prices', widget: 'list', field: { label: 'Price', name: 'price', widget: 'object', fields: { label: 'Ammount', name: 'ammount', widget: 'number', value_type: 'float', required: true }, { label: 'Size', name: 'size', widget: 'string', required: true } } }
