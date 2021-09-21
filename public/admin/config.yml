@@ -15,6 +15,10 @@ collections:
           name: name
           widget: string
           required: true
+
+        - label: Description
+          name: description
+          widget: string
           
         - label: Image
           name: image
@@ -24,6 +28,7 @@ collections:
           name: prices
           widget: list
           label_singular: price
+          required: true
           field:
             label: Price
             name: price
@@ -39,7 +44,6 @@ collections:
                 - label: Size
                   name: size
                   widget: string
-                  required: true
   
   - label: Pretzel Dogs
     name: pretzel dogs
@@ -53,6 +57,10 @@ collections:
           name: name
           widget: string
           required: true
+
+        - label: Description
+          name: description
+          widget: string
           
         - label: Image
           name: image
@@ -62,6 +70,7 @@ collections:
           name: prices
           widget: list
           label_singular: price
+          required: true
           field:
             label: Price
             name: price
@@ -77,7 +86,6 @@ collections:
                 - label: Size
                   name: size
                   widget: string
-                  required: true
 
   - label: Ice Cream
     name: ice cream
@@ -91,6 +99,10 @@ collections:
           name: name
           widget: string
           required: true
+
+        - label: Description
+          name: description
+          widget: string
           
         - label: Image
           name: image
@@ -100,6 +112,7 @@ collections:
           name: prices
           widget: list
           label_singular: price
+          required: true
           field:
             label: Price
             name: price
@@ -115,7 +128,6 @@ collections:
                 - label: Size
                   name: size
                   widget: string
-                  required: true
 
   - label: Water Ice
     name: water ice
@@ -129,6 +141,10 @@ collections:
           name: name
           widget: string
           required: true
+
+        - label: Description
+          name: description
+          widget: string
           
         - label: Image
           name: image
@@ -138,6 +154,7 @@ collections:
           name: prices
           widget: list
           label_singular: price
+          required: true
           field:
             label: Price
             name: price
@@ -153,7 +170,6 @@ collections:
                 - label: Size
                   name: size
                   widget: string
-                  required: true
 
   - label: Dips
     name: dips
@@ -167,6 +183,10 @@ collections:
           name: name
           widget: string
           required: true
+
+        - label: Description
+          name: description
+          widget: string
           
         - label: Image
           name: image
@@ -176,6 +196,7 @@ collections:
           name: prices
           widget: list
           label_singular: price
+          required: true
           field:
             label: Price
             name: price
@@ -191,4 +212,3 @@ collections:
                 - label: Size
                   name: size
                   widget: string
-                  required: true
