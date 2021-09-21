@@ -23,6 +23,7 @@ collections:
         - label: Prices
           name: prices
           widget: list
+          label_singular: price
           field:
             label: Price
             name: price
@@ -40,24 +41,154 @@ collections:
                   widget: string
                   required: true
   
-  - label: 'Pretzel Dogs'
-    name: 'pretzel dogs'
-    folder: 'content/markdown/pretzeldogs'
+  - label: Pretzel Dogs
+    name: pretzel dogs
+    folder: content/markdown/pretzeldogs
     create: true
-    identifier_field: 'name'
-    slug: '{{slug}}'
-    label_singular: 'Pretzel Dog'
+    identifier_field: name
+    slug: "{{slug}}"
+    label_singular: Pretzel Dog
     fields:
-      - { label: 'Name', name: 'name', widget: 'string', required: true }
-      - { label: 'Image', name: 'image', widget: 'image' }
+        - label: Name
+          name: name
+          widget: string
+          required: true
+          
+        - label: Image
+          name: image
+          widget: image
+          
+        - label: Prices
+          name: prices
+          widget: list
+          label_singular: price
+          field:
+            label: Price
+            name: price
+            widget: object
+            required: true
+            fields:
+                - label: Ammount
+                  name: ammount
+                  widget: number
+                  value_type: float
+                  required: true
+                  
+                - label: Size
+                  name: size
+                  widget: string
+                  required: true
 
-  - label: 'Ice Cream'
-    name: 'ice cream'
-    folder: 'content/markdown/icecream'
+  - label: Ice Cream
+    name: ice cream
+    folder: content/markdown/icecream
     create: true
-    identifier_field: 'name'
-    slug: '{{slug}}'
-    label_singular: 'Ice Cream'
+    identifier_field: name
+    slug: "{{slug}}"
+    label_singular: Ice Cream
     fields:
-      - { label: 'Name', name: 'name', widget: 'string', required: true }
-      - { label: 'Image', name: 'image', widget: 'image' }
+        - label: Name
+          name: name
+          widget: string
+          required: true
+          
+        - label: Image
+          name: image
+          widget: image
+          
+        - label: Prices
+          name: prices
+          widget: list
+          label_singular: price
+          field:
+            label: Price
+            name: price
+            widget: object
+            required: true
+            fields:
+                - label: Ammount
+                  name: ammount
+                  widget: number
+                  value_type: float
+                  required: true
+                  
+                - label: Size
+                  name: size
+                  widget: string
+                  required: true
+
+  - label: Water Ice
+    name: water ice
+    folder: content/markdown/waterice
+    create: true
+    identifier_field: name
+    slug: "{{slug}}"
+    label_singular: Water Ice
+    fields:
+        - label: Name
+          name: name
+          widget: string
+          required: true
+          
+        - label: Image
+          name: image
+          widget: image
+          
+        - label: Prices
+          name: prices
+          widget: list
+          label_singular: price
+          field:
+            label: Price
+            name: price
+            widget: object
+            required: true
+            fields:
+                - label: Ammount
+                  name: ammount
+                  widget: number
+                  value_type: float
+                  required: true
+                  
+                - label: Size
+                  name: size
+                  widget: string
+                  required: true
+
+  - label: Dips
+    name: dips
+    folder: content/markdown/dips
+    create: true
+    identifier_field: name
+    slug: "{{slug}}"
+    label_singular: Dip
+    fields:
+        - label: Name
+          name: name
+          widget: string
+          required: true
+          
+        - label: Image
+          name: image
+          widget: image
+          
+        - label: Prices
+          name: prices
+          widget: list
+          label_singular: price
+          field:
+            label: Price
+            name: price
+            widget: object
+            required: true
+            fields:
+                - label: Ammount
+                  name: ammount
+                  widget: number
+                  value_type: float
+                  required: true
+                  
+                - label: Size
+                  name: size
+                  widget: string
+                  required: true
