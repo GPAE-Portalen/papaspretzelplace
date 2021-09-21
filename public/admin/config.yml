@@ -39,6 +39,6 @@ collections:
     create: true
     identifier_field: 'name'
     slug: '{{slug}}'
-    fiels:
+    fields:
       - { label: 'Name', name: 'name', widget: 'string', required: true }
       - { label: 'Image', name: 'image', widget: 'image' }
