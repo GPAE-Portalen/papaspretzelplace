@@ -38,6 +38,13 @@ gulp.task('combineJson', async () => {
         .pipe(beautify())
         .pipe(gulp.dest("./src/data"));
 
+        gulp.src("./content/json/icecream/*.json")
+        .pipe(jsoncombine("icecream.json", function (data, meta) {
+            return new Buffer(JSON.stringify(data));
+        }))
+        .pipe(beautify())
+        .pipe(gulp.dest("./src/data"));
+
         gulp.src("./content/json/waterice/*.json")
         .pipe(jsoncombine("waterice.json", function (data, meta) {
             return new Buffer(JSON.stringify(data));

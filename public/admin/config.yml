@@ -9,6 +9,7 @@ collections:
     create: true
     identifier_field: 'name'
     slug: '{{slug}}'
+    label_singular: 'Add Pretzel'
     fields:
       - { label: 'Name', name: 'name', widget: 'string', required: true }
       - { label: 'Image', name: 'image', widget: 'image' }
@@ -19,6 +20,18 @@ collections:
     create: true
     identifier_field: 'name'
     slug: '{{slug}}'
+    label_singular: 'Add Pretzel Dog'
+    fields:
+      - { label: 'Name', name: 'name', widget: 'string', required: true }
+      - { label: 'Image', name: 'image', widget: 'image' }
+
+  - label: 'Ice Cream'
+    name: 'ice cream'
+    folder: 'content/markdown/icecream'
+    create: true
+    identifier_field: 'name'
+    slug: '{{slug}}'
+    label_singular: 'Add Ice Cream'
     fields:
       - { label: 'Name', name: 'name', widget: 'string', required: true }
       - { label: 'Image', name: 'image', widget: 'image' }
@@ -29,6 +42,7 @@ collections:
     create: true
     identifier_field: 'name'
     slug: '{{slug}}'
+    label_singular: 'Add Water Ice'
     fields:
       - { label: 'Name', name: 'name', widget: 'string', required: true }
       - { label: 'Image', name: 'image', widget: 'image' }
@@ -39,6 +53,7 @@ collections:
     create: true
     identifier_field: 'name'
     slug: '{{slug}}'
+    label_singular: 'Add Dip'
     fields:
       - { label: 'Name', name: 'name', widget: 'string', required: true }
       - { label: 'Image', name: 'image', widget: 'image' }
