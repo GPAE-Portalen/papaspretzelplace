@@ -6,7 +6,7 @@ collections:
   - label: Pretzels
     name: pretzels
     folder: content/markdown/pretzels
-    create: 'true'
+    create: true
     identifier_field: name
     slug: "{{slug}}"
     label_singular: Pretzel
@@ -14,7 +14,7 @@ collections:
         - label: Name
           name: name
           widget: string
-          required: 'true'
+          required: true
           
         - label: Image
           name: image
@@ -27,18 +27,18 @@ collections:
             label: Price
             name: price
             widget: object
-            required: 'true'
+            required: true
             fields:
                 - label: Ammount
                   name: ammount
                   widget: number
                   value_type: float
-                  required: 'true'
+                  required: true
                   
                 - label: Size
                   name: size
                   widget: string
-                  required: 'true'
+                  required: true
   
   - label: 'Pretzel Dogs'
     name: 'pretzel dogs'
