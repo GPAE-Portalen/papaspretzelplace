@@ -3,16 +3,42 @@ backend:
   branch: main
 media_folder: assets/img
 collections:
-  - label: 'Pretzels'
-    name: 'pretzels'
-    folder: 'content/markdown/pretzels'
-    create: true
-    identifier_field: 'name'
-    slug: '{{slug}}'
-    label_singular: 'Pretzel'
+  - label: Pretzels
+    name: pretzels
+    folder: content/markdown/pretzels
+    create: 'true'
+    identifier_field: name
+    slug: "{{slug}}"
+    label_singular: Pretzel
     fields:
-      - { label: 'Name', name: 'name', widget: 'string', required: true }
-      - { label: 'Image', name: 'image', widget: 'image' }
+        - label: Name
+          name: name
+          widget: string
+          required: 'true'
+          
+        - label: Image
+          name: image
+          widget: image
+          
+        - label: Prices
+          name: prices
+          widget: list
+          field:
+            label: Price
+            name: price
+            widget: object
+            required: 'true'
+            fields:
+                - label: Ammount
+                  name: ammount
+                  widget: number
+                  value_type: float
+                  required: 'true'
+                  
+                - label: Size
+                  name: size
+                  widget: string
+                  required: 'true'
   
   - label: 'Pretzel Dogs'
     name: 'pretzel dogs'
@@ -35,26 +61,3 @@ collections:
     fields:
       - { label: 'Name', name: 'name', widget: 'string', required: true }
       - { label: 'Image', name: 'image', widget: 'image' }
-
-  - label: 'Water Ice'
-    name: 'water ice'
-    folder: 'content/markdown/waterice'
-    create: true
-    identifier_field: 'name'
-    slug: '{{slug}}'
-    label_singular: 'Water Ice'
-    fields:
-      - { label: 'Name', name: 'name', widget: 'string', required: true }
-      - { label: 'Image', name: 'image', widget: 'image' }
-
-  - label: 'Dips'
-    name: 'dips'
-    folder: 'content/markdown/dips'
-    create: true
-    identifier_field: 'name'
-    slug: '{{slug}}'
-    label_singular: 'Dip'
-    fields:
-      - { label: 'Name', name: 'name', widget: 'string', required: true }
-      - { label: 'Image', name: 'image', widget: 'image' }
-      - { label: 'Prices', name: 'prices', widget: 'list', field: { label: 'Price', name: 'price', widget: 'object', fields: { label: 'Ammount', name: 'ammount', widget: 'number', value_type: 'float', required: true }, { label: 'Size', name: 'size', widget: 'string', required: true } } }
