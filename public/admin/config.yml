@@ -7,9 +7,38 @@ collections:
     name: 'pretzels'
     folder: 'content/markdown/pretzels'
     create: true
-    identifier_field: name
+    identifier_field: 'name'
     slug: '{{slug}}'
     fields:
       - { label: 'Name', name: 'name', widget: 'string', required: true }
       - { label: 'Image', name: 'image', widget: 'image' }
-      - { label: 'Prices', name: 'prices', widget: 'list', label_singular: 'Add a price', required: true, field: { label: 'Price', name: 'price', widget: 'object', fields: { label: 'Amount', name: 'ammount', widget: 'number', value_type: 'float', required: true }, { label: 'Size', name: 'size', widget: 'string', required: true } } }
+  
+  - label: 'Pretzel Dogs'
+    name: 'pretzel dogs'
+    folder: 'content/markdown/pretzeldogs'
+    create: true
+    identifier_field: 'name'
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Name', name: 'name', widget: 'string', required: true }
+      - { label: 'Image', name: 'image', widget: 'image' }
+
+  - label: 'Water Ice'
+    name: 'water ice'
+    folder: 'content/markdown/waterice'
+    create: true
+    identifier_field: 'name'
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Name', name: 'name', widget: 'string', required: true }
+      - { label: 'Image', name: 'image', widget: 'image' }
+
+  - label: 'Dips'
+    name: 'dips'
+    folder: 'content/markdown/dips'
+    create: true
+    identifier_field: 'name'
+    slug: '{{slug}}'
+    fiels:
+      - { label: 'Name', name: 'name', widget: 'string', required: true }
+      - { label: 'Image', name: 'image', widget: 'image' }

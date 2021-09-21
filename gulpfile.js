@@ -30,6 +30,28 @@ gulp.task('combineJson', async () => {
         }))
         .pipe(beautify())
         .pipe(gulp.dest("./src/data"));
+
+        gulp.src("./content/json/pretzeldogs/*.json")
+        .pipe(jsoncombine("pretzeldogs.json", function (data, meta) {
+            return new Buffer(JSON.stringify(data));
+        }))
+        .pipe(beautify())
+        .pipe(gulp.dest("./src/data"));
+
+        gulp.src("./content/json/waterice/*.json")
+        .pipe(jsoncombine("waterice.json", function (data, meta) {
+            return new Buffer(JSON.stringify(data));
+        }))
+        .pipe(beautify())
+        .pipe(gulp.dest("./src/data"));
+
+
+        gulp.src("./content/json/dips/*.json")
+        .pipe(jsoncombine("dips.json", function (data, meta) {
+            return new Buffer(JSON.stringify(data));
+        }))
+        .pipe(beautify())
+        .pipe(gulp.dest("./src/data"));
 });
 
 // Copy images from assets folder to public folder
