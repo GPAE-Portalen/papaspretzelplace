@@ -1,0 +1,8 @@
+---
+name: Salted Caramel Pretzel
+prices:
+  - ammount: 3
+    size: sm
+  - ammount: 4
+    size: lg
+---
