@@ -1,1 +1,10 @@
-{}
+{
+    "cheese": {
+        "name": "Cheese",
+        "prices": [{
+            "ammount": 0.75
+        }],
+        "body": "",
+        "updatedAt": "2021-09-22T21:38:31.665Z"
+    }
+}

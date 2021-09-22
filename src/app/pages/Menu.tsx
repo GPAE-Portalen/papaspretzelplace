@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 import { Logo } from '../components/Logo';
 import { SocialsButton } from '../components/SocialsButton';
 import { MenuItems } from '../components/MenuItems';
-import { IMenu} from "../../interfaces";
+import { IMenu } from "../../interfaces";
 
 export default function Menu(): JSX.Element {
     const [menu, setMenu] = useState<IMenu>();
@@ -52,7 +52,10 @@ export default function Menu(): JSX.Element {
                     <p>PA State Sales Tax 6%</p>
                 </section>
 
-                <MenuItems />
+                {
+                    menu &&
+                    <MenuItems {...menu} />
+                }
             </Main>
 
             <Footer />

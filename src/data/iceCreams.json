@@ -1,1 +1,98 @@
-{}
+{
+    "cherry-vanilla": {
+        "name": "Cherry Vanilla",
+        "prices": [{
+            "ammount": 3,
+            "size": "sm"
+        }, {
+            "ammount": 5,
+            "size": "lg"
+        }],
+        "body": "",
+        "updatedAt": "2021-09-22T21:38:31.667Z"
+    },
+    "chocolate-chip-cookie-dough": {
+        "name": "Chocolate Chip Cookie Dough",
+        "prices": [{
+            "ammount": 3,
+            "size": "sm"
+        }, {
+            "ammount": 5,
+            "size": "lg"
+        }],
+        "body": "",
+        "updatedAt": "2021-09-22T21:38:31.668Z"
+    },
+    "chocolate": {
+        "name": "Chocolate",
+        "prices": [{
+            "ammount": 3,
+            "size": "sm"
+        }, {
+            "ammount": 5,
+            "size": "lg"
+        }],
+        "body": "",
+        "updatedAt": "2021-09-22T21:38:31.669Z"
+    },
+    "cookies-cream": {
+        "name": "Cookies + Cream",
+        "prices": [{
+            "ammount": 3,
+            "size": "sm"
+        }, {
+            "ammount": 5,
+            "size": "lg"
+        }],
+        "body": "",
+        "updatedAt": "2021-09-22T21:38:31.670Z"
+    },
+    "mint-chocolate-chip": {
+        "name": "Mint Chocolate Chip",
+        "prices": [{
+            "ammount": 3,
+            "size": "sm"
+        }, {
+            "ammount": 5,
+            "size": "lg"
+        }],
+        "body": "",
+        "updatedAt": "2021-09-22T21:38:31.672Z"
+    },
+    "moose-tracks": {
+        "name": "Moose Tracks",
+        "prices": [{
+            "ammount": 3,
+            "size": "sm"
+        }, {
+            "ammount": 5,
+            "size": "lg"
+        }],
+        "body": "",
+        "updatedAt": "2021-09-22T21:38:31.673Z"
+    },
+    "salted-caramel-pretzel": {
+        "name": "Salted Caramel Pretzel",
+        "prices": [{
+            "ammount": 3,
+            "size": "sm"
+        }, {
+            "ammount": 5,
+            "size": "lg"
+        }],
+        "body": "",
+        "updatedAt": "2021-09-22T21:38:31.674Z"
+    },
+    "vanilla": {
+        "name": "Vanilla",
+        "prices": [{
+            "ammount": 3,
+            "size": "sm"
+        }, {
+            "ammount": 5,
+            "size": "lg"
+        }],
+        "body": "",
+        "updatedAt": "2021-09-22T21:38:31.674Z"
+    }
+}
