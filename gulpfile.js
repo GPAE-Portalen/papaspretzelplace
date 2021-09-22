@@ -24,41 +24,24 @@ gulp.task('generateJson', async () => {
 
 // Combine JSON data
 gulp.task('combineJson', async () => {
-    gulp.src("./content/json/pretzel/*.json")
-        .pipe(jsoncombine("pretzels.json", function (data, meta) {
-            return new Buffer(JSON.stringify(data));
-        }))
-        .pipe(beautify())
-        .pipe(gulp.dest("./src/data"));
+    function combine(contentJsonDirName, dataJsonFileName) {
+        const jsonContentSrc = `./content/json/${contentJsonDirName}/*.json`;
+        const dataJsonFile = `${dataJsonFileName}.json`;
+        const dataPath = './src/data';
 
-        gulp.src("./content/json/pretzelDog/*.json")
-        .pipe(jsoncombine("pretzelDogs.json", function (data, meta) {
-            return new Buffer(JSON.stringify(data));
-        }))
-        .pipe(beautify())
-        .pipe(gulp.dest("./src/data"));
+        gulp.src(jsonContentSrc)
+            .pipe(jsoncombine(dataJsonFile, function (data, meta) {
+                return new Buffer.from(JSON.stringify(data));
+            }))
+            .pipe(beautify())
+            .pipe(gulp.dest(dataPath));
+    }
 
-        gulp.src("./content/json/iceCream/*.json")
-        .pipe(jsoncombine("iceCreams.json", function (data, meta) {
-            return new Buffer(JSON.stringify(data));
-        }))
-        .pipe(beautify())
-        .pipe(gulp.dest("./src/data"));
-
-        gulp.src("./content/json/waterIce/*.json")
-        .pipe(jsoncombine("waterIce.json", function (data, meta) {
-            return new Buffer(JSON.stringify(data));
-        }))
-        .pipe(beautify())
-        .pipe(gulp.dest("./src/data"));
-
-
-        gulp.src("./content/json/dip/*.json")
-        .pipe(jsoncombine("dips.json", function (data, meta) {
-            return new Buffer(JSON.stringify(data));
-        }))
-        .pipe(beautify())
-        .pipe(gulp.dest("./src/data"));
+    combine('pretzel', 'pretzels');
+    combine('pretzelDog', 'pretzelDogs');
+    combine('iceCream', 'iceCreams');
+    combine('waterIce', 'waterIce');
+    combine('dip', 'dips');
 });
 
 // Copy images from assets folder to public folder

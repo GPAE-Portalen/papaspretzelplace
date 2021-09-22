@@ -30,20 +30,16 @@ collections:
           widget: list
           label_singular: price
           min: 1
-          field:
-            label: Price
-            name: price
-            widget: object
-            fields:
-                - label: Ammount
-                  name: ammount
-                  widget: number
-                  value_type: float
+          fields:
+            - label: Ammount
+              name: ammount
+              widget: number
+              value_type: float
                   
-                - label: Size
-                  name: size
-                  widget: string
-                  required: false
+            - label: Size
+              name: size
+              widget: string
+              required: false
   
   - label: Pretzel Dogs
     name: pretzel dogs
@@ -72,20 +68,16 @@ collections:
           widget: list
           label_singular: price
           min: 1
-          field:
-            label: Price
-            name: price
-            widget: object
-            fields:
-                - label: Ammount
-                  name: ammount
-                  widget: number
-                  value_type: float
+          fields:
+            - label: Ammount
+              name: ammount
+              widget: number
+              value_type: float
                   
-                - label: Size
-                  name: size
-                  widget: string
-                  required: false
+            - label: Size
+              name: size
+              widget: string
+              required: false
 
   - label: Ice Cream
     name: ice cream
@@ -114,20 +106,16 @@ collections:
           widget: list
           label_singular: price
           min: 1
-          field:
-            label: Price
-            name: price
-            widget: object
-            fields:
-                - label: Ammount
-                  name: ammount
-                  widget: number
-                  value_type: float
+          fields:
+            - label: Ammount
+              name: ammount
+              widget: number
+              value_type: float
                   
-                - label: Size
-                  name: size
-                  widget: string
-                  required: false
+            - label: Size
+              name: size
+              widget: string
+              required: false
 
   - label: Water Ice
     name: water ice
@@ -156,20 +144,16 @@ collections:
           widget: list
           label_singular: price
           min: 1
-          field:
-            label: Price
-            name: price
-            widget: object
-            fields:
-                - label: Ammount
-                  name: ammount
-                  widget: number
-                  value_type: float
+          fields:
+            - label: Ammount
+              name: ammount
+              widget: number
+              value_type: float
                   
-                - label: Size
-                  name: size
-                  widget: string
-                  required: false
+            - label: Size
+              name: size
+              widget: string
+              required: false
 
   - label: Dips
     name: dips
@@ -198,17 +182,13 @@ collections:
           widget: list
           label_singular: price
           min: 1
-          field:
-            label: Price
-            name: price
-            widget: object
-            fields:
-                - label: Ammount
-                  name: ammount
-                  widget: number
-                  value_type: float
+          fields:
+            - label: Ammount
+              name: ammount
+              widget: number
+              value_type: float
                   
-                - label: Size
-                  name: size
-                  widget: string
-                  required: false
+            - label: Size
+              name: size
+              widget: string
+              required: false
