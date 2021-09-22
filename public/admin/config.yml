@@ -14,36 +14,35 @@ collections:
         - label: Name
           name: name
           widget: string
-          required: true
 
         - label: Description
           name: description
           widget: string
+          required: false
           
         - label: Image
           name: image
           widget: image
+          required: false
           
         - label: Prices
           name: prices
           widget: list
           label_singular: price
-          required: true
           field:
             label: Price
             name: price
             widget: object
-            required: true
             fields:
                 - label: Ammount
                   name: ammount
                   widget: number
                   value_type: float
-                  required: true
                   
                 - label: Size
                   name: size
                   widget: string
+                  required: false
   
   - label: Pretzel Dogs
     name: pretzel dogs
@@ -56,36 +55,35 @@ collections:
         - label: Name
           name: name
           widget: string
-          required: true
 
         - label: Description
           name: description
           widget: string
+          required: false
           
         - label: Image
           name: image
           widget: image
+          required: false
           
         - label: Prices
           name: prices
           widget: list
           label_singular: price
-          required: true
           field:
             label: Price
             name: price
             widget: object
-            required: true
             fields:
                 - label: Ammount
                   name: ammount
                   widget: number
                   value_type: float
-                  required: true
                   
                 - label: Size
                   name: size
                   widget: string
+                  required: false
 
   - label: Ice Cream
     name: ice cream
@@ -98,36 +96,35 @@ collections:
         - label: Name
           name: name
           widget: string
-          required: true
 
         - label: Description
           name: description
           widget: string
+          required: false
           
         - label: Image
           name: image
           widget: image
+          required: false
           
         - label: Prices
           name: prices
           widget: list
           label_singular: price
-          required: true
           field:
             label: Price
             name: price
             widget: object
-            required: true
             fields:
                 - label: Ammount
                   name: ammount
                   widget: number
                   value_type: float
-                  required: true
                   
                 - label: Size
                   name: size
                   widget: string
+                  required: false
 
   - label: Water Ice
     name: water ice
@@ -140,36 +137,35 @@ collections:
         - label: Name
           name: name
           widget: string
-          required: true
 
         - label: Description
           name: description
           widget: string
+          required: false
           
         - label: Image
           name: image
           widget: image
+          required: false
           
         - label: Prices
           name: prices
           widget: list
           label_singular: price
-          required: true
           field:
             label: Price
             name: price
             widget: object
-            required: true
             fields:
                 - label: Ammount
                   name: ammount
                   widget: number
                   value_type: float
-                  required: true
                   
                 - label: Size
                   name: size
                   widget: string
+                  required: false
 
   - label: Dips
     name: dips
@@ -182,33 +178,32 @@ collections:
         - label: Name
           name: name
           widget: string
-          required: true
 
         - label: Description
           name: description
           widget: string
-          
+          required: false
+
         - label: Image
           name: image
           widget: image
+          required: false
           
         - label: Prices
           name: prices
           widget: list
           label_singular: price
-          required: true
           field:
             label: Price
             name: price
             widget: object
-            required: true
             fields:
                 - label: Ammount
                   name: ammount
                   widget: number
                   value_type: float
-                  required: true
                   
                 - label: Size
                   name: size
                   widget: string
+                  required: false
