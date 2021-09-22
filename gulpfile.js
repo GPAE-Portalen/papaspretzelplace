@@ -24,36 +24,36 @@ gulp.task('generateJson', async () => {
 
 // Combine JSON data
 gulp.task('combineJson', async () => {
-    gulp.src("./content/json/pretzels/*.json")
+    gulp.src("./content/json/pretzel/*.json")
         .pipe(jsoncombine("pretzels.json", function (data, meta) {
             return new Buffer(JSON.stringify(data));
         }))
         .pipe(beautify())
         .pipe(gulp.dest("./src/data"));
 
-        gulp.src("./content/json/pretzeldogs/*.json")
-        .pipe(jsoncombine("pretzeldogs.json", function (data, meta) {
+        gulp.src("./content/json/pretzelDog/*.json")
+        .pipe(jsoncombine("pretzelDogs.json", function (data, meta) {
             return new Buffer(JSON.stringify(data));
         }))
         .pipe(beautify())
         .pipe(gulp.dest("./src/data"));
 
-        gulp.src("./content/json/icecream/*.json")
-        .pipe(jsoncombine("icecream.json", function (data, meta) {
+        gulp.src("./content/json/iceCream/*.json")
+        .pipe(jsoncombine("iceCreams.json", function (data, meta) {
             return new Buffer(JSON.stringify(data));
         }))
         .pipe(beautify())
         .pipe(gulp.dest("./src/data"));
 
-        gulp.src("./content/json/waterice/*.json")
-        .pipe(jsoncombine("waterice.json", function (data, meta) {
+        gulp.src("./content/json/waterIce/*.json")
+        .pipe(jsoncombine("waterIce.json", function (data, meta) {
             return new Buffer(JSON.stringify(data));
         }))
         .pipe(beautify())
         .pipe(gulp.dest("./src/data"));
 
 
-        gulp.src("./content/json/dips/*.json")
+        gulp.src("./content/json/dip/*.json")
         .pipe(jsoncombine("dips.json", function (data, meta) {
             return new Buffer(JSON.stringify(data));
         }))

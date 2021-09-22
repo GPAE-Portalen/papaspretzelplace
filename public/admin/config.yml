@@ -5,7 +5,7 @@ media_folder: assets/img
 collections:
   - label: Pretzels
     name: pretzels
-    folder: content/markdown/pretzels
+    folder: content/markdown/pretzel
     create: true
     identifier_field: name
     slug: "{{slug}}"
@@ -29,6 +29,7 @@ collections:
           name: prices
           widget: list
           label_singular: price
+          min: 1
           field:
             label: Price
             name: price
@@ -46,7 +47,7 @@ collections:
   
   - label: Pretzel Dogs
     name: pretzel dogs
-    folder: content/markdown/pretzeldogs
+    folder: content/markdown/pretzelDog
     create: true
     identifier_field: name
     slug: "{{slug}}"
@@ -70,6 +71,7 @@ collections:
           name: prices
           widget: list
           label_singular: price
+          min: 1
           field:
             label: Price
             name: price
@@ -87,7 +89,7 @@ collections:
 
   - label: Ice Cream
     name: ice cream
-    folder: content/markdown/icecream
+    folder: content/markdown/iceCream
     create: true
     identifier_field: name
     slug: "{{slug}}"
@@ -111,6 +113,7 @@ collections:
           name: prices
           widget: list
           label_singular: price
+          min: 1
           field:
             label: Price
             name: price
@@ -128,7 +131,7 @@ collections:
 
   - label: Water Ice
     name: water ice
-    folder: content/markdown/waterice
+    folder: content/markdown/waterIce
     create: true
     identifier_field: name
     slug: "{{slug}}"
@@ -152,6 +155,7 @@ collections:
           name: prices
           widget: list
           label_singular: price
+          min: 1
           field:
             label: Price
             name: price
@@ -169,7 +173,7 @@ collections:
 
   - label: Dips
     name: dips
-    folder: content/markdown/dips
+    folder: content/markdown/dip
     create: true
     identifier_field: name
     slug: "{{slug}}"
@@ -193,6 +197,7 @@ collections:
           name: prices
           widget: list
           label_singular: price
+          min: 1
           field:
             label: Price
             name: price

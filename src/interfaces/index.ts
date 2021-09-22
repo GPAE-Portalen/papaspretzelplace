@@ -19,13 +19,22 @@ export interface IDictionary<T> {
     [key: string]: T;
 }
 
-export interface IPrezelPost {
+export interface IMenu {
+    pretzels: IDictionary<IMenuItem>;
+    pretzelDogs: IDictionary<IMenuItem>;
+    iceCreams: IDictionary<IMenuItem>;
+    waterIce: IDictionary<IMenuItem>;
+    dips: IDictionary<IMenuItem>;
+}
+
+export interface IMenuItem {
     name: string;
-    prices: IPrice[];
+    description?: string;
     image?: string; 
+    prices: IPrice[];
 }
 
 export interface IPrice {
     ammount: number;
-    name: string;
+    size?: string;
 }

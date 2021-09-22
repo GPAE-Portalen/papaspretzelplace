@@ -8,39 +8,19 @@ import Footer from '../components/Footer';
 import { Logo } from '../components/Logo';
 import { SocialsButton } from '../components/SocialsButton';
 import { MenuItems } from '../components/MenuItems';
-import { IBlogPost } from "../../interfaces";
+import { IMenu} from "../../interfaces";
 
 export default function Menu(): JSX.Element {
-    const [blogPost, setBlogPost] = useState<IBlogPost>();
-    const [getData, setGetData] = useState<boolean>(false);
+    const [menu, setMenu] = useState<IMenu>();
 
     const title: string = 'Menu';
     const description: string = 'Fresh Pretzels with an Artisan Twist';
 
     useEffect(() => {
-        if (!getData) {
-            (async () => {
-                await window.repository.createBlogPost('2021-08-17_hello-world');
-                setGetData(true);
-            })();
+        if(!menu) {
+            setMenu(window.repository.getMenu());
         }
-
-        if (getData) {
-            (async () => {
-                const data = await window.repository.getBlogPost('2021-08-17_hello-world');
-                setBlogPost(data);
-                console.log(blogPost);
-            })();
-        }
-
-        return () => {
-            (async () => {
-                await window.repository.deleteBlogPost('2021-08-17_hello-world');
-                console.log(blogPost);
-            })();
-        }
-    }, [getData, blogPost]);
-
+    }, [menu]);
 
     const seo: ISEOProps = {
         title,
