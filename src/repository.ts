@@ -12,11 +12,11 @@ export default class Repository implements IRepository {
     }
 
     getMenu(): IMenu {
-        const pretzels: IDictionary<IMenuItem> = require(`${this.url}pretzels.json`);
-        const pretzelDogs: IDictionary<IMenuItem> = require(`${this.url}pretzelDogs.json`);
-        const iceCreams: IDictionary<IMenuItem> = require(`${this.url}iceCreams.json`);
-        const waterIce: IDictionary<IMenuItem> = require(`${this.url}waterIce.json`);
-        const dips: IDictionary<IMenuItem> = require(`${this.url}dips.json`);
+        const pretzels: IDictionary<IMenuItem> = require(`${this.url}/pretzels.json`);
+        const pretzelDogs: IDictionary<IMenuItem> = require(`${this.url}/pretzelDogs.json`);
+        const iceCreams: IDictionary<IMenuItem> = require(`${this.url}/iceCreams.json`);
+        const waterIce: IDictionary<IMenuItem> = require(`${this.url}/waterIce.json`);
+        const dips: IDictionary<IMenuItem> = require(`${this.url}/dips.json`);
 
         const menu: IMenu = {
             pretzels,
