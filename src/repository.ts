@@ -17,12 +17,13 @@ export default class Repository implements IRepository {
         const iceCreams: IDictionary<IMenuItem> = require(`${this.url}iceCreams.json`);
         const waterIce: IDictionary<IMenuItem> = require(`${this.url}waterIce.json`);
         const dips: IDictionary<IMenuItem> = require(`${this.url}dips.json`);
+
         const menu: IMenu = {
             pretzels,
             pretzelDogs,
             iceCreams,
             waterIce,
-            dips
+            dips,
         };
 
         return menu;

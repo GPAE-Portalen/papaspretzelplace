@@ -4,11 +4,25 @@ const markdownToJSON = require('gulp-markdown-to-json');
 const marked = require('marked');
 const jsoncombine = require('gulp-jsoncombine');
 const beautify = require('gulp-jsbeautifier');
+const fs = require('fs');
 
 // Clean JSON data
 gulp.task('cleanJson', async () => {
+    function createJsonData(dataJsonFileName) {
+        fs.writeFileSync(`./src/data/${dataJsonFileName}.json`, JSON.stringify({}))
+    }
+
     gulp.src("./content/json/**/*.json", { read: false })
         .pipe(clean())
+
+    gulp.src("./src/data/**/*.json", { read: false })
+        .pipe(clean())
+
+    createJsonData('pretzels');
+    createJsonData('pretzelDogs');
+    createJsonData('iceCreams');
+    createJsonData('waterIce');
+    createJsonData('dips');
 });
 
 // Generate JSON data from markdown
@@ -19,6 +33,7 @@ marked.setOptions({
 gulp.task('generateJson', async () => {
     gulp.src('./content/markdown/**/*.md')
         .pipe(markdownToJSON(marked))
+        .pipe(beautify())
         .pipe(gulp.dest('./content/json'))
 });
 
