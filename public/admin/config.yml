@@ -9,7 +9,10 @@ collections:
       - label: Open Hours
         name: open hours
         file: content/markdown/openHours.md
-        widget: string
+        fields:
+          - label: Text
+            name: text
+            widget: string
 
   - label: Pretzels
     name: pretzels
