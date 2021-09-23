@@ -18,7 +18,11 @@ gulp.task('cleanJson', async () => {
     gulp.src("./src/data/**/*.json", { read: false })
         .pipe(clean())
 
+    // Base information
     createJsonData('openHours');
+    createJsonData('contactEmailAdress');
+
+    // Menu
     createJsonData('pretzels');
     createJsonData('pretzelDogs');
     createJsonData('iceCreams');
@@ -63,8 +67,11 @@ gulp.task('combineJson', async () => {
             .pipe(gulp.dest(dataPath));
     }
 
-    handleSingularFile('openHours')
+    // Base information
+    handleSingularFile('openHours');
+    handleSingularFile('contactEmailAdress');
 
+    // Menu
     combine('pretzel', 'pretzels');
     combine('pretzelDog', 'pretzelDogs');
     combine('iceCream', 'iceCreams');

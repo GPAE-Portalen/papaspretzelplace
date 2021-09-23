@@ -14,6 +14,14 @@ collections:
             name: text
             widget: string
 
+      - label: Contact Email Adress
+        name: contact email address
+        file: content/markdown/contactEmailAdress.md
+        fields:
+          - label: Email
+            name: email
+            widget: string
+
   - label: Pretzels
     name: pretzels
     folder: content/markdown/pretzel
