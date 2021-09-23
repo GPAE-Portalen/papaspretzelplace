@@ -18,6 +18,7 @@ gulp.task('cleanJson', async () => {
     gulp.src("./src/data/**/*.json", { read: false })
         .pipe(clean())
 
+    createJsonData('openHours');
     createJsonData('pretzels');
     createJsonData('pretzelDogs');
     createJsonData('iceCreams');
@@ -51,6 +52,18 @@ gulp.task('combineJson', async () => {
             .pipe(beautify())
             .pipe(gulp.dest(dataPath));
     }
+
+    function handleSingularFile(dataJsonFileName) {
+        const jsonFile = `${dataJsonFileName}.json`;
+        const jsonContentSrc = `./content/json/${jsonFile}`;
+        const dataPath = './src/data';
+
+        gulp.src(jsonContentSrc)
+            .pipe(beautify())
+            .pipe(gulp.dest(dataPath));
+    }
+
+    handleSingularFile('openHours')
 
     combine('pretzel', 'pretzels');
     combine('pretzelDog', 'pretzelDogs');
