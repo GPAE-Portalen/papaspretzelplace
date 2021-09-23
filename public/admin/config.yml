@@ -3,10 +3,13 @@ backend:
   branch: main
 media_folder: assets/img
 collections:
-  - label: Open Hours
-    name: open hours
-    file: content/markdown/openHours.md
-    widget: string
+  - label: Base Information
+    name: base information
+    files:
+      - label: Open Hours
+        name: open hours
+        file: content/markdown/openHours.md
+        widget: string
 
   - label: Pretzels
     name: pretzels
