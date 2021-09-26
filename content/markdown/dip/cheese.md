@@ -2,5 +2,5 @@
 display: true
 name: Cheese
 prices:
-  - ammount: 0.75
+  - price: 0.75
 ---

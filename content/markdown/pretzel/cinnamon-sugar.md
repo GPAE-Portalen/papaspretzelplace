@@ -2,5 +2,5 @@
 display: true
 name: Cinnamon Sugar
 prices:
-  - ammount: 2.5
+  - price: 2.5
 ---

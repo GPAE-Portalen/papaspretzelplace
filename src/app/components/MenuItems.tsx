@@ -60,18 +60,18 @@ const Divider = (): JSX.Element => (
 );
 
 const MenuItem = (menuItem: IMenuItem): JSX.Element => {
-    const renderSizingPrices = (): JSX.Element[] => menuItem.prices.map((price: IPrice): JSX.Element => {
-        const first: boolean = menuItem.prices.indexOf(price) === 0;
+    const renderSizingPrices = (): JSX.Element[] => menuItem.prices.map((priceItem: IPrice): JSX.Element => {
+        const first: boolean = menuItem.prices.indexOf(priceItem) === 0;
         const className: string = first ? 'pe-2' : 'px-2 border-start'
 
         return (
             <Fragment key={uuidv4()}>
                 <span className={className}>
                     { 
-                        price.size && 
-                        <span>{price.size}&nbsp;</span>
+                        priceItem.size && 
+                        <span>{priceItem.size}&nbsp;</span>
                     }
-                    <Money value={price.ammount} />
+                    <Money value={priceItem.price} />
                 </span>
             </Fragment>
         );

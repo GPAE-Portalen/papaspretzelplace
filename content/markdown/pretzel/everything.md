@@ -2,5 +2,5 @@
 display: true
 name: Everything
 prices:
-  - ammount: 2
+  - price: 2
 ---

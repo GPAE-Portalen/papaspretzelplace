@@ -36,6 +36,6 @@ export interface IMenuItem {
 }
 
 export interface IPrice {
-    ammount: number;
+    price: number;
     size?: string;
 }

@@ -2,8 +2,8 @@
 display: true
 name: Salted Caramel Pretzel
 prices:
-  - ammount: 3
+  - price: 3
     size: sm
-  - ammount: 5
+  - price: 5
     size: lg
 ---

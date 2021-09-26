@@ -2,5 +2,5 @@
 display: true
 name: Cheddar
 prices:
-  - ammount: 2.5
+  - price: 2.5
 ---

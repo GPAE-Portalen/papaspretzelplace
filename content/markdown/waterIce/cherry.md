@@ -2,10 +2,10 @@
 display: true
 name: Cherry
 prices:
-  - ammount: 2
+  - price: 2
     size: sm
-  - ammount: 3
+  - price: 3
     size: md
-  - ammount: 5
+  - price: 5
     size: lg
 ---
