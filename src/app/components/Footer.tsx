@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 import { Container, EContainerType } from './Container';
 
 import { Address } from './Address';
 import { SocialsCircleButton } from './SocialsCircleButton';
+import { IOpenHours } from '../../interfaces';
 
 export interface IFooterProps {
 
@@ -32,6 +33,15 @@ export default function Footer(props: IFooterProps): JSX.Element {
 }
 
 const Lowbar = (): JSX.Element => {
+    const [openHours, setOpenHours] = useState<IOpenHours>();
+
+    useEffect(() => {
+        if(!openHours) {
+            const data: IOpenHours = window.repository.getOpenHours();
+            setOpenHours(data);
+        }
+    }, [openHours]);
+
     const scrollTop = (): void => {
         window.scrollTo(0, 0);
     };
@@ -49,10 +59,13 @@ const Lowbar = (): JSX.Element => {
                         </p>
                     </article>
 
-                    <article>
-                        <h2 className="h4">Hours</h2>
-                        <p>Opens daily 11am</p>
-                    </article>
+                    {
+                        openHours &&
+                        <article>
+                            <h2 className="h4">Hours</h2>
+                            <p>{openHours.text}</p>
+                        </article>
+                    }
                 </div>
 
                 <div className="mb-3">

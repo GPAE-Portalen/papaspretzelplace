@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import { Container, EContainerType } from './Container';
@@ -6,8 +6,18 @@ import { Container, EContainerType } from './Container';
 import { Logo } from './Logo';
 import { SocialsButton } from '../components/SocialsButton';
 import { Address } from './Address';
+import { IOpenHours } from '../../interfaces';
 
 export const Offcanvas = (): JSX.Element => {
+    const [openHours, setOpenHours] = useState<IOpenHours>();
+
+    useEffect(() => {
+        if(!openHours) {
+            const data: IOpenHours = window.repository.getOpenHours();
+            setOpenHours(data);
+        }
+    }, [openHours]);
+
     const address: string = '302 Mill Street, Bristol, PA 19007';
     const addressUrl: string = encodeURI(address);
 
@@ -29,15 +39,21 @@ export const Offcanvas = (): JSX.Element => {
                 </Container>
             </div>
 
-            <div className="bg-ppp-beige-100 bg-gradient w-100 border-top border-ppp-blue-100">
-                <Container type={EContainerType.Default} className="text-end">
-                    <small className="text-uppercase fw-bold d-block">Opens daily 11am</small>
-                </Container>
-            </div>
+             {
+                openHours &&
+                <div className="bg-ppp-beige-100 bg-gradient w-100 border-top border-ppp-blue-100">
+                    <Container type={EContainerType.Default} className="text-end">
+                        <small className="text-uppercase fw-bold d-block">{openHours.text.toUpperCase()}</small>
+                    </Container>
+                 </div>
+             }
 
             <div className="offcanvas offcanvas-end" tabIndex={-1} id="offcanvasRight">
                 <div className="offcanvas-header justify-content-end">
-                    <div className="text-uppercase fw-bold flex-grow-1">Opens daily 11am</div>
+                    {
+                        openHours &&
+                        <div className="text-uppercase fw-bold flex-grow-1">{openHours.text.toUpperCase()}</div>
+                    }
 
                     <i className="bi bi-x-lg" data-bs-dismiss="offcanvas"></i>
                 </div>

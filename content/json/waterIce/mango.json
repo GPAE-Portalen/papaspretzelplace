@@ -2,15 +2,15 @@
     "display": true,
     "name": "Mango",
     "prices": [{
-        "ammount": 2,
+        "price": 2,
         "size": "sm"
     }, {
-        "ammount": 3,
+        "price": 3,
         "size": "md"
     }, {
-        "ammount": 5,
+        "price": 5,
         "size": "lg"
     }],
     "body": "",
-    "updatedAt": "2021-09-26T13:10:03.639Z"
+    "updatedAt": "2021-09-26T13:25:00.378Z"
 }

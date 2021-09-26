@@ -2,12 +2,12 @@
     "display": true,
     "name": "Cherry Vanilla",
     "prices": [{
-        "ammount": 3,
+        "price": 3,
         "size": "sm"
     }, {
-        "ammount": 5,
+        "price": 5,
         "size": "lg"
     }],
     "body": "",
-    "updatedAt": "2021-09-26T13:08:56.780Z"
+    "updatedAt": "2021-09-26T13:23:53.750Z"
 }

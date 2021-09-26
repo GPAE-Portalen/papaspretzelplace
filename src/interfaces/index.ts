@@ -39,3 +39,11 @@ export interface IPrice {
     price: number;
     size?: string;
 }
+
+export interface IContactEmailAddress {
+    email: string;
+}
+
+export interface IOpenHours {
+    text: string;
+}

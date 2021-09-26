@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
+import { IContactEmailAddress } from '../../interfaces';
 
 export interface IAddressProps {
     className?: string;
 }
 
 export const Address = (props: IAddressProps): JSX.Element => {
+    const [contactEmailAddress, setContactEmailAddress] = useState<IContactEmailAddress>();
+
+    useEffect(() => {
+        if(!contactEmailAddress) {
+            const data: IContactEmailAddress = window.repository.getContactEmailAddress();
+            setContactEmailAddress(data);
+        }
+    }, [contactEmailAddress]);
+
     const address: string = '302 Mill Street, Bristol, PA 19007';
     const addressUrl: string = encodeURI(address);
 
@@ -16,12 +26,17 @@ export const Address = (props: IAddressProps): JSX.Element => {
 
             <br />
 
-            <a href="mailto:papaspretzelplace@gmail.com" className="d-inline-block my-1">
-                <i className="bi bi-envelope"></i>
-                <span>&nbsp;papaspretzelplace@gmail.com</span>
-            </a>
+            {
+                contactEmailAddress &&
+                <Fragment>
+                    <a href="mailto:papaspretzelplace@gmail.com" className="d-inline-block my-1">
+                        <i className="bi bi-envelope"></i>
+                        <span>&nbsp;{contactEmailAddress.email}</span>
+                    </a>
 
-            <br />
+                     <br />
+                </Fragment>
+            }
 
             <a href="tel:+1 267-554-7947" className="d-inline-block my-1">
                 <i className="bi bi-telephone"></i>

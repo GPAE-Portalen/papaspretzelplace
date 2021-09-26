@@ -1,7 +1,9 @@
-import { IMenu, IDictionary, IMenuItem } from './interfaces/index';
+import { IMenu, IDictionary, IMenuItem, IContactEmailAddress, IOpenHours } from './interfaces/index';
 
 export interface IRepository {
     getMenu(): IMenu;
+    getContactEmailAddress(): IContactEmailAddress;
+    getOpenHours(): IOpenHours;
 }
 
 export default class Repository implements IRepository {
@@ -27,5 +29,17 @@ export default class Repository implements IRepository {
         };
 
         return menu;
+    }
+
+    getContactEmailAddress(): IContactEmailAddress {
+        const contactEmailAddress: IContactEmailAddress = require(`${this.url}contactEmailAddress.json`);
+
+        return contactEmailAddress;
+    }
+
+    getOpenHours(): IOpenHours {
+        const openHours: IOpenHours = require(`${this.url}openHours.json`);
+
+        return openHours;
     }
 }

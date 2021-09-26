@@ -2,12 +2,12 @@
     "display": true,
     "name": "Chocolate",
     "prices": [{
-        "ammount": 3,
+        "price": 3,
         "size": "sm"
     }, {
-        "ammount": 5,
+        "price": 5,
         "size": "lg"
     }],
     "body": "",
-    "updatedAt": "2021-09-26T13:09:03.847Z"
+    "updatedAt": "2021-09-26T13:24:04.265Z"
 }

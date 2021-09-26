@@ -21,7 +21,7 @@ gulp.task('cleanJson', async () => {
 
     // Base information
     createJsonData('openHours');
-    createJsonData('contactEmailAdress');
+    createJsonData('contactEmailAddress');
 
     // Menu
     createJsonData('pretzels');
@@ -70,7 +70,7 @@ gulp.task('combineJson', async () => {
 
     // Base information
     handleSingularFile('openHours');
-    handleSingularFile('contactEmailAdress');
+    handleSingularFile('contactEmailAddress');
 
     // Menu
     combine('pretzel', 'pretzels');
