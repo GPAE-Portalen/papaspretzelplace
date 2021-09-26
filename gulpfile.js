@@ -9,26 +9,11 @@ const del = require('del');
 
 // Clean JSON data
 gulp.task('cleanJson', async () => {
-    function createJsonData(dataJsonFileName) {
-        fs.writeFileSync(`./src/data/${dataJsonFileName}.json`, JSON.stringify({}))
-    }
-
     gulp.src("./content/json/**/*.json", { read: false })
         .pipe(clean())
 
     gulp.src("./src/data/**/*.json", { read: false })
         .pipe(clean())
-
-    // Base information
-    createJsonData('openHours');
-    createJsonData('contactEmailAddress');
-
-    // Menu
-    createJsonData('pretzels');
-    createJsonData('iceCreams');
-    createJsonData('waterIce');
-    createJsonData('dips');
-    createJsonData('drinks');
 });
 
 // Generate JSON data from markdown
@@ -78,6 +63,33 @@ gulp.task('combineJson', async () => {
     combine('waterIce', 'waterIce');
     combine('dip', 'dips');
     combine('drink', 'drinks');
+});
+
+// Create empty JSON data if it doesnt exist in MD
+gulp.task('createLeftoverJson', async () => {
+    function getJsonDataFilePath(dataJsonFileName) {
+        return `./src/data/${dataJsonFileName}.json`;
+    }
+
+    function createJsonData(dataJsonFileName) {
+        fs.writeFileSync(getJsonDataFilePath(dataJsonFileName), JSON.stringify({}))
+    }
+
+    const dataJsonFileNames = [
+        'openHours',
+        'contactEmailAddress',
+        'pretzels',
+        'iceCreams',
+        'waterIce',
+        'dips',
+        'drinks'
+    ];
+
+    dataJsonFileNames.forEach(dataJsonFileName => {
+        if(!fs.existsSync(getJsonDataFilePath(dataJsonFileName))) {
+            createJsonData(dataJsonFileName);
+        }
+    });
 });
 
 // Clean JSON data
