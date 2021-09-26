@@ -28,6 +28,7 @@ export interface IMenu {
 }
 
 export interface IMenuItem {
+    display: boolean;
     name: string;
     description?: string;
     image?: string; 

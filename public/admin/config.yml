@@ -30,6 +30,11 @@ collections:
     slug: "{{slug}}"
     label_singular: Pretzel
     fields:
+        - label: Display?
+          name: display
+          widget: boolean
+          default: true
+
         - label: Name
           name: name
           widget: string
@@ -68,6 +73,11 @@ collections:
     slug: "{{slug}}"
     label_singular: Ice Cream
     fields:
+        - label: Display?
+          name: display
+          widget: boolean
+          default: true
+
         - label: Name
           name: name
           widget: string
@@ -106,6 +116,11 @@ collections:
     slug: "{{slug}}"
     label_singular: Water Ice
     fields:
+        - label: Display?
+          name: display
+          widget: boolean
+          default: true
+
         - label: Name
           name: name
           widget: string
@@ -144,6 +159,11 @@ collections:
     slug: "{{slug}}"
     label_singular: Dip
     fields:
+        - label: Display?
+          name: display
+          widget: boolean
+          default: true
+
         - label: Name
           name: name
           widget: string
@@ -182,6 +202,11 @@ collections:
     slug: "{{slug}}"
     label_singular: Drink
     fields:
+        - label: Display?
+          name: display
+          widget: boolean
+          default: true
+
         - label: Name
           name: name
           widget: string

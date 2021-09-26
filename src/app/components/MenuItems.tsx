@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { IDictionary, IMenu, IMenuItem, IPrice } from '../../interfaces';
 
@@ -99,11 +99,53 @@ const MenuItem = (menuItem: IMenuItem): JSX.Element => {
 }
 
 export const MenuItems = (menu: IMenu): JSX.Element => {
+    const [render, setRender] = useState(false);
+
+    useEffect(() => {
+        if(menu) {
+            Object.keys(menu.pretzels).forEach((key: string) => {
+                if(!menu.pretzels[key].display) {
+                    delete menu.pretzels[key];
+                }
+            });
+    
+            Object.keys(menu.iceCreams).forEach((key: string) => {
+                if(!menu.iceCreams[key].display) {
+                    delete menu.iceCreams[key];
+                }
+            });
+    
+            Object.keys(menu.waterIce).forEach((key: string) => {
+                if(!menu.waterIce[key].display) {
+                    delete menu.waterIce[key];
+                }
+            });
+    
+            Object.keys(menu.dips).forEach((key: string) => {
+                if(!menu.dips[key].display) {
+                    delete menu.dips[key];
+                }
+            });
+    
+            Object.keys(menu.drinks).forEach((key: string) => {
+                if(!menu.drinks[key].display) {
+                    delete menu.drinks[key];
+                }
+            });
+
+            setRender(true);
+        }
+    }, [menu]);
+
     const renderMenuItems = (menuItems: IDictionary<IMenuItem>): JSX.Element[] => Object.keys(menuItems).map((key: string): JSX.Element => {
         return (
             <MenuItem key={key} {...menuItems[key]} />
         );
     });
+
+    if(!render) {
+        return <Fragment />;
+    }
 
     return (
         <section>
