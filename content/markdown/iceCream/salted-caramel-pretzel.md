@@ -1,4 +1,5 @@
 ---
+display: true
 name: Salted Caramel Pretzel
 prices:
   - ammount: 3

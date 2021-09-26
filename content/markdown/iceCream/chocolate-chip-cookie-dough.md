@@ -1,4 +1,5 @@
 ---
+display: true
 name: Chocolate Chip Cookie Dough
 prices:
   - ammount: 3

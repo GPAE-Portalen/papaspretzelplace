@@ -1,4 +1,5 @@
 ---
+display: true
 name: Cherry
 prices:
   - ammount: 2

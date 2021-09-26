@@ -1,4 +1,5 @@
 ---
+display: true
 name: Vanilla
 prices:
   - ammount: 3

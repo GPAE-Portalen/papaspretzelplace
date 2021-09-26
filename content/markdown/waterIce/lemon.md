@@ -1,4 +1,5 @@
 ---
+display: true
 name: Lemon
 prices:
   - ammount: 2

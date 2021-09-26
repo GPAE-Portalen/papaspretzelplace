@@ -1,4 +1,5 @@
 ---
+display: true
 name: Moose Tracks
 prices:
   - ammount: 3

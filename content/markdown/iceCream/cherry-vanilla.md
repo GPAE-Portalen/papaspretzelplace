@@ -1,4 +1,5 @@
 ---
+display: true
 name: Cherry Vanilla
 prices:
   - ammount: 3

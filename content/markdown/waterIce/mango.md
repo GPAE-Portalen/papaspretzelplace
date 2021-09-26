@@ -1,4 +1,5 @@
 ---
+display: true
 name: Mango
 prices:
   - ammount: 2

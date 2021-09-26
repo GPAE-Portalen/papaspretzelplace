@@ -1,4 +1,5 @@
 ---
+display: true
 name: Blueberry
 prices:
   - ammount: 2

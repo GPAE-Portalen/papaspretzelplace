@@ -1,4 +1,5 @@
 {
+    "display": true,
     "name": "Moose Tracks",
     "prices": [{
         "ammount": 3,
@@ -8,5 +9,5 @@
         "size": "lg"
     }],
     "body": "",
-    "updatedAt": "2021-09-22T21:38:31.673Z"
+    "updatedAt": "2021-09-26T13:09:16.887Z"
 }

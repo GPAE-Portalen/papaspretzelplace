@@ -1,5 +1,6 @@
 {
     "cherry-vanilla": {
+        "display": true,
         "name": "Cherry Vanilla",
         "prices": [{
             "ammount": 3,
@@ -9,9 +10,10 @@
             "size": "lg"
         }],
         "body": "",
-        "updatedAt": "2021-09-22T21:38:31.667Z"
+        "updatedAt": "2021-09-26T13:08:56.780Z"
     },
     "chocolate-chip-cookie-dough": {
+        "display": true,
         "name": "Chocolate Chip Cookie Dough",
         "prices": [{
             "ammount": 3,
@@ -21,9 +23,10 @@
             "size": "lg"
         }],
         "body": "",
-        "updatedAt": "2021-09-22T21:38:31.668Z"
+        "updatedAt": "2021-09-26T13:08:59.963Z"
     },
     "chocolate": {
+        "display": true,
         "name": "Chocolate",
         "prices": [{
             "ammount": 3,
@@ -33,9 +36,10 @@
             "size": "lg"
         }],
         "body": "",
-        "updatedAt": "2021-09-22T21:38:31.669Z"
+        "updatedAt": "2021-09-26T13:09:03.847Z"
     },
     "cookies-cream": {
+        "display": true,
         "name": "Cookies + Cream",
         "prices": [{
             "ammount": 3,
@@ -45,9 +49,10 @@
             "size": "lg"
         }],
         "body": "",
-        "updatedAt": "2021-09-22T21:38:31.670Z"
+        "updatedAt": "2021-09-26T13:09:07.537Z"
     },
     "mint-chocolate-chip": {
+        "display": true,
         "name": "Mint Chocolate Chip",
         "prices": [{
             "ammount": 3,
@@ -57,9 +62,10 @@
             "size": "lg"
         }],
         "body": "",
-        "updatedAt": "2021-09-22T21:38:31.672Z"
+        "updatedAt": "2021-09-26T13:09:12.638Z"
     },
     "moose-tracks": {
+        "display": true,
         "name": "Moose Tracks",
         "prices": [{
             "ammount": 3,
@@ -69,9 +75,10 @@
             "size": "lg"
         }],
         "body": "",
-        "updatedAt": "2021-09-22T21:38:31.673Z"
+        "updatedAt": "2021-09-26T13:09:16.887Z"
     },
     "salted-caramel-pretzel": {
+        "display": true,
         "name": "Salted Caramel Pretzel",
         "prices": [{
             "ammount": 3,
@@ -81,9 +88,10 @@
             "size": "lg"
         }],
         "body": "",
-        "updatedAt": "2021-09-22T21:38:31.674Z"
+        "updatedAt": "2021-09-26T13:09:20.460Z"
     },
     "vanilla": {
+        "display": true,
         "name": "Vanilla",
         "prices": [{
             "ammount": 3,
@@ -93,6 +101,6 @@
             "size": "lg"
         }],
         "body": "",
-        "updatedAt": "2021-09-22T21:38:31.674Z"
+        "updatedAt": "2021-09-26T13:09:23.662Z"
     }
 }

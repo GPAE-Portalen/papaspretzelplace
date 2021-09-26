@@ -1,8 +1,9 @@
 {
+    "display": true,
     "name": "Cheddar",
     "prices": [{
         "ammount": 2.5
     }],
     "body": "",
-    "updatedAt": "2021-09-22T21:38:31.676Z"
+    "updatedAt": "2021-09-26T13:09:27.586Z"
 }

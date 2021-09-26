@@ -1,4 +1,5 @@
 ---
+display: true
 name: Strawberry
 prices:
   - ammount: 2

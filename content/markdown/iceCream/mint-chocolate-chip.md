@@ -1,4 +1,5 @@
 ---
+display: true
 name: Mint Chocolate Chip
 prices:
   - ammount: 3

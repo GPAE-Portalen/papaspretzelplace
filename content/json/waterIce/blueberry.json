@@ -1,4 +1,5 @@
 {
+    "display": true,
     "name": "Blueberry",
     "prices": [{
         "ammount": 2,
@@ -11,5 +12,5 @@
         "size": "lg"
     }],
     "body": "",
-    "updatedAt": "2021-09-22T21:38:31.683Z"
+    "updatedAt": "2021-09-26T13:09:53.422Z"
 }

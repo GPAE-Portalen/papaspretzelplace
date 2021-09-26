@@ -1,4 +1,5 @@
 ---
+display: true
 name: Watermelon
 prices:
   - ammount: 2

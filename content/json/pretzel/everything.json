@@ -1,8 +1,9 @@
 {
+    "display": true,
     "name": "Everything",
     "prices": [{
         "ammount": 2
     }],
     "body": "",
-    "updatedAt": "2021-09-22T21:38:31.678Z"
+    "updatedAt": "2021-09-26T13:09:34.430Z"
 }

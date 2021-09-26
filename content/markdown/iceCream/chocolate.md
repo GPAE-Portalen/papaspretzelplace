@@ -1,4 +1,5 @@
 ---
+display: true
 name: Chocolate
 prices:
   - ammount: 3

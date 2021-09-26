@@ -1,4 +1,5 @@
 ---
+display: true
 name: Cookies + Cream
 prices:
   - ammount: 3
