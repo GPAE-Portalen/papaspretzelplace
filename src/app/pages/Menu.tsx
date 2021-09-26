@@ -20,8 +20,6 @@ export default function Menu(): JSX.Element {
         if(!menu) {
             setMenu(window.repository.getMenu());
         }
-
-        console.log(menu);
     }, [menu]);
 
     const seo: ISEOProps = {

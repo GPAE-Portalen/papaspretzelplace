@@ -25,10 +25,10 @@ gulp.task('cleanJson', async () => {
 
     // Menu
     createJsonData('pretzels');
-    createJsonData('pretzelDogs');
     createJsonData('iceCreams');
     createJsonData('waterIce');
     createJsonData('dips');
+    createJsonData('drinks');
 });
 
 // Generate JSON data from markdown
@@ -74,10 +74,10 @@ gulp.task('combineJson', async () => {
 
     // Menu
     combine('pretzel', 'pretzels');
-    combine('pretzelDog', 'pretzelDogs');
     combine('iceCream', 'iceCreams');
     combine('waterIce', 'waterIce');
     combine('dip', 'dips');
+    combine('drink', 'drinks');
 });
 
 // Clean JSON data

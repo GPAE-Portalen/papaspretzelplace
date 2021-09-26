@@ -39,7 +39,7 @@ function initDevelopment() {
     window.envProd = process.env.REACT_APP_DIST_ENV === EnvironmentVariables.Production;
     window.envDev = process.env.REACT_APP_DIST_ENV === EnvironmentVariables.Development;
 
-    window.repository = new Repository('./data');
+    window.repository = new Repository('./data/');
 
     (() => {
         if (window.envProd)

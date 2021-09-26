@@ -60,44 +60,6 @@ collections:
               widget: string
               required: false
   
-  - label: Pretzel Dogs
-    name: pretzel dogs
-    folder: content/markdown/pretzelDog
-    create: true
-    identifier_field: name
-    slug: "{{slug}}"
-    label_singular: Pretzel Dog
-    fields:
-        - label: Name
-          name: name
-          widget: string
-
-        - label: Description
-          name: description
-          widget: string
-          required: false
-          
-        - label: Image
-          name: image
-          widget: image
-          required: false
-          
-        - label: Prices
-          name: prices
-          widget: list
-          label_singular: price
-          min: 1
-          fields:
-            - label: Ammount
-              name: ammount
-              widget: number
-              value_type: float
-                  
-            - label: Size
-              name: size
-              widget: string
-              required: false
-
   - label: Ice Cream
     name: ice cream
     folder: content/markdown/iceCream
@@ -191,6 +153,44 @@ collections:
           widget: string
           required: false
 
+        - label: Image
+          name: image
+          widget: image
+          required: false
+          
+        - label: Prices
+          name: prices
+          widget: list
+          label_singular: price
+          min: 1
+          fields:
+            - label: Ammount
+              name: ammount
+              widget: number
+              value_type: float
+                  
+            - label: Size
+              name: size
+              widget: string
+              required: false
+
+  - label: Drinks
+    name: drinks
+    folder: content/markdown/drink
+    create: true
+    identifier_field: name
+    slug: "{{slug}}"
+    label_singular: Drink
+    fields:
+        - label: Name
+          name: name
+          widget: string
+
+        - label: Description
+          name: description
+          widget: string
+          required: false
+          
         - label: Image
           name: image
           widget: image

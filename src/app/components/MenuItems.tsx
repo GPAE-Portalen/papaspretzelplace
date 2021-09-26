@@ -59,7 +59,6 @@ const Divider = (): JSX.Element => (
     <Fragment>&nbsp;-&nbsp;</Fragment>
 );
 
-
 const MenuItem = (menuItem: IMenuItem): JSX.Element => {
     const renderSizingPrices = (): JSX.Element[] => menuItem.prices.map((price: IPrice): JSX.Element => {
         const first: boolean = menuItem.prices.indexOf(price) === 0;
@@ -108,20 +107,45 @@ export const MenuItems = (menu: IMenu): JSX.Element => {
 
     return (
         <section>
-            <h2 className="text-capitalize">Pretzels</h2>
-            {renderMenuItems(menu.pretzels)}
+            {
+                menu.pretzels && Object.keys(menu.pretzels).length > 0 &&
+                <Fragment>
+                    <h2 className="text-capitalize mt-5">Pretzels</h2>
+                    {renderMenuItems(menu.pretzels)}
+                </Fragment>
+            }
 
-            <h2 className="text-capitalize mt-5">Pretzel Dogs</h2>
-            {renderMenuItems(menu.pretzelDogs)}
+            {
+                menu.iceCreams && Object.keys(menu.iceCreams).length > 0 &&
+                <Fragment>
+                    <h2 className="text-capitalize mt-5">Ice Cream</h2>
+                    {renderMenuItems(menu.iceCreams)}
+                </Fragment>
+            }
 
-            <h2 className="text-capitalize mt-5">Ice Cream</h2>
-            {renderMenuItems(menu.iceCreams)}
+            {
+                menu.waterIce && Object.keys(menu.waterIce).length > 0 &&
+                <Fragment>
+                    <h2 className="text-capitalize mt-5">Water Ice</h2>
+                    {renderMenuItems(menu.waterIce)}
+                </Fragment>
+            }
 
-            <h2 className="text-capitalize mt-5">Water Ice</h2>
-            {renderMenuItems(menu.waterIce)}
+            {
+                menu.dips && Object.keys(menu.dips).length > 0 &&
+                <Fragment>
+                    <h2 className="text-capitalize mt-5">Dips</h2>
+                    {renderMenuItems(menu.dips)}
+                </Fragment>
+            }
 
-            <h2 className="text-capitalize mt-5">Dips</h2>
-            {renderMenuItems(menu.dips)}
+            {
+                menu.drinks && Object.keys(menu.drinks).length > 0 &&
+                <Fragment>
+                    <h2 className="text-capitalize mt-5">Drinks</h2>
+                    {renderMenuItems(menu.drinks)}
+                </Fragment>
+            }
         </section>
     );
 }

@@ -20,11 +20,11 @@ export interface IDictionary<T> {
 }
 
 export interface IMenu {
-    pretzels: IDictionary<IMenuItem>;
-    pretzelDogs: IDictionary<IMenuItem>;
+    pretzels: IDictionary<IMenuItem>; 
     iceCreams: IDictionary<IMenuItem>;
     waterIce: IDictionary<IMenuItem>;
     dips: IDictionary<IMenuItem>;
+    drinks: IDictionary<IMenuItem>;
 }
 
 export interface IMenuItem {
