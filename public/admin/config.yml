@@ -14,9 +14,9 @@ collections:
             name: text
             widget: string
 
-      - label: Contact Email Adress
+      - label: Contact Email Address
         name: contact email address
-        file: content/markdown/contactEmailAdress.md
+        file: content/markdown/contactEmailAddress.md
         fields:
           - label: Email
             name: email
