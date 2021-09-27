@@ -10,15 +10,12 @@
     "email": "gustavpaeklund@gmail.com"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^1.6.0",
-    "netlify-cli": "^6.9.9",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-feather": "^2.0.9",
     "react-ga": "^3.3.0",
     "react-helmet": "^6.1.0",
     "react-lazy-load-image-component": "^1.5.1",
-    "react-redux": "^7.2.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
     "web-vitals": "^1.1.1"
@@ -35,9 +32,9 @@
     "css-watch": "run-p css-watch-dev css-watch-min",
     "css-watch-dev": "npm run css-build -- --watch",
     "css-watch-min": "npm run css-compile -- --watch",
-    "css-build": "node-sass src/app/styles/index.scss src/app/styles/index.css",
-    "css-compile": "node-sass --output-style compressed src/app/styles/index.scss src/app/styles/index.min.css",
-    "css-prefix": "postcss --no-map --use autoprefixer --output src/app/styles/index.min.css src/app/styles/index.min.css"
+    "css-build": "node-sass src/styles/index.scss src/styles/index.css",
+    "css-compile": "node-sass --output-style compressed src/styles/index.scss src/styles/index.min.css",
+    "css-prefix": "postcss --no-map --use autoprefixer --output src/styles/index.min.css src/styles/index.min.css"
   },
   "eslintConfig": {
     "extends": [
@@ -69,14 +66,12 @@
     "@types/react-dom": "^17.0.9",
     "@types/react-helmet": "^6.1.2",
     "@types/react-lazy-load-image-component": "^1.5.2",
-    "@types/react-redux": "^7.1.18",
     "@types/react-router": "^5.1.16",
     "@types/react-router-dom": "^5.1.9",
     "@types/uuid": "^8.3.1",
     "autoprefixer": "^10.3.1",
     "bootstrap": "^5.1.1",
     "cross-env": "^7.0.3",
-    "front-matter": "^4.0.2",
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-cli": "^2.3.0",

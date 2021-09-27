@@ -1,16 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
 import ReactGA from 'react-ga';
 import '@popperjs/core';
 import 'bootstrap/dist/js/bootstrap';
 
-import EnvironmentVariables from './environmentVariables';
+import EnvironmentVariables from './enums/environmentVariables';
 
-import './app/styles/index.css';
-
-import App from './app/App';
-import store from './app/store';
+import './styles/index.css';
+import App from './App';
 
 import Repository from './repository';
 
@@ -50,9 +47,7 @@ function initDevelopment() {
 
     ReactDOM.render(
         <React.StrictMode>
-            <Provider store={store}>
-                <App />
-            </Provider>
+            <App />
         </React.StrictMode>, rootElement
     );
 })();
