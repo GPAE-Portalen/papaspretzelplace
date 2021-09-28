@@ -59,7 +59,7 @@ gulp.task('combineJson', async () => {
 
     // Menu
     combine('pretzel', 'pretzels');
-    combine('iceCream', 'iceCreams');
+    combine('iceCream', 'iceCream');
     combine('waterIce', 'waterIce');
     combine('dip', 'dips');
     combine('drink', 'drinks');
@@ -79,7 +79,7 @@ gulp.task('createLeftoverJson', async () => {
         'openHours',
         'contactEmailAddress',
         'pretzels',
-        'iceCreams',
+        'iceCream',
         'waterIce',
         'dips',
         'drinks'

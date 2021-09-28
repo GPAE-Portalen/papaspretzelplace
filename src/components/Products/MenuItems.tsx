@@ -1,6 +1,7 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment, useContext } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { IDictionary, IMenu, IMenuItem, IPrice } from '../../interfaces';
+import { DataContext, IDataContext } from '../../App';
+import { IDictionary, IMenuItem, IPrice } from '../../interfaces';
 
 interface IMoneyProps {
     value: number;
@@ -57,44 +58,9 @@ const MenuItem = (menuItem: IMenuItem): JSX.Element => {
     );
 }
 
-export const MenuItems = (menu: IMenu): JSX.Element => {
-    const [render, setRender] = useState(false);
-
-    useEffect(() => {
-        if(menu) {
-            Object.keys(menu.pretzels).forEach((key: string) => {
-                if(!menu.pretzels[key].display) {
-                    delete menu.pretzels[key];
-                }
-            });
-    
-            Object.keys(menu.iceCreams).forEach((key: string) => {
-                if(!menu.iceCreams[key].display) {
-                    delete menu.iceCreams[key];
-                }
-            });
-    
-            Object.keys(menu.waterIce).forEach((key: string) => {
-                if(!menu.waterIce[key].display) {
-                    delete menu.waterIce[key];
-                }
-            });
-    
-            Object.keys(menu.dips).forEach((key: string) => {
-                if(!menu.dips[key].display) {
-                    delete menu.dips[key];
-                }
-            });
-    
-            Object.keys(menu.drinks).forEach((key: string) => {
-                if(!menu.drinks[key].display) {
-                    delete menu.drinks[key];
-                }
-            });
-
-            setRender(true);
-        }
-    }, [menu]);
+export const MenuItems = (): JSX.Element => {
+    const data: IDataContext = useContext(DataContext);
+    const { pretzels, iceCream, waterIce, dips, drinks } = data.menu;
 
     const renderMenuItems = (menuItems: IDictionary<IMenuItem>): JSX.Element[] => Object.keys(menuItems).map((key: string): JSX.Element => {
         return (
@@ -102,49 +68,45 @@ export const MenuItems = (menu: IMenu): JSX.Element => {
         );
     });
 
-    if(!render) {
-        return <Fragment />;
-    }
-
     return (
         <section>
             {
-                menu.pretzels && Object.keys(menu.pretzels).length > 0 &&
+                Object.keys(pretzels).length > 0 &&
                 <Fragment>
                     <h2 className="text-capitalize mt-5">Pretzels</h2>
-                    {renderMenuItems(menu.pretzels)}
+                    {renderMenuItems(pretzels)}
                 </Fragment>
             }
 
             {
-                menu.iceCreams && Object.keys(menu.iceCreams).length > 0 &&
+                Object.keys(iceCream).length > 0 &&
                 <Fragment>
                     <h2 className="text-capitalize mt-5">Ice Cream</h2>
-                    {renderMenuItems(menu.iceCreams)}
+                    {renderMenuItems(iceCream)}
                 </Fragment>
             }
 
             {
-                menu.waterIce && Object.keys(menu.waterIce).length > 0 &&
+                Object.keys(waterIce).length > 0 &&
                 <Fragment>
                     <h2 className="text-capitalize mt-5">Water Ice</h2>
-                    {renderMenuItems(menu.waterIce)}
+                    {renderMenuItems(waterIce)}
                 </Fragment>
             }
 
             {
-                menu.dips && Object.keys(menu.dips).length > 0 &&
+                Object.keys(dips).length > 0 &&
                 <Fragment>
                     <h2 className="text-capitalize mt-5">Dips</h2>
-                    {renderMenuItems(menu.dips)}
+                    {renderMenuItems(dips)}
                 </Fragment>
             }
 
             {
-                menu.drinks && Object.keys(menu.drinks).length > 0 &&
+                Object.keys(drinks).length > 0 &&
                 <Fragment>
                     <h2 className="text-capitalize mt-5">Drinks</h2>
-                    {renderMenuItems(menu.drinks)}
+                    {renderMenuItems(drinks)}
                 </Fragment>
             }
         </section>

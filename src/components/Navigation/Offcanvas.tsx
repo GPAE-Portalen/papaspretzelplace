@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Fragment, useState, useEffect, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import { Container, EContainerType } from '../Container';
@@ -6,17 +6,11 @@ import { Container, EContainerType } from '../Container';
 import { Logo } from '../Logo';
 import { SocialsButton } from '../Socials/SocialsButton';
 import { Address } from '../Contacts/Address';
-import { IOpenHours } from '../../interfaces';
+import { DataContext, IDataContext } from '../../App';
 
 export const Offcanvas = (): JSX.Element => {
-    const [openHours, setOpenHours] = useState<IOpenHours>();
-
-    useEffect(() => {
-        if(!openHours) {
-            const data: IOpenHours = window.repository.getOpenHours();
-            setOpenHours(data);
-        }
-    }, [openHours]);
+    const data: IDataContext = useContext(DataContext);
+    const { openHours } = data.baseInformation;
 
     const address: string = '302 Mill Street, Bristol, PA 19007';
     const addressUrl: string = encodeURI(address);

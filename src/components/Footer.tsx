@@ -1,16 +1,13 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext} from 'react';
+
+import { DataContext, IDataContext } from '../App';
 
 import { Container, EContainerType } from './Container';
 
 import { Address } from './Contacts/Address';
 import { SocialsCircleButton } from './Socials/SocialsCircleButton';
-import { IOpenHours } from '../interfaces';
 
-export interface IFooterProps {
-
-}
-
-export default function Footer(props: IFooterProps): JSX.Element {
+export default function Footer(): JSX.Element {
     const year: number = new Date().getFullYear();
 
     return (
@@ -33,14 +30,8 @@ export default function Footer(props: IFooterProps): JSX.Element {
 }
 
 const Lowbar = (): JSX.Element => {
-    const [openHours, setOpenHours] = useState<IOpenHours>();
-
-    useEffect(() => {
-        if(!openHours) {
-            const data: IOpenHours = window.repository.getOpenHours();
-            setOpenHours(data);
-        }
-    }, [openHours]);
+    const data: IDataContext = useContext(DataContext);
+    const { openHours } = data.baseInformation;
 
     const scrollTop = (): void => {
         window.scrollTo(0, 0);

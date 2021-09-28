@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import SEO, { ISEOProps } from "../components/SEO/SEO";
 import Header from '../components/Header';
@@ -8,19 +8,10 @@ import Footer from '../components/Footer';
 import { Logo } from '../components/Logo';
 import { SocialsButton } from '../components/Socials/SocialsButton';
 import { MenuItems } from '../components/Products/MenuItems';
-import { IMenu } from "../interfaces";
 
 export default function Menu(): JSX.Element {
-    const [menu, setMenu] = useState<IMenu>();
-
     const title: string = 'Menu';
     const description: string = 'Fresh Pretzels with an Artisan Twist';
-
-    useEffect(() => {
-        if(!menu) {
-            setMenu(window.repository.getMenu());
-        }
-    }, [menu]);
 
     const seo: ISEOProps = {
         title,
@@ -50,10 +41,7 @@ export default function Menu(): JSX.Element {
                     <p>PA State Sales Tax 6%</p>
                 </section>
 
-                {
-                    menu &&
-                    <MenuItems {...menu} />
-                }
+                <MenuItems />
             </Main>
 
             <Footer />

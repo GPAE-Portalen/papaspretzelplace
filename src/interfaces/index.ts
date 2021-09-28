@@ -2,9 +2,14 @@ export interface IDictionary<T> {
     [key: string]: T;
 }
 
+export interface IBaseInformation {
+    contactEmailAddress: IContactEmailAddress;
+    openHours: IOpenHours;
+}
+
 export interface IMenu {
     pretzels: IDictionary<IMenuItem>; 
-    iceCreams: IDictionary<IMenuItem>;
+    iceCream: IDictionary<IMenuItem>;
     waterIce: IDictionary<IMenuItem>;
     dips: IDictionary<IMenuItem>;
     drinks: IDictionary<IMenuItem>;
