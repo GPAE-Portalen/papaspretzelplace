@@ -69,6 +69,23 @@ export const Offcanvas = (): JSX.Element => {
                                         Menu
                                     </NavLink>
                                 </li>
+
+                                {
+                                    window.envDev &&
+                                    <Fragment>
+                                         <li className="nav-item bg-ppp-red bg-gradient mt-3 shadow fw-bold rounded" data-bs-dismiss="offcanvas">
+                                            <NavLink to="/about" className="nav-link text-white p-1">
+                                                About
+                                            </NavLink>
+                                         </li>
+
+                                         <li className="nav-item bg-ppp-red bg-gradient mt-3 shadow fw-bold rounded" data-bs-dismiss="offcanvas">
+                                            <NavLink to="/contact" className="nav-link text-white p-1">
+                                                Contact
+                                            </NavLink>
+                                         </li>
+                                    </Fragment>
+                                }
                             </ul>
                         </nav>
                     </section>

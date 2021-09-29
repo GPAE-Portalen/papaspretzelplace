@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { Fragment, useContext, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import withPage from './hocs/withPage';
@@ -9,6 +9,8 @@ import {
 
 const Home = React.lazy(() => import("./pages/Home"));
 const Menu = React.lazy(() => import("./pages/Menu"));
+const About = React.lazy(() => import("./pages/About"));
+const Contact = React.lazy(() => import("./pages/Contact"));
 const NotFound = React.lazy(() => import("./pages/NotFound"));
 
 export interface IDataContext {
@@ -33,6 +35,13 @@ export default function App() {
                     <Switch>
                         <Route exact path="/" component={withPage(Home)} />
                         <Route exact path="/menu" component={withPage(Menu)} />
+                        {
+                            window.envDev &&
+                            <Fragment>
+                                <Route exact path="/about" component={withPage(About)} />
+                                <Route exact path="/contact" component={withPage(Contact)} />
+                            </Fragment>
+                        }                   
                         <Route path="*" component={withPage(NotFound)} />
                     </Switch>
                 </React.Suspense>
