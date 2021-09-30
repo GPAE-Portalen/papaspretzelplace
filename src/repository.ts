@@ -1,4 +1,4 @@
-import { IMenu, IDictionary, IMenuItem, IContactEmailAddress, IOpenHours, IBaseInformation } from './interfaces/index';
+import { IMenu, IDictionary, IMenuItem, IContactEmailAddress, IOpenHours, IBaseInformation, IContacts, IAddress, ISocials } from './interfaces/index';
 
 export interface IRepository {
     getBaseInformation(): IBaseInformation
@@ -20,13 +20,26 @@ export default class Repository implements IRepository {
     }
 
     getBaseInformation(): IBaseInformation {
-        const contactEmailAddress: IContactEmailAddress = this.getContactEmailAddress();
-        const openHours: IOpenHours = this.getOpenHours();
+        const contacts: IContacts = {
+            phoneNumber: "+1 267-554-7947",
+            emailAddress: this.getContactEmailAddress().email
+        };
+        const address: IAddress = {
+            address: "302 Mill Street, Bristol, PA 19007",
+            openHours: this.getOpenHours().text
+        };
+        const socials: ISocials = {
+            facebook: "https://www.facebook.com/papaspretzelplace/",
+            instagram: "https://www.instagram.com/papaspretzelplace/"
+        } as ISocials;
 
         const baseInformation: IBaseInformation = {
-            contactEmailAddress,
-            openHours
+            contacts,
+            address,
+            socials
         };
+
+        console.log(baseInformation);
 
         return baseInformation;
     }

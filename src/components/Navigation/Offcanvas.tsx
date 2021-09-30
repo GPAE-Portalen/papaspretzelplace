@@ -10,10 +10,8 @@ import { DataContext, IDataContext } from '../../App';
 
 export const Offcanvas = (): JSX.Element => {
     const data: IDataContext = useContext(DataContext);
-    const { openHours } = data.baseInformation;
-
-    const address: string = '302 Mill Street, Bristol, PA 19007';
-    const addressUrl: string = encodeURI(address);
+    const { address } = data.baseInformation;
+    const addressUrl: string = encodeURI(address.address);
 
     return (
         <Fragment>
@@ -28,25 +26,25 @@ export const Offcanvas = (): JSX.Element => {
             <div className="bg-light bg-gradient w-100">
                 <Container type={EContainerType.Default}>
                     <a href={`https://maps.google.com/maps?hl=en&q=${addressUrl}&ie=UTF8&t=roadmap&z=10&iwloc=B`} target="_blank" rel="noreferrer" className="d-inline-block my-1 text-decoration-none text-dark">
-                        <i className="bi bi-geo-alt-fill"></i>&nbsp;{address}
+                        <i className="bi bi-geo-alt-fill"></i>&nbsp;{address.address}
                     </a>
                 </Container>
             </div>
 
              {
-                openHours &&
+                address.openHours &&
                 <div className="bg-ppp-beige-100 bg-gradient w-100 border-top border-ppp-blue-100">
                     <Container type={EContainerType.Default} className="text-end">
-                        <small className="text-uppercase fw-bold d-block">{openHours.text.toUpperCase()}</small>
+                        <small className="text-uppercase fw-bold d-block">{address.openHours.toUpperCase()}</small>
                     </Container>
-                 </div>
+                </div>
              }
 
             <div className="offcanvas offcanvas-end" tabIndex={-1} id="offcanvasRight">
                 <div className="offcanvas-header justify-content-end">
                     {
-                        openHours &&
-                        <div className="text-uppercase fw-bold flex-grow-1">{openHours.text.toUpperCase()}</div>
+                        address.openHours &&
+                        <div className="text-uppercase fw-bold flex-grow-1">{address.openHours.toUpperCase()}</div>
                     }
 
                     <i className="bi bi-x-lg" data-bs-dismiss="offcanvas"></i>

@@ -3,8 +3,9 @@ export interface IDictionary<T> {
 }
 
 export interface IBaseInformation {
-    contactEmailAddress: IContactEmailAddress;
-    openHours: IOpenHours;
+    contacts: IContacts;
+    address: IAddress;
+    socials: ISocials;
 }
 
 export interface IMenu {
@@ -34,4 +35,19 @@ export interface IContactEmailAddress {
 
 export interface IOpenHours {
     text: string;
+}
+
+export interface IContacts {
+    phoneNumber: string;
+    emailAddress: string;
+}
+
+export interface IAddress {
+    address: string;
+    openHours: string;
+}
+
+export interface ISocials {
+    facebook: string;
+    instagram: string;
 }

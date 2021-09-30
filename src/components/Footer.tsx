@@ -13,8 +13,8 @@ export default function Footer(): JSX.Element {
     return (
         <footer className="mt-auto border-top">
             <Container type={EContainerType.Default} className="py-3">
-                <div>
-                    <Address className="mb-3" />
+                <div className="mb-3">
+                    <Address />
                 </div>
 
                 <Lowbar />
@@ -31,7 +31,7 @@ export default function Footer(): JSX.Element {
 
 const Lowbar = (): JSX.Element => {
     const data: IDataContext = useContext(DataContext);
-    const { openHours } = data.baseInformation;
+    const { address } = data.baseInformation;
 
     const scrollTop = (): void => {
         window.scrollTo(0, 0);
@@ -51,10 +51,10 @@ const Lowbar = (): JSX.Element => {
                     </article>
 
                     {
-                        openHours &&
+                        address.openHours &&
                         <article>
                             <h2 className="h4">Hours</h2>
-                            <p>{openHours.text}</p>
+                            <p>{address.openHours}</p>
                         </article>
                     }
                 </div>

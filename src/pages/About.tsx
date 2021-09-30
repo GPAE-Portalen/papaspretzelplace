@@ -13,6 +13,7 @@ export default function About(): JSX.Element {
     const description: string = "Papa's Pretzel Place is a locally owned soft pretzel company. They are a wholesale and retail soft pretzel bakery and eatery at 302 Mill Street, Bristol, PA 19007 opens daily 11am.";
 
     const seo: ISEOProps = {
+        title,
         description
     }
 
