@@ -3,7 +3,7 @@ import { DataContext, IDataContext } from '../../App';
 
 export const SocialsButton = (): JSX.Element => {
     const data: IDataContext = useContext(DataContext);
-    const { facebook, instagram } = data.baseInformation.socials;
+    const { facebook, instagram } = data.baseInformation.socialMedia;
 
     return (
         <div className="row mx-auto mb-3" style={{ maxWidth: '500px' }}>

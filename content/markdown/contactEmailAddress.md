@@ -1,3 +1,0 @@
----
-email: papaspretzelplace@gmail.com 
----

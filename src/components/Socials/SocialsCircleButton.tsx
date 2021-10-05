@@ -3,7 +3,7 @@ import { DataContext, IDataContext } from '../../App';
 
 export const SocialsCircleButton = (): JSX.Element => {
     const data: IDataContext = useContext(DataContext);
-    const { facebook, instagram } = data.baseInformation.socials;
+    const { facebook, instagram } = data.baseInformation.socialMedia;
 
     return (
         <div className="d-flex">

@@ -1,3 +1,3 @@
 ---
-text: Opens daily 11 AM 
+text: Opens daily 11 AM
 ---

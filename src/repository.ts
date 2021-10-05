@@ -1,15 +1,17 @@
-import { IMenu, IDictionary, IMenuItem, IContactEmailAddress, IOpenHours, IBaseInformation, IContacts, IAddress, ISocials } from './interfaces/index';
+import { IMenu, IDictionary, IMenuItem, IOpenHours, IBaseInformation, IContacts, IAddress, ISocialMedia } from './interfaces/index';
 
 export interface IRepository {
-    getBaseInformation(): IBaseInformation
+    getBaseInformation(): IBaseInformation;
     getMenu(): IMenu;
-    getContactEmailAddress(): IContactEmailAddress;
+    getAddress(): IAddress;
     getOpenHours(): IOpenHours;
-    getPrezels(): IDictionary<IMenuItem>
-    getIceCream(): IDictionary<IMenuItem>
-    getWaterIce(): IDictionary<IMenuItem>
-    getDips(): IDictionary<IMenuItem>
-    getDrinks(): IDictionary<IMenuItem>
+    getContacts(): IContacts;
+    getSocialMedia(): ISocialMedia;
+    getPrezels(): IDictionary<IMenuItem>;
+    getIceCream(): IDictionary<IMenuItem>;
+    getWaterIce(): IDictionary<IMenuItem>;
+    getDips(): IDictionary<IMenuItem>;
+    getDrinks(): IDictionary<IMenuItem>;
 }
 
 export default class Repository implements IRepository {
@@ -20,26 +22,17 @@ export default class Repository implements IRepository {
     }
 
     getBaseInformation(): IBaseInformation {
-        const contacts: IContacts = {
-            phoneNumber: "+1 267-554-7947",
-            emailAddress: this.getContactEmailAddress().email
-        };
-        const address: IAddress = {
-            address: "302 Mill Street, Bristol, PA 19007",
-            openHours: this.getOpenHours().text
-        };
-        const socials: ISocials = {
-            facebook: "https://www.facebook.com/papaspretzelplace/",
-            instagram: "https://www.instagram.com/papaspretzelplace/"
-        } as ISocials;
+        const address: IAddress = this.getAddress();
+        const openHours: IOpenHours = this.getOpenHours();
+        const contacts: IContacts = this.getContacts();
+        const socialMedia: ISocialMedia = this.getSocialMedia();
 
         const baseInformation: IBaseInformation = {
-            contacts,
             address,
-            socials
+            openHours,
+            contacts,
+            socialMedia
         };
-
-        console.log(baseInformation);
 
         return baseInformation;
     }
@@ -62,16 +55,28 @@ export default class Repository implements IRepository {
         return menu;
     }
 
-    getContactEmailAddress(): IContactEmailAddress {
-        const contactEmailAddress: IContactEmailAddress = require(`${this.url}contactEmailAddress.json`);
+    getAddress(): IAddress {
+        const address: IAddress = require(`${this.url}address.json`);
 
-        return contactEmailAddress;
+        return address;
     }
 
     getOpenHours(): IOpenHours {
         const openHours: IOpenHours = require(`${this.url}openHours.json`);
 
         return openHours;
+    }
+
+    getContacts(): IContacts {
+        const contacts: IContacts = require(`${this.url}contacts.json`);
+
+        return contacts;
+    }
+
+    getSocialMedia(): ISocialMedia {
+        const socialMedia: ISocialMedia = require(`${this.url}socialMedia.json`);
+
+        return socialMedia;
     }
 
     getPrezels(): IDictionary<IMenuItem> {

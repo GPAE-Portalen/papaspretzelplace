@@ -31,7 +31,7 @@ export default function Footer(): JSX.Element {
 
 const Lowbar = (): JSX.Element => {
     const data: IDataContext = useContext(DataContext);
-    const { address } = data.baseInformation;
+    const { address, openHours } = data.baseInformation;
 
     const scrollTop = (): void => {
         window.scrollTo(0, 0);
@@ -44,17 +44,17 @@ const Lowbar = (): JSX.Element => {
                     <article className="me-5">
                         <h2 className="h4">Address</h2>
                         <p>
-                            302 Mill Street<br />
-                            Bristol<br />
-                            PA 19007
+                            {address.street}<br />
+                            {address.city}<br />
+                            {address.state}
                         </p>
                     </article>
 
                     {
-                        address.openHours &&
+                        openHours.text &&
                         <article>
                             <h2 className="h4">Hours</h2>
-                            <p>{address.openHours}</p>
+                            <p>{openHours.text}</p>
                         </article>
                     }
                 </div>

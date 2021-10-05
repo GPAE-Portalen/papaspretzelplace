@@ -3,9 +3,10 @@ export interface IDictionary<T> {
 }
 
 export interface IBaseInformation {
-    contacts: IContacts;
     address: IAddress;
-    socials: ISocials;
+    openHours: IOpenHours;
+    contacts: IContacts;
+    socialMedia: ISocialMedia;
 }
 
 export interface IMenu {
@@ -29,10 +30,6 @@ export interface IPrice {
     size?: string;
 }
 
-export interface IContactEmailAddress {
-    email: string;
-}
-
 export interface IOpenHours {
     text: string;
 }
@@ -43,11 +40,12 @@ export interface IContacts {
 }
 
 export interface IAddress {
-    address: string;
-    openHours: string;
+    street: string;
+    city: string;
+    state: string;
 }
 
-export interface ISocials {
+export interface ISocialMedia {
     facebook: string;
     instagram: string;
 }

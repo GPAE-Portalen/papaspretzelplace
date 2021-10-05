@@ -3,10 +3,23 @@ backend:
   branch: main
 media_folder: assets/img
 collections:
-  - label: Base Information
-    name: base information
-    files:
-      - label: Open Hours
+  - label: Address
+    name: Address
+    file: content/markdown/address.md
+    fields:
+      - label: Street
+        name: street
+        widget: string
+
+      - label: City
+        name: city
+        widget: string
+
+      - label: State
+        name: state
+        widget: string
+
+  - label: Open Hours
         name: open hours
         file: content/markdown/openHours.md
         fields:
@@ -14,13 +27,29 @@ collections:
             name: text
             widget: string
 
-      - label: Contact Email Address
-        name: contact email address
-        file: content/markdown/contactEmailAddress.md
-        fields:
-          - label: Email
-            name: email
-            widget: string
+  - label: Contacts
+    name: contacts
+    file: content/markdown/contacts.md
+    fields:
+      - label: Phone Number
+        name: phone number
+        widget: string
+
+      - label: Email Address
+        name: email address
+        widget: string
+
+  - label: Social Media
+    name: social media
+    file: content/markdown/socialMedia.md
+    fields:
+      - label: Facebook
+        name: facebook
+        widget: string
+
+      - label: Instagram
+        name: instagram
+        widget: string
 
   - label: Pretzels
     name: pretzels

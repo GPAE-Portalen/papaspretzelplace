@@ -54,8 +54,10 @@ gulp.task('combineJson', async () => {
     }
 
     // Base information
+    handleSingularFile('address');
     handleSingularFile('openHours');
-    handleSingularFile('contactEmailAddress');
+    handleSingularFile('contacts');
+    handleSingularFile('socialMedia');
 
     // Menu
     combine('pretzel', 'pretzels');
@@ -76,8 +78,10 @@ gulp.task('createLeftoverJson', async () => {
     }
 
     const dataJsonFileNames = [
+        'address',
         'openHours',
-        'contactEmailAddress',
+        'contacts',
+        'socialMedia',
         'pretzels',
         'iceCream',
         'waterIce',

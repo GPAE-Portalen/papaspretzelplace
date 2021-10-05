@@ -4,15 +4,16 @@ import { DataContext, IDataContext } from '../../App';
 export const Address = (): JSX.Element => {
     const data: IDataContext = useContext(DataContext);
     const { contacts, address } = data.baseInformation;
-    const addressUrl: string = encodeURI(address.address);
+    const fullAddress: string = `${address.street}, ${address.city}, ${address.state}`;
+    const addressUrl: string = encodeURI(fullAddress);
 
     return (
         <address>
             {
-                address.address &&
+                address &&
                 <Fragment>
                     <a href={`https://maps.google.com/maps?hl=en&q=${addressUrl}&ie=UTF8&t=roadmap&z=10&iwloc=B`} target="_blank" rel="noreferrer" className="d-inline-block my-1">
-                        <i className="bi bi-geo-alt"></i>&nbsp;{address.address}
+                        <i className="bi bi-geo-alt"></i>&nbsp;{fullAddress}
                     </a>
 
                     <br />
