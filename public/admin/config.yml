@@ -20,12 +20,12 @@ collections:
         widget: string
 
   - label: Open Hours
-        name: open hours
-        file: content/markdown/openHours.md
-        fields:
-          - label: Text
-            name: text
-            widget: string
+    name: open hours
+    file: content/markdown/openHours.md
+    fields:
+      - label: Text
+        name: text
+        widget: string
 
   - label: Contacts
     name: contacts
