@@ -24,27 +24,30 @@ export const Offcanvas = (): JSX.Element => {
                 </Container>
             </div>
 
-            <div className="bg-light bg-gradient w-100">
-                <Container type={EContainerType.Default}>
-                    <a href={`https://maps.google.com/maps?hl=en&q=${addressUrl}&ie=UTF8&t=roadmap&z=10&iwloc=B`} target="_blank" rel="noreferrer" className="d-inline-block my-1 text-decoration-none text-dark">
-                        <i className="bi bi-geo-alt-fill"></i>&nbsp;{fullAddress}
-                    </a>
-                </Container>
-            </div>
+            {
+                address.street && address.city && address.state &&
+                <div className="bg-light bg-gradient w-100">
+                    <Container type={EContainerType.Default}>
+                        <a href={`https://maps.google.com/maps?hl=en&q=${addressUrl}&ie=UTF8&t=roadmap&z=10&iwloc=B`} target="_blank" rel="noreferrer" className="d-inline-block my-1 text-decoration-none text-dark">
+                            <i className="bi bi-geo-alt-fill"></i>&nbsp;{fullAddress}
+                        </a>
+                    </Container>
+                </div>
+            }
 
-             {
-                openHours &&
+            {
+                openHours.text &&
                 <div className="bg-ppp-beige-100 bg-gradient w-100 border-top border-ppp-blue-100">
                     <Container type={EContainerType.Default} className="text-end">
                         <small className="text-uppercase fw-bold d-block">{openHours.text.toUpperCase()}</small>
                     </Container>
                 </div>
-             }
+            }
 
             <div className="offcanvas offcanvas-end" tabIndex={-1} id="offcanvasRight">
                 <div className="offcanvas-header justify-content-end">
                     {
-                        openHours &&
+                        openHours.text &&
                         <div className="text-uppercase fw-bold flex-grow-1">{openHours.text.toUpperCase()}</div>
                     }
 
@@ -91,7 +94,7 @@ export const Offcanvas = (): JSX.Element => {
 
                     <section className="mt-auto">
                         <SocialsButton />
-
+                        
                         <Address />
                     </section>
                 </div>

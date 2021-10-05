@@ -8,17 +8,21 @@ import { Address } from './Contacts/Address';
 import { SocialsCircleButton } from './Socials/SocialsCircleButton';
 
 export default function Footer(): JSX.Element {
+    const data: IDataContext = useContext(DataContext);
+    const { address } = data.baseInformation;
     const year: number = new Date().getFullYear();
 
     return (
         <footer className="mt-auto border-top">
-            <Container type={EContainerType.Default} className="py-3">
-                <div className="mb-3">
-                    <Address />
-                </div>
-
-                <Lowbar />
-            </Container>
+            {
+                address.street && 
+                <Container type={EContainerType.Default} className="py-3">
+                    <div className="mb-3">
+                        <Address />
+                    </div>
+                    <Lowbar />
+                </Container>
+            }
 
             <section className="bg-light py-1">
                 <Container type={EContainerType.Default}>
@@ -31,7 +35,7 @@ export default function Footer(): JSX.Element {
 
 const Lowbar = (): JSX.Element => {
     const data: IDataContext = useContext(DataContext);
-    const { address, openHours } = data.baseInformation;
+    const { address, openHours, socialMedia } = data.baseInformation;
 
     const scrollTop = (): void => {
         window.scrollTo(0, 0);
@@ -41,14 +45,17 @@ const Lowbar = (): JSX.Element => {
         <div className="d-flex justify-content-between flex-nowrap align-items-end mb-2">
             <section>
                 <div className="d-flex flex-wrap">
-                    <article className="me-5">
-                        <h2 className="h4">Address</h2>
-                        <p>
-                            {address.street}<br />
-                            {address.city}<br />
-                            {address.state}
-                        </p>
-                    </article>
+                    {
+                        address.street && address.city && address.state &&
+                        <article className="me-5">
+                            <h2 className="h4">Address</h2>
+                            <p>
+                                {address.street}<br />
+                                {address.city}<br />
+                                {address.state}
+                            </p>
+                        </article>
+                    }
 
                     {
                         openHours.text &&
@@ -58,11 +65,14 @@ const Lowbar = (): JSX.Element => {
                         </article>
                     }
                 </div>
-
-                <div className="mb-3">
-                    <h2 className="h4">Follow us</h2>
-                    <SocialsCircleButton />
-                </div>
+                
+                {
+                    socialMedia.facebook &&
+                    <div className="mb-3">
+                        <h2 className="h4">Follow us</h2>
+                        <SocialsCircleButton />
+                    </div>
+                }
             </section>
 
             <div>
