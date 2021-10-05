@@ -54,10 +54,10 @@ gulp.task('combineJson', async () => {
     }
 
     // Base information
-    //handleSingularFile('address');
-    //handleSingularFile('openHours');
-    //handleSingularFile('contacts');
-    //handleSingularFile('socialMedia');
+    handleSingularFile('address');
+    handleSingularFile('openHours');
+    handleSingularFile('contacts');
+    handleSingularFile('socialMedia');
 
     // Menu
     combine('pretzel', 'pretzels');
