@@ -35,11 +35,11 @@ collections:
         file: content/markdown/contacts.md
         fields:
           - label: Phone Number
-            name: phone number
+            name: phoneNumber
             widget: string
 
           - label: Email Address
-            name: email address
+            name: emailAddress
             widget: string
 
       - label: Social Media
