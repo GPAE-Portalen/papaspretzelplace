@@ -50,9 +50,9 @@ collections:
             name: facebook
             widget: string
 
-        - label: Instagram
-          name: instagram
-          widget: string
+          - label: Instagram
+            name: instagram
+            widget: string
 
   - label: Pretzels
     name: pretzels
