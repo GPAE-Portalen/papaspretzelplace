@@ -10742,3 +10742,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 .bg-ig {
   background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+
+.big-address {
+  font-size: calc(0.75rem + 0.5vw);
+  font-weight: 700;
+  letter-spacing: 1px; }

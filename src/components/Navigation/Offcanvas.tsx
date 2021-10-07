@@ -5,7 +5,7 @@ import { Container, EContainerType } from '../Container';
 
 import { Logo } from '../Logo';
 import { SocialsButton } from '../Socials/SocialsButton';
-import { Address } from '../Contacts/Address';
+import { Contacts } from '../Contacts/Contacts';
 import { DataContext, IDataContext } from '../../App';
 
 export const Offcanvas = (): JSX.Element => {
@@ -95,7 +95,7 @@ export const Offcanvas = (): JSX.Element => {
                     <section className="mt-auto">
                         <SocialsButton />
                         
-                        <Address />
+                        <Contacts />
                     </section>
                 </div>
             </div>

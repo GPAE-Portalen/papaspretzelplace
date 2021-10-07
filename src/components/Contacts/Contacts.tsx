@@ -1,7 +1,7 @@
 import React, { useContext, Fragment } from 'react';
 import { DataContext, IDataContext } from '../../App';
 
-export const Address = (): JSX.Element => {
+export const Contacts = (): JSX.Element => {
     const data: IDataContext = useContext(DataContext);
     const { contacts, address } = data.baseInformation;
     const fullAddress: string = `${address.street}, ${address.city}, ${address.state}`;

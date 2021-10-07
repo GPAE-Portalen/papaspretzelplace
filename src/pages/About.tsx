@@ -3,7 +3,7 @@ import React from "react";
 import SEO, { ISEOProps } from "../components/SEO/SEO";
 import Header from '../components/Header';
 import Main from '../components/Main';
-import Footer from '../components/Footer';
+import FooterTwo from '../components/FooterTwo';
 
 import { Logo } from '../components/Logo';
 import { SocialsButton } from '../components/Socials/SocialsButton';
@@ -39,7 +39,7 @@ export default function About(): JSX.Element {
                 </section>
             </Main>
 
-            <Footer />
+            <FooterTwo />
         </React.Fragment >
     );
 }
