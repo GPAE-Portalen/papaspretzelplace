@@ -1,5 +1,5 @@
 ---
-display: true
+display: false
 name: Blueberry
 prices:
   - price: 2
