@@ -1,9 +1,10 @@
 {
     "display": true,
     "name": "Regular + Cheese",
+    "image": "/assets/img/demo_image.jpg",
     "prices": [{
         "price": 4
     }],
     "body": "",
-    "updatedAt": "2021-09-26T13:24:39.765Z"
+    "updatedAt": "2021-10-31T17:16:25.382Z"
 }

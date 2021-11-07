@@ -37,8 +37,6 @@ export default function Menu(): JSX.Element {
                     </article>
 
                     <SocialsButton />
-
-                    <p>PA State Sales Tax 6%</p>
                 </section>
 
                 <MenuItems />
