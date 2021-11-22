@@ -27,8 +27,8 @@ const MenuItem = (menuItem: IMenuItem): JSX.Element => {
         return (
             <Fragment key={uuidv4()}>
                 <span className={className}>
-                    { 
-                        priceItem.size && 
+                    {
+                        priceItem.size &&
                         <span>{priceItem.size}&nbsp;</span>
                     }
                     <Money value={priceItem.price} />
@@ -38,23 +38,35 @@ const MenuItem = (menuItem: IMenuItem): JSX.Element => {
     });
 
     return (
-        <article className="card shadow border-ppp-blue-100 mb-1">
-            <div className="card-body">
-                <h2 className="h6 card-title m-0 text-capitalize">{menuItem.name}</h2>
-            </div>
-            <div className="card-footer">
+        <div className="menu-item col-12 col-md-6 col-lg-4">
+            <article className="card shadow border-ppp-blue-100 mb-1">
                 {
-                    menuItem.prices && menuItem.prices.length > 0 &&
-                    <p className="card-text">
-                        <small>
-                            {
-                                renderSizingPrices()
-                            }
-                        </small>
-                    </p>
+                    menuItem.image &&
+                    <div className="d-none d-lg-block">
+                        <div className="card-img-top">
+                            <img src={`${process.env.PUBLIC_URL}${menuItem.image}`} alt={menuItem.name} />
+                        </div>
+                    </div>
                 }
-            </div>
-        </article>
+
+                <div className="card-body">
+                    <h2 className="h6 card-title m-0 text-capitalize">{menuItem.name}</h2>  
+                </div>
+
+                <div className="card-footer">
+                    {
+                        menuItem.prices && menuItem.prices.length > 0 &&
+                        <p className="card-text">
+                            <small>
+                                {
+                                    renderSizingPrices()
+                                }
+                            </small>
+                        </p>
+                    }
+                </div>
+            </article>
+        </div>
     );
 }
 
@@ -72,42 +84,52 @@ export const MenuItems = (): JSX.Element => {
         <section>
             {
                 Object.keys(pretzels).length > 0 &&
-                <Fragment>
-                    <h2 className="text-capitalize mt-5">Pretzels</h2>
+                <div className="row g-3">
+                    <div className="col-12">
+                        <h2 className="text-capitalize mt-5">Pretzels</h2>
+                    </div>
                     {renderMenuItems(pretzels)}
-                </Fragment>
+                </div>
             }
 
             {
                 Object.keys(iceCream).length > 0 &&
-                <Fragment>
-                    <h2 className="text-capitalize mt-5">Ice Cream</h2>
+                <div className="row g-3">
+                    <div className="col-12">
+                        <h2 className="text-capitalize mt-5">Ice Cream</h2>
+                    </div>
                     {renderMenuItems(iceCream)}
-                </Fragment>
+                </div>
             }
 
             {
                 Object.keys(waterIce).length > 0 &&
-                <Fragment>
-                    <h2 className="text-capitalize mt-5">Water Ice</h2>
+                <div className="row g-3">
+                    <div className="col-12">
+                        <h2 className="text-capitalize mt-5">Water Ice</h2>
+                    </div>
                     {renderMenuItems(waterIce)}
-                </Fragment>
+                </div>
             }
 
             {
                 Object.keys(dips).length > 0 &&
-                <Fragment>
-                    <h2 className="text-capitalize mt-5">Dips</h2>
+                <div className="row g-3">
+                    <div className="col-12">
+                        <h2 className="text-capitalize mt-5">Dips</h2>
+                    </div>
                     {renderMenuItems(dips)}
-                </Fragment>
+                </div>
             }
 
             {
                 Object.keys(drinks).length > 0 &&
-                <Fragment>
-                    <h2 className="text-capitalize mt-5">Drinks</h2>
+                <div className="row g-3">
+                    <div className="col-12">
+                        <h2 className="text-capitalize mt-5">Drinks</h2>
+                    </div>
                     {renderMenuItems(drinks)}
-                </Fragment>
+                </div>
             }
         </section>
     );

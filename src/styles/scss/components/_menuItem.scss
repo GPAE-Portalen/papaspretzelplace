@@ -1,0 +1,12 @@
+.menu-item {
+    .card-img-top {
+        height: 96px;
+        overflow: hidden;
+
+        img {
+            transform: translateY(-50%);
+            width: 100%;
+            height: auto;
+        }
+    }
+}

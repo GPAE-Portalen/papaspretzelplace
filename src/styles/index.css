@@ -10747,3 +10747,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-size: calc(0.75rem + 0.5vw);
   font-weight: 700;
   letter-spacing: 1px; }
+
+.menu-item .card-img-top {
+  height: 96px;
+  overflow: hidden; }
+  .menu-item .card-img-top img {
+    transform: translateY(-50%);
+    width: 100%;
+    height: auto; }
