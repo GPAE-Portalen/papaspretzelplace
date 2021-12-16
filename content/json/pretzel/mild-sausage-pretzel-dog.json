@@ -1,0 +1,10 @@
+{
+    "display": true,
+    "name": "Mild Sausage Pretzel Dog",
+    "image": "/assets/img/mild-sausage.jpg",
+    "prices": [{
+        "price": 5
+    }],
+    "body": "",
+    "updatedAt": "2021-12-16T21:06:23.179Z"
+}

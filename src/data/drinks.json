@@ -1,1 +1,14 @@
-{}
+{
+    "joes-tea-20-oz": {
+        "display": true,
+        "name": "Joe's Tea 20 oz",
+        "body": "",
+        "updatedAt": "2021-12-16T21:06:23.174Z"
+    },
+    "pepsi-products-20-oz": {
+        "display": true,
+        "name": "Pepsi Products 20 oz",
+        "body": "",
+        "updatedAt": "2021-12-16T21:06:23.175Z"
+    }
+}

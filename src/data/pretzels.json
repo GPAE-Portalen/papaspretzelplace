@@ -11,47 +11,66 @@
     "cinnamon-sugar": {
         "display": true,
         "name": "Cinnamon Sugar",
+        "image": "/assets/img/cinna-sugar.jpg",
         "prices": [{
-            "price": 2.5
+            "price": 3.5,
+            "size": "4.5 oz"
         }],
         "body": "",
-        "updatedAt": "2021-09-26T13:24:30.796Z"
+        "updatedAt": "2021-12-16T21:06:23.178Z"
     },
     "everything": {
         "display": true,
         "name": "Everything",
+        "image": "/assets/img/everything-pretzel-2.jpg",
         "prices": [{
-            "price": 2
+            "price": 3,
+            "size": "4.5 oz"
         }],
         "body": "",
-        "updatedAt": "2021-09-26T13:24:33.290Z"
+        "updatedAt": "2021-12-16T21:06:23.178Z"
     },
-    "omg-regular": {
+    "mild-sausage-pretzel-dog": {
         "display": true,
-        "name": "OMG (Regular)",
-        "prices": [{
-            "price": 2
-        }],
-        "body": "",
-        "updatedAt": "2021-09-26T13:24:35.468Z"
-    },
-    "pork-roll": {
-        "display": true,
-        "name": "Pork Roll",
+        "name": "Mild Sausage Pretzel Dog",
+        "image": "/assets/img/mild-sausage.jpg",
         "prices": [{
             "price": 5
         }],
         "body": "",
-        "updatedAt": "2021-09-26T13:24:37.548Z"
+        "updatedAt": "2021-12-16T21:06:23.179Z"
+    },
+    "omg-regular": {
+        "display": true,
+        "name": "OMG (Regular)",
+        "image": "/assets/img/omg-2-pretzel.jpg",
+        "prices": [{
+            "price": 3,
+            "size": "4.5 oz"
+        }],
+        "body": "",
+        "updatedAt": "2021-12-16T21:06:23.179Z"
+    },
+    "pork-roll": {
+        "display": true,
+        "name": "Pork Roll with Cheese",
+        "image": "/assets/img/pretzel-pork-roll-link.jpg",
+        "prices": [{
+            "price": 5
+        }],
+        "body": "",
+        "updatedAt": "2021-12-16T21:06:23.181Z"
     },
     "pretzel-dog": {
         "display": true,
         "name": "Pretzel Dog",
+        "description": "All Beef with Cheese",
+        "image": "/assets/img/pretzel-dog.jpg",
         "prices": [{
             "price": 4
         }],
         "body": "",
-        "updatedAt": "2021-11-03T16:11:06.295Z"
+        "updatedAt": "2021-12-16T21:06:23.181Z"
     },
     "regular-cheese": {
         "display": true,
@@ -62,5 +81,15 @@
         }],
         "body": "",
         "updatedAt": "2021-10-31T17:16:25.382Z"
+    },
+    "spicy-sausage-pretzel-dog": {
+        "display": true,
+        "name": "Spicy Sausage Pretzel Dog",
+        "image": "/assets/img/spicy-sausage.jpg",
+        "prices": [{
+            "price": 5
+        }],
+        "body": "",
+        "updatedAt": "2021-12-16T21:06:23.182Z"
     }
 }

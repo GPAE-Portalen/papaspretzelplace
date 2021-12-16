@@ -1,0 +1,10 @@
+{
+    "display": true,
+    "name": "Spicy Sausage Pretzel Dog",
+    "image": "/assets/img/spicy-sausage.jpg",
+    "prices": [{
+        "price": 5
+    }],
+    "body": "",
+    "updatedAt": "2021-12-16T21:06:23.182Z"
+}
