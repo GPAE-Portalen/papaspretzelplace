@@ -1,11 +1,56 @@
 {
-    "cheese": {
+    "bacon-jam": {
         "display": true,
-        "name": "Cheese",
+        "name": "Bacon Jam",
         "prices": [{
             "price": 0.75
         }],
         "body": "",
-        "updatedAt": "2021-09-26T13:23:40.449Z"
+        "updatedAt": "2021-12-16T21:15:12.009Z"
+    },
+    "cheddar-cheese": {
+        "display": true,
+        "name": "Cheddar Cheese",
+        "prices": [{
+            "price": 0.75
+        }],
+        "body": "",
+        "updatedAt": "2021-12-16T21:15:12.010Z"
+    },
+    "cheese": {
+        "display": true,
+        "name": "American Cheese ",
+        "prices": [{
+            "price": 0.75
+        }],
+        "body": "",
+        "updatedAt": "2021-12-16T21:15:12.010Z"
+    },
+    "chili-lime": {
+        "display": true,
+        "name": "Chili Lime",
+        "prices": [{
+            "price": 0.75
+        }],
+        "body": "",
+        "updatedAt": "2021-12-16T21:15:12.011Z"
+    },
+    "pizza-sauce": {
+        "display": true,
+        "name": "Pizza Sauce",
+        "prices": [{
+            "price": 0.75
+        }],
+        "body": "",
+        "updatedAt": "2021-12-16T21:15:12.012Z"
+    },
+    "vanilla-cream": {
+        "display": true,
+        "name": "Vanilla Cream",
+        "prices": [{
+            "price": 0.75
+        }],
+        "body": "",
+        "updatedAt": "2021-12-16T21:15:12.013Z"
     }
 }

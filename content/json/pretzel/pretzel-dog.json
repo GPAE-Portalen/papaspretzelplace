@@ -1,9 +1,11 @@
 {
     "display": true,
     "name": "Pretzel Dog",
+    "description": "All Beef with Cheese",
+    "image": "/assets/img/pretzel-dog.jpg",
     "prices": [{
         "price": 4
     }],
     "body": "",
-    "updatedAt": "2021-11-03T16:11:06.295Z"
+    "updatedAt": "2021-12-16T21:15:12.020Z"
 }

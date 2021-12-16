@@ -1,6 +1,6 @@
 ---
 display: true
-name: Cheese
+name: "American Cheese "
 prices:
   - price: 0.75
 ---
