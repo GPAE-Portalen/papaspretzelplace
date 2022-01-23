@@ -19,7 +19,7 @@ export default function HeaderDesign(props: IHeaderDesignProps): JSX.Element {
 
     const logoProps: ILogoProps = {
         alt: "Papa's Pretzel Place Logo",
-        height: "200px"
+        height: "225px"
     };
 
     const SocialsCircleButtonProps: ISocialsCircleButton = {
