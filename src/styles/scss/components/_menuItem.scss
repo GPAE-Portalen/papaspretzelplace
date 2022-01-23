@@ -1,12 +1,40 @@
+.menu-group-title {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+
 .menu-item {
     .card-img-top {
-        height: 96px;
+        height: 150px;
         overflow: hidden;
+        display: none;
 
         img {
             transform: translateY(-50%);
             width: 100%;
             height: auto;
         }
+
+        @include media-breakpoint-up(sm) {
+        }
+
+        @include media-breakpoint-up(md) {
+            display: block;
+        }
+
+        @include media-breakpoint-up(lg) {
+        }
+
+        @include media-breakpoint-only(xl) {
+        }
+
+        @include media-breakpoint-up(xxl) {
+        }
+    }
+
+    .menu-item-title {
+        margin-top: 2px !important;
+        font-size: 1.25rem;
     }
 }

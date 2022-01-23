@@ -21,7 +21,7 @@ export const Container = (props: IContainerProps): JSX.Element => {
     const standardClassName: string = '';
     const className: string = `${standardClassName}container${containerTypeClassName[props.type]}${props.className ? ` ${props.className}` : ''}`
 
-    const standardStyle: React.CSSProperties = { maxWidth: '680px' };
+    const standardStyle: React.CSSProperties = { };
     const style: React.CSSProperties = Object.assign(standardStyle, props.style);
 
     return (

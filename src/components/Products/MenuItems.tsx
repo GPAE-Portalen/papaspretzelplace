@@ -1,7 +1,7 @@
-import React, { Fragment, useContext } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import React, { /*Fragment,*/ useContext } from 'react';
+/*import { v4 as uuidv4 } from 'uuid';*/
 import { DataContext, IDataContext } from '../../App';
-import { IDictionary, IMenuItem, IPrice } from '../../interfaces';
+import { IDictionary, IMenuItem/*, IPrice*/ } from '../../interfaces';
 
 interface IMoneyProps {
     value: number;
@@ -20,50 +20,44 @@ const Money = (props: IMoneyProps): JSX.Element => {
 }
 
 const MenuItem = (menuItem: IMenuItem): JSX.Element => {
-    const renderSizingPrices = (): JSX.Element[] => menuItem.prices.map((priceItem: IPrice): JSX.Element => {
-        const first: boolean = menuItem.prices.indexOf(priceItem) === 0;
-        const className: string = first ? 'pe-2' : 'px-2 border-start'
+    //const renderSizingPrices = (): JSX.Element[] => menuItem.prices.map((priceItem: IPrice): JSX.Element => {
+    //    const first: boolean = menuItem.prices.indexOf(priceItem) === 0;
+    //    const className: string = first ? 'pe-2' : 'px-2 border-start'
 
-        return (
-            <Fragment key={uuidv4()}>
-                <span className={className}>
-                    {
-                        priceItem.size &&
-                        <span>{priceItem.size}&nbsp;</span>
-                    }
-                    <Money value={priceItem.price} />
-                </span>
-            </Fragment>
-        );
-    });
+    //    return (
+    //        <Fragment key={uuidv4()}>
+    //            <span className={className}>
+    //                {
+    //                    priceItem.size &&
+    //                    <span>{priceItem.size}&nbsp;</span>
+    //                }
+    //                <Money value={priceItem.price} />
+    //            </span>
+    //        </Fragment>
+    //    );
+    //});
 
     return (
-        <div className="menu-item col-12 col-md-6 col-lg-4">
-            <article className="card shadow border-ppp-blue-100 mb-1">
+        <div className="menu-item col-12 col-md-6 col-lg-4 col-xl-3">
+            <article className="card shadow border-ppp-blue-100">
                 {
                     menuItem.image &&
-                    <div className="d-none d-lg-block">
-                        <div className="card-img-top">
-                            <img src={`${process.env.PUBLIC_URL}${menuItem.image}`} alt={menuItem.name} />
-                        </div>
+                    <div className="card-img-top position-relative">
+                        <img src={`${process.env.PUBLIC_URL}${menuItem.image}`} alt={menuItem.name} className="position-absolute" style={{ top: '50%' }} />
                     </div>
                 }
 
                 <div className="card-body">
-                    <h2 className="h6 card-title m-0 text-capitalize">{menuItem.name}</h2>  
-                </div>
+                    <h3 className="menu-item-title m-0 text-capitalize">{menuItem.name}</h3>
 
-                <div className="card-footer">
-                    {
-                        menuItem.prices && menuItem.prices.length > 0 &&
-                        <p className="card-text">
-                            <small>
-                                {
-                                    renderSizingPrices()
-                                }
-                            </small>
-                        </p>
-                    }
+                    {/*{*/}
+                    {/*    menuItem.prices && menuItem.prices.length > 0 &&*/}
+                    {/*    <small>*/}
+                    {/*        {*/}
+                    {/*            renderSizingPrices()*/}
+                    {/*        }*/}
+                    {/*    </small>*/}
+                    {/*}*/}
                 </div>
             </article>
         </div>
@@ -84,9 +78,9 @@ export const MenuItems = (): JSX.Element => {
         <section>
             {
                 Object.keys(pretzels).length > 0 &&
-                <div className="row g-3">
+                <div className="row g-1 g-lg-2 mt-5">
                     <div className="col-12">
-                        <h2 className="text-capitalize mt-5">Pretzels</h2>
+                        <h2 className="menu-group-title">Pretzels</h2>
                     </div>
                     {renderMenuItems(pretzels)}
                 </div>
@@ -94,9 +88,20 @@ export const MenuItems = (): JSX.Element => {
 
             {
                 Object.keys(iceCream).length > 0 &&
-                <div className="row g-3">
-                    <div className="col-12">
-                        <h2 className="text-capitalize mt-5">Ice Cream</h2>
+                <div className="row g-1 g-lg-2 mt-5">
+                    <div className="col-12 row g-1 g-lg-2 align-items-center mb-2 mb-sm-0">
+                        <div className="col-12 col-sm-auto me-4">
+                            <h2 className="menu-group-title">Ice Cream</h2>
+                        </div>
+
+                        <div className="col-12 col-sm-auto d-flex text-nowrap flex-nowrap" style={{ height: 'fit-content' }}>
+                            <span className="badge bg-white text-dark px-3 py-2 border shadow-sm">
+                                <Money value={3} />&nbsp;Small
+                            </span>
+                            <span className="badge bg-white text-dark px-3 py-2 border shadow-sm">
+                                <Money value={5} />&nbsp;Large
+                            </span>
+                        </div>
                     </div>
                     {renderMenuItems(iceCream)}
                 </div>
@@ -104,9 +109,23 @@ export const MenuItems = (): JSX.Element => {
 
             {
                 Object.keys(waterIce).length > 0 &&
-                <div className="row g-3">
-                    <div className="col-12">
-                        <h2 className="text-capitalize mt-5">Water Ice</h2>
+                <div className="row g-1 g-lg-2 mt-5">
+                    <div className="col-12 row g-1 g-lg-2 align-items-center mb-2 mb-sm-0">
+                        <div className="col-12 col-sm-auto me-4">
+                            <h2 className="menu-group-title">Water Ice</h2>
+                        </div>
+
+                        <div className="col-12 col-sm-auto d-flex text-nowrap flex-nowrap" style={{ height: 'fit-content' }}>
+                            <span className="badge bg-white text-dark px-3 py-2 border shadow-sm">
+                                <Money value={2} />&nbsp;Small
+                            </span>
+                            <span className="badge bg-white text-dark px-3 py-2 border shadow-sm">
+                                <Money value={3} />&nbsp;Medium
+                            </span>
+                            <span className="badge bg-white text-dark px-3 py-2 border shadow-sm">
+                                <Money value={5} />&nbsp;Large
+                            </span>
+                        </div>
                     </div>
                     {renderMenuItems(waterIce)}
                 </div>
@@ -114,9 +133,9 @@ export const MenuItems = (): JSX.Element => {
 
             {
                 Object.keys(dips).length > 0 &&
-                <div className="row g-3">
+                <div className="row g-1 g-lg-2 mt-5">
                     <div className="col-12">
-                        <h2 className="text-capitalize mt-5">Dips</h2>
+                        <h2 className="menu-group-title">Dips</h2>
                     </div>
                     {renderMenuItems(dips)}
                 </div>
@@ -124,9 +143,9 @@ export const MenuItems = (): JSX.Element => {
 
             {
                 Object.keys(drinks).length > 0 &&
-                <div className="row g-3">
+                <div className="row g-1 g-lg-2 mt-5">
                     <div className="col-12">
-                        <h2 className="text-capitalize mt-5">Drinks</h2>
+                        <h2 className="menu-group-title">Drinks</h2>
                     </div>
                     {renderMenuItems(drinks)}
                 </div>

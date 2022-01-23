@@ -1,11 +1,9 @@
 import React from "react";
 
 import SEO, { ISEOProps } from "../components/SEO/SEO";
-import Header from '../components/Header';
 import Main from '../components/Main';
 import Footer from '../components/Footer';
 
-import { Logo } from '../components/Logo';
 import { SocialsButton } from '../components/Socials/SocialsButton';
 import { MenuItems } from '../components/Products/MenuItems';
 
@@ -22,11 +20,7 @@ export default function Menu(): JSX.Element {
         <React.Fragment>
             <SEO {...seo} />
 
-            <Header />
-
             <Main>
-                <Logo alt="Papa's Pretzel Place Logo" height="260px" />
-
                 <section className="text-center">
                     <article>
                         <h1>

@@ -10753,10 +10753,23 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-weight: 700;
   letter-spacing: 1px; }
 
+.menu-group-title {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  margin-bottom: 0; }
+
 .menu-item .card-img-top {
-  height: 96px;
-  overflow: hidden; }
+  height: 150px;
+  overflow: hidden;
+  display: none; }
   .menu-item .card-img-top img {
     transform: translateY(-50%);
     width: 100%;
     height: auto; }
+  @media (min-width: 768px) {
+    .menu-item .card-img-top {
+      display: block; } }
+
+.menu-item .menu-item-title {
+  margin-top: 2px !important;
+  font-size: 1.25rem; }

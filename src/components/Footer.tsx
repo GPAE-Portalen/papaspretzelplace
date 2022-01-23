@@ -13,7 +13,7 @@ export default function Footer(): JSX.Element {
     const year: number = new Date().getFullYear();
 
     return (
-        <footer className="mt-auto border-top">
+        <footer className="mt-auto border-top bg-ppp-beige-100">
             {
                 address.street && 
                 <Container type={EContainerType.Default} className="py-3">
@@ -24,7 +24,7 @@ export default function Footer(): JSX.Element {
                 </Container>
             }
 
-            <section className="bg-light py-1">
+            <section className="bg-ppp-red text-white py-1">
                 <Container type={EContainerType.Default}>
                     <small>© {year} Papa's Pretzel Place. All Rights Reserved</small>
                 </Container>
