@@ -1,5 +1,5 @@
 import React, { /*Fragment,*/ useContext } from 'react';
-/*import { v4 as uuidv4 } from 'uuid';*/
+import { v4 as uuidv4 } from 'uuid';
 import { DataContext, IDataContext } from '../../App';
 import { IDictionary, IMenuItem/*, IPrice*/ } from '../../interfaces';
 
@@ -68,11 +68,27 @@ export const MenuItems = (): JSX.Element => {
     const data: IDataContext = useContext(DataContext);
     const { pretzels, iceCream, waterIce, dips, drinks } = data.menu;
 
-    const renderMenuItems = (menuItems: IDictionary<IMenuItem>): JSX.Element[] => Object.keys(menuItems).map((key: string): JSX.Element => {
-        return (
-            <MenuItem key={key} {...menuItems[key]} />
-        );
-    });
+    const renderMenuItems = (menuItems: IDictionary<IMenuItem>): JSX.Element[] => {
+        let menuItemValues: IMenuItem[] = Object.values(menuItems).map((value: IMenuItem) => {
+            return value;
+        });
+
+        menuItemValues.sort((a, b) => {
+            if (a.image && !b.image)
+                return -1;
+
+            if (b.image && !a.image)
+                return 1;
+
+            return 0;
+        });
+
+        return menuItemValues.map((menuItem: IMenuItem): JSX.Element => {
+            return (
+                <MenuItem key={uuidv4()} {...menuItem} />
+            );
+        });
+    }
 
     return (
         <section>
