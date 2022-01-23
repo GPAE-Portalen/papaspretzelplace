@@ -13,17 +13,17 @@ export const SocialsCircleButton = (props: ISocialsCircleButton): JSX.Element =>
     const standardClassName: string = "d-flex";
     const className: string = props.className ? `${standardClassName} ${props.className}` : standardClassName;
 
-    const standardStyle: React.CSSProperties = { };
+    const standardStyle: React.CSSProperties = {};
     const style: React.CSSProperties = Object.assign(standardStyle, props.style);
 
     return (
         <div className={className} style={style}>
             {
                 instagram &&
-                <a  href={instagram}
+                <a href={instagram}
                     target="_blank"
                     rel="noreferrer"
-                    className="btn btn-secondary bg-ig rounded-circle"
+                    className="btn btn-light bg-ig rounded-circle border-0 text-white"
                     data-bs-toggle="tooltip"
                     data-bs-placement="top"
                     title="Instagram">
@@ -31,19 +31,19 @@ export const SocialsCircleButton = (props: ISocialsCircleButton): JSX.Element =>
                     <span className="d-none">Instagram</span>
                 </a>
             }
-    
+
             {
                 facebook &&
-                    <a  href={facebook}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="btn btn-primary bg-gradient ms-2 rounded-circle"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="Facebook">
-                            <i className="bi bi-facebook"></i>
-                            <span className="d-none">Facebook</span>
-                    </a> 
+                <a href={facebook}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn btn-primary bg-gradient ms-1 rounded-circle border-0"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Facebook">
+                    <i className="bi bi-facebook"></i>
+                    <span className="d-none">Facebook</span>
+                </a>
             }
         </div>
     );

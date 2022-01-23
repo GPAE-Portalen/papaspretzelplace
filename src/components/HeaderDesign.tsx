@@ -23,14 +23,14 @@ export default function HeaderDesign(props: IHeaderDesignProps): JSX.Element {
     };
 
     const SocialsCircleButtonProps: ISocialsCircleButton = {
-        className: "mb-2 me-lg-3"
+        className: "me-lg-3"
     };
 
     return (
         <Fragment>
             <header>
                 <div className="bg-white p-3">
-                    <div className="container p-0 d-flex justify-content-between">
+                    <div className="container p-0 d-flex justify-content-between align-items-center mb-3">
                         <address className="ms-lg-3 mb-0">
                             <a href={`https://maps.google.com/maps?hl=en&q=${addressUrl}&ie=UTF8&t=roadmap&z=10&iwloc=B`} target="_blank" rel="noreferrer" className="text-decoration-none text-dark fs-one-one ppp-font-bold">
                                 <i className="bi bi-geo-alt-fill"></i>&nbsp;{fullAddress}

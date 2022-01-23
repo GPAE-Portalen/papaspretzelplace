@@ -10,7 +10,7 @@ export const SocialsButton = (props: ISocialsButton): JSX.Element => {
     const data: IDataContext = useContext(DataContext);
     const { facebook, instagram } = data.baseInformation.socialMedia;
 
-    const standardClassName: string = "row mx-auto";
+    const standardClassName: string = "row gx-1 mx-auto";
     const className: string = props.className ? `${standardClassName} ${props.className}` : standardClassName;
 
     const standardStyle: React.CSSProperties = { maxWidth: '500px' };
@@ -20,8 +20,8 @@ export const SocialsButton = (props: ISocialsButton): JSX.Element => {
         <div className={className} style={style}>
             {
                 instagram &&
-                <div className="col px-1">
-                    <a href={instagram} target="_blank" rel="noreferrer" className="btn btn-sm btn-secondary fw-bold bg-ig text-wrap w-100">
+                <div className="col">
+                    <a href={instagram} target="_blank" rel="noreferrer" className="btn btn-sm btn-light fw-bold bg-ig text-wrap w-100 border-0 text-nowrap text-white">
                         <i className="bi bi-instagram"></i>
                         <span>&nbsp;Instagram</span>
                     </a>
@@ -30,8 +30,8 @@ export const SocialsButton = (props: ISocialsButton): JSX.Element => {
 
             {
                 facebook &&
-                <div className="col px-1">
-                    <a href={facebook} target="_blank" rel="noreferrer" className="btn btn-sm btn-primary bg-gradient ms-2 fw-bold text-wrap w-100">
+                <div className="col">
+                    <a href={facebook} target="_blank" rel="noreferrer" className="btn btn-sm btn-primary bg-gradient fw-bold text-wrap w-100 border-0 text-nowrap">
                         <i className="bi bi-facebook"></i>
                         <span>&nbsp;Facebook</span>
                     </a>
