@@ -9,8 +9,9 @@ import {
 
 const Home = React.lazy(() => import("./pages/Home"));
 const Menu = React.lazy(() => import("./pages/Menu"));
-const About = React.lazy(() => import("./pages/About"));
-const Contact = React.lazy(() => import("./pages/Contact"));
+const Order = React.lazy(() => import("./pages/Order"));
+const Address = React.lazy(() => import("./pages/Address"));
+const Contacts = React.lazy(() => import("./pages/Contacts"));
 const NotFound = React.lazy(() => import("./pages/NotFound"));
 
 export interface IDataContext {
@@ -38,8 +39,9 @@ export default function App() {
                         {
                             window.envDev &&
                             <Fragment>
-                                <Route exact path="/about" component={withPage(About)} />
-                                <Route exact path="/contact" component={withPage(Contact)} />
+                                <Route exact path="/order" component={withPage(Order)} />
+                                <Route exact path="/address" component={withPage(Address)} />
+                                <Route exact path="/contacts" component={withPage(Contacts)} />
                             </Fragment>
                         }                   
                         <Route path="*" component={withPage(NotFound)} />

@@ -1,3 +1,38 @@
 .bg-ig {
     background: linear-gradient( 45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
 }
+
+/* hide scrollbar but allow scrolling */
+.hide-scroll {
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll;
+}
+
+.hide-scroll::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
+.ppp-font {
+    font-family: "Source Serif Pro";
+}
+
+.ppp-font-italic {
+    font-family: "Source Serif Pro Italic";
+}
+
+.ppp-font-bold {
+    font-family: "Source Serif Pro Bold";
+}
+
+.ppp-font-bold-italic {
+    font-family: "Source Serif Pro Bold Italic";
+}
+
+.fs-one-one {
+    font-size: 1.1rem;
+}
+
+.fs-two-five {
+    font-size: 2.5rem;
+}

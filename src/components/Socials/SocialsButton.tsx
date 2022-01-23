@@ -1,12 +1,23 @@
 import React, { useContext } from 'react';
 import { DataContext, IDataContext } from '../../App';
 
-export const SocialsButton = (): JSX.Element => {
+export interface ISocialsButton {
+    className?: string;
+    style?: React.CSSProperties;
+}
+
+export const SocialsButton = (props: ISocialsButton): JSX.Element => {
     const data: IDataContext = useContext(DataContext);
     const { facebook, instagram } = data.baseInformation.socialMedia;
 
+    const standardClassName: string = "row mx-auto";
+    const className: string = props.className ? `${standardClassName} ${props.className}` : standardClassName;
+
+    const standardStyle: React.CSSProperties = { maxWidth: '500px' };
+    const style: React.CSSProperties = Object.assign(standardStyle, props.style);
+
     return (
-        <div className="row mx-auto mb-3" style={{ maxWidth: '500px' }}>
+        <div className={className} style={style}>
             {
                 instagram &&
                 <div className="col px-1">

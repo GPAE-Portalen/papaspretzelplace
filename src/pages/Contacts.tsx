@@ -5,10 +5,8 @@ import HeaderDesign from "../components/HeaderDesign";
 import Main from '../components/Main';
 import Footer from '../components/Footer';
 
-import { MenuItems } from '../components/Products/MenuItems';
-
 export default function Menu(): JSX.Element {
-    const title: string = 'Menu';
+    const title: string = 'Contacts';
 
     const seo: ISEOProps = {
         title,
@@ -22,16 +20,11 @@ export default function Menu(): JSX.Element {
             <HeaderDesign />
 
             <Main>
-                <section className="d-none text-center">
+                <section className="d-none">
                     <article>
-                        <h1>
-                            <small className="text-muted d-block fs-3">{title}</small>
-                            <div className="display-4">Papa's Pretzel Place</div>
-                        </h1>
+                        <h1>{title} Papa's Pretzel Place</h1>
                     </article>
                 </section>
-
-                <MenuItems />
             </Main>
 
             <Footer />

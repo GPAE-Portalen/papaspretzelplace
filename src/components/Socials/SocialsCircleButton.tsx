@@ -1,12 +1,23 @@
 import React, { useContext } from 'react';
 import { DataContext, IDataContext } from '../../App';
 
-export const SocialsCircleButton = (): JSX.Element => {
+export interface ISocialsCircleButton {
+    className?: string;
+    style?: React.CSSProperties;
+}
+
+export const SocialsCircleButton = (props: ISocialsCircleButton): JSX.Element => {
     const data: IDataContext = useContext(DataContext);
     const { facebook, instagram } = data.baseInformation.socialMedia;
 
+    const standardClassName: string = "d-flex";
+    const className: string = props.className ? `${standardClassName} ${props.className}` : standardClassName;
+
+    const standardStyle: React.CSSProperties = { };
+    const style: React.CSSProperties = Object.assign(standardStyle, props.style);
+
     return (
-        <div className="d-flex">
+        <div className={className} style={style}>
             {
                 instagram &&
                 <a  href={instagram}

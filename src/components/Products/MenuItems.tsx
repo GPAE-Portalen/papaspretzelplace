@@ -78,7 +78,7 @@ export const MenuItems = (): JSX.Element => {
         <section>
             {
                 Object.keys(pretzels).length > 0 &&
-                <div className="row g-1 g-lg-2 mt-5">
+                <div className="row g-1 g-lg-2 mt-3">
                     <div className="col-12">
                         <h2 className="menu-group-title">Pretzels</h2>
                     </div>
