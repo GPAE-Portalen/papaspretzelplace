@@ -43,6 +43,8 @@ export interface IAddress {
     street: string;
     city: string;
     state: string;
+    fullAddress: string;
+    uri: string;
 }
 
 export interface ISocialMedia {

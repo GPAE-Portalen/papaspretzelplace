@@ -14,8 +14,6 @@ export interface IHeaderDesignProps {
 export default function HeaderDesign(props: IHeaderDesignProps): JSX.Element {
     const data: IDataContext = useContext(DataContext);
     const { address } = data.baseInformation;
-    const fullAddress: string = `${address.street}, ${address.city}, ${address.state}`;
-    const addressUrl: string = encodeURI(fullAddress);
 
     const logoProps: ILogoProps = {
         alt: "Papa's Pretzel Place Logo",
@@ -32,8 +30,8 @@ export default function HeaderDesign(props: IHeaderDesignProps): JSX.Element {
                 <div className="bg-white p-3">
                     <div className="container p-0 d-flex justify-content-between align-items-center mb-3">
                         <address className="ms-lg-3 mb-0">
-                            <a href={`https://maps.google.com/maps?hl=en&q=${addressUrl}&ie=UTF8&t=roadmap&z=10&iwloc=B`} target="_blank" rel="noreferrer" className="text-decoration-none text-dark fs-one-one ppp-font-bold">
-                                <i className="bi bi-geo-alt-fill"></i>&nbsp;{fullAddress}
+                            <a href={`https://maps.google.com/maps?hl=en&q=${address.uri}&ie=UTF8&t=roadmap&z=10&iwloc=B`} target="_blank" rel="noreferrer" className="text-decoration-none text-dark fs-one-one ppp-font-bold">
+                                <i className="bi bi-geo-alt-fill"></i>&nbsp;{address.fullAddress}
                             </a>
                         </address>
 
@@ -61,16 +59,16 @@ export default function HeaderDesign(props: IHeaderDesignProps): JSX.Element {
 const StickyNav = () => {
     return (
         <div className="sticky-top">
-            <nav className="navbar navbar-dark bg-ppp-red py-1">
+            <nav className="navbar navbar-dark bg-ppp-red py-2">
                 <div className="container px-0">
                     <ul className="navbar-nav flex-row text-nowrap mx-auto hide-scroll">
                         <li className="nav-item ms-3 me-2">
-                            <NavLink to="/" className="nav-link" activeClassName="">
+                            <NavLink exact to="/" className="nav-link pb-0" activeClassName="active">
                                 Home
                             </NavLink>
                         </li>
                         <li className="nav-item mx-2">
-                            <NavLink to="/menu" className="nav-link" activeClassName="active">
+                            <NavLink to="/menu" className="nav-link pb-0" activeClassName="active">
                                 Menu
                             </NavLink>
                         </li>
@@ -78,17 +76,17 @@ const StickyNav = () => {
                             window.envDev &&
                             <Fragment>
                                 <li className="nav-item mx-2">
-                                    <NavLink to="/order" className="nav-link" activeClassName="active">
+                                    <NavLink to="/order" className="nav-link pb-0" activeClassName="active">
                                         Order
                                     </NavLink>
                                 </li>
                                 <li className="nav-item mx-2">
-                                    <NavLink to="/address" className="nav-link" activeClassName="active">
+                                    <NavLink to="/address" className="nav-link pb-0" activeClassName="active">
                                         Address
                                     </NavLink>
                                 </li>
                                 <li className="nav-item ms-2 me-3">
-                                    <NavLink to="/contacts" className="nav-link" activeClassName="active">
+                                    <NavLink to="/contacts" className="nav-link pb-0" activeClassName="active">
                                         Contacts
                                     </NavLink>
                                 </li>

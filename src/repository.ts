@@ -1,4 +1,13 @@
-import { IMenu, IDictionary, IMenuItem, IOpenHours, IBaseInformation, IContacts, IAddress, ISocialMedia } from './interfaces/index';
+import {
+    IMenu,
+    IDictionary,
+    IMenuItem,
+    IOpenHours,
+    IBaseInformation,
+    IContacts,
+    IAddress,
+    ISocialMedia
+} from './interfaces/index';
 
 export interface IRepository {
     getBaseInformation(): IBaseInformation;
@@ -57,6 +66,9 @@ export default class Repository implements IRepository {
 
     getAddress(): IAddress {
         const address: IAddress = require(`${this.url}address.json`);
+
+        address.fullAddress = `${address.street}, ${address.city}, ${address.state}`;
+        address.uri = encodeURI(address.fullAddress);
 
         return address;
     }

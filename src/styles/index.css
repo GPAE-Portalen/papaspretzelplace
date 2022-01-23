@@ -10647,9 +10647,6 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important; } }
 
-.offcanvas {
-  z-index: 50000; }
-
 @font-face {
   font-family: "Source Serif Pro Extra Light";
   src: url("../assets/fonts/SourceSerifPro-ExtraLight.ttf");
@@ -10784,6 +10781,9 @@ nav {
 
 .fs-two-five {
   font-size: 2.5rem; }
+
+.nav-link.active {
+  border-bottom: 4px solid white; }
 
 .big-address {
   font-size: calc(0.75rem + 0.5vw);

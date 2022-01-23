@@ -36,3 +36,8 @@
 .fs-two-five {
     font-size: 2.5rem;
 }
+
+// Bootstrap adaptation
+.nav-link.active {
+    border-bottom: 4px solid white;
+}
