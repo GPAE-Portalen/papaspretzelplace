@@ -13,7 +13,7 @@ export default function Footer(): JSX.Element {
     const year: number = new Date().getFullYear();
 
     return (
-        <footer className="mt-auto border-top bg-ppp-blue-600">
+        <footer className="mt-auto border-top bg-ppp-blue-100">
             {
                 address.street && 
                 <Container type={EContainerType.Default} className="py-3">
