@@ -9,6 +9,8 @@ export const Contacts = (): JSX.Element => {
 
     return (
         <address>
+            <h2 className="h4">Contacts</h2>
+
             {
                 address.street && address.city && address.state &&
                 <Fragment>
