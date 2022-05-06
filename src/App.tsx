@@ -37,7 +37,7 @@ export default function App() {
                         <Route exact path="/" component={withPage(Home)} />
                         <Route exact path="/menu" component={withPage(Menu)} />
                         {
-                            window.envDev &&
+                            window.envDev && window.envProd &&
                             <Fragment>
                                 <Route exact path="/order" component={withPage(Order)} />
                                 <Route exact path="/address" component={withPage(Address)} />

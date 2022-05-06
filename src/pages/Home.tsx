@@ -21,7 +21,7 @@ export default function Menu(): JSX.Element {
             <Main>
                 <section className="d-none">
                     <article>
-                        <h1>{title} Papa's Pretzel Place</h1>
+                        <h1>{title}</h1>
                     </article>
                 </section>
             </Main>

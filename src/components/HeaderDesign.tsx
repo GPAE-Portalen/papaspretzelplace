@@ -73,7 +73,7 @@ const StickyNav = () => {
                             </NavLink>
                         </li>
                         {
-                            window.envDev &&
+                            window.envDev && window.envProd &&
                             <Fragment>
                                 <li className="nav-item mx-2">
                                     <NavLink to="/order" className="nav-link pb-0" activeClassName="active">
