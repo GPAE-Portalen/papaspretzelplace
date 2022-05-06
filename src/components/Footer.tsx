@@ -3,7 +3,6 @@ import React, { Fragment, useContext } from 'react';
 import { DataContext, IDataContext } from '../App';
 import { Container, EContainerType } from './Container';
 import { Contacts } from './Contacts/Contacts';
-import { SocialsCircleButton } from './Socials/SocialsCircleButton';
 
 export default function Footer(): JSX.Element {
     const year: number = new Date().getFullYear();
