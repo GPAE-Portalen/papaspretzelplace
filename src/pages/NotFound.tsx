@@ -5,7 +5,6 @@ import Main from '../components/Main';
 import Footer from '../components/Footer';
 
 export default function Home(): JSX.Element {
-    const title: string = "Papa's Pretzel Place";
     const description: string = '*Dough* This page does knot exist!';
 
     return (
